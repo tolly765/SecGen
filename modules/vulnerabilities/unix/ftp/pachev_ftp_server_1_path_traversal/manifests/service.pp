@@ -8,10 +8,18 @@ class pachev_ftp_server_1_path_traversal::service {
   $release_dir = '/opt/pachev_ftp/pachev_ftp-master/ftp_server/target/release'
   $user = $secgen_parameters['leaked_username'][0]
 
-  # run on each boot via cron
-  cron { 'ftp-port-iptables':
-    command     => "iptables -t nat -I PREROUTING -p tcp --dport $port -j DNAT --to 127.0.0.1:2121 &",
-    special     => 'reboot',
+  file { '/etc/network/if-pre-up.d':
+    ensure  => directory,
+  } ->
+  file { '/etc/network/if-pre-up.d/iptables':
+    ensure  => present,
+    owner   => 'root',
+    mode    => '0755', # execute permissions.
+    content => '#!/bin/sh'
+  } ->
+  file_line { 'ftp_redirect_port_rule':
+    path => '/etc/network/if-pre-up.d/iptables',
+    line => "iptables -t nat -I PREROUTING -p tcp --dport $port -j DNAT --to 127.0.0.1:2121",
   }
 
   # recreates in /etc/systemd/, but could link to the copy in /opt/
