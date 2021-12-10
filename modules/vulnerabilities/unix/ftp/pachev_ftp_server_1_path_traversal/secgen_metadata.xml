@@ -8,6 +8,7 @@
   <author>Z. Cliffe Schreuders</author>
   <module_license>MIT</module_license>
   <description>Pachev FTP Server version 1.0 suffers from a path traversal vulnerability.
+    In this configuration only active FTP connections work, which may mean published exploit code needs updating.
   </description>
 
   <type>ftp</type>
@@ -50,7 +51,6 @@
     <generator type="message_generator"/>
   </default_input>
 
-  <!-- ideally something found by dirbuster -->
   <default_input into="pre_leaked_filenames">
     <value>note</value>
   </default_input>
