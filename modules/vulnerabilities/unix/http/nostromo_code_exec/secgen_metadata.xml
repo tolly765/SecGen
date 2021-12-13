@@ -44,7 +44,7 @@
   </default_input>
 
   <!--optional vulnerability details-->
-  <cve>2019-16278</cve>
+  <cve>CVE-2019-16278</cve>
   <cvss_base_score>10</cvss_base_score>
   <cvss_vector>AV:N/AC:L/Au:N/C:C/I:C/A:C</cvss_vector>
   <reference>https://www.exploit-db.com/exploits/47573</reference>
