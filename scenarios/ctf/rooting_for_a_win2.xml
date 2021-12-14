@@ -93,27 +93,21 @@
     <system_name>server</system_name>
 		<base distro="Debian 10" type="desktop" name="KDE"/>
 
-    <vulnerability module_path=".*/nostromo_code_exec">
+
+    <vulnerability module_path="vulnerabilities/unix/ftp/proftpd_133c_backdoor_nonroot">
       <input into="strings_to_leak">
         <generator type="flag_generator"/>
       </input>
       <input into="strings_to_pre_leak">
         <generator type="flag_generator"/>
-
-        <encoder type="^(ascii|alpha)_reversible$" difficulty="low">
-          <input into="strings_to_encode">
-            <generator type="flag_generator"/>
-          </input>
-        </encoder>
       </input>
     </vulnerability>
 
-    <vulnerability module_path=".*/suid_root_man">
+    <vulnerability module_path=".*/sudo_root_awk">
       <input into="strings_to_leak">
         <generator type="flag_generator"/>
       </input>
     </vulnerability>
-
 
     <network type="private_network">
       <input into="IP_address">
