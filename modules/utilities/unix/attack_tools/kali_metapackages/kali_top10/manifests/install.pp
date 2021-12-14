@@ -2,8 +2,7 @@ class kali_top10::install{
   # package { ['kali-tools-top10', 'nfs-common', 'ftp']:
   #   ensure => 'installed',
   # }
-  # TODO: ftp package just disapeared from the kali repos -- investigate
-  ensure_packages(['nfs-common'])
+  ensure_packages(['nfs-common', 'tnftp'])
 
   # The following is a workaround for the crackmapexec package triggering our IPS
   # almost everything in kali-tools-top10:
