@@ -58,9 +58,10 @@
 
 
   <!--optional vulnerability details-->
-  <!--<cve></cve>-->
   <cvss_base_score>10</cvss_base_score>
   <cvss_vector>AV:N/AC:L/Au:N/C:C/I:C/A:C</cvss_vector>
+  <!-- no cve -->
+  <reference>OSVDB-69562</reference>
   <reference>https://www.rapid7.com/db/modules/exploit/unix/ftp/proftpd_133c_backdoor</reference>
   <software_name>proftpd</software_name>
   <software_license>GPL</software_license>
@@ -79,9 +80,21 @@
     <type>^ftp$</type>
   </conflict>
 
-
   <requires>
     <type>update</type>
   </requires>
+
+  <CyBOK KA="MAT" topic="Attacks and exploitation">
+    <keyword>EXPLOITATION</keyword>
+    <keyword>EXPLOITATION FRAMEWORKS</keyword>
+    <keyword>BACKDOOR TROJANS</keyword>
+  </CyBOK>
+  <CyBOK KA="SOIM" topic="PENETRATION TESTING">
+    <keyword>PENETRATION TESTING - SOFTWARE TOOLS</keyword>
+    <keyword>PENETRATION TESTING - ACTIVE PENETRATION</keyword>
+  </CyBOK>
+  <CyBOK KA="NS" topic="PENETRATION TESTING">
+    <keyword>FILE - TRANSFER PROTOCOL (FTP)</keyword>
+  </CyBOK>
 
 </vulnerability>

@@ -16,41 +16,40 @@
 
   <!-- bludit -->
   <CyBOK KA="WAM" topic="Fundamental Concepts and Approaches">
-		<keyword>authentication</keyword>
-		<keyword>passwords and alternatives</keyword>
-	</CyBOK>
+    <keyword>authentication</keyword>
+    <keyword>passwords and alternatives</keyword>
+  </CyBOK>
   <CyBOK KA="AAA" topic="Authentication">
-		<keyword>user authentication</keyword>
-		<keyword>BRUTEFORCE</keyword>
-	</CyBOK>
-
+    <keyword>user authentication</keyword>
+    <keyword>BRUTEFORCE</keyword>
+  </CyBOK>
   <CyBOK KA="WAM" topic="Server-Side Vulnerabilities and Mitigations">
     <keyword>server-side misconfiguration and vulnerable components</keyword>
     <keyword>FILE UPLOAD VULNERABILITY</keyword>
   </CyBOK>
-	<CyBOK KA="MAT" topic="Attacks and exploitation">
-		<keyword>EXPLOITATION</keyword>
-		<keyword>EXPLOITATION FRAMEWORKS</keyword>
-	</CyBOK>
-	<CyBOK KA="SS" topic="Categories of Vulnerabilities">
-		<keyword>CVEs and CWEs</keyword>
-	</CyBOK>
-	<CyBOK KA="SOIM" topic="PENETRATION TESTING">
-		<keyword>PENETRATION TESTING - SOFTWARE TOOLS</keyword>
-		<keyword>PENETRATION TESTING - ACTIVE PENETRATION</keyword>
-	</CyBOK>
+  <CyBOK KA="MAT" topic="Attacks and exploitation">
+    <keyword>EXPLOITATION</keyword>
+    <keyword>EXPLOITATION FRAMEWORKS</keyword>
+  </CyBOK>
+  <CyBOK KA="SS" topic="Categories of Vulnerabilities">
+    <keyword>CVEs and CWEs</keyword>
+  </CyBOK>
+  <CyBOK KA="SOIM" topic="PENETRATION TESTING">
+    <keyword>PENETRATION TESTING - SOFTWARE TOOLS</keyword>
+    <keyword>PENETRATION TESTING - ACTIVE PENETRATION</keyword>
+  </CyBOK>
 
   <!-- escalate to user and to root via sudo -->
   <CyBOK KA="AAA" topic="Authorisation">
-		<keyword>access control</keyword>
-		<keyword>Elevated privileges</keyword>
-		<keyword>Vulnerabilities and attacks on access control misconfigurations</keyword>
-	</CyBOK>
-	<CyBOK KA="OSV" topic="Primitives for Isolation and Mediation">
-		<keyword>Access controls and operating systems</keyword>
-		<keyword>Linux security model</keyword>
-		<keyword>Attacks against SUDO</keyword>
-	</CyBOK>
+    <keyword>access control</keyword>
+    <keyword>Elevated privileges</keyword>
+    <keyword>Vulnerabilities and attacks on access control misconfigurations</keyword>
+  </CyBOK>
+  <CyBOK KA="OSV" topic="Primitives for Isolation and Mediation">
+    <keyword>Access controls and operating systems</keyword>
+    <keyword>Linux security model</keyword>
+    <keyword>Attacks against SUDO</keyword>
+  </CyBOK>
 
   <CyBOK KA="AB" topic="Models">
     <keyword>kill chains</keyword>
@@ -64,8 +63,8 @@
     <keyword>symmetric encryption and authentication</keyword>
   </CyBOK>
   <CyBOK KA="AAA" topic="Authentication">
-		<keyword>BRUTEFORCE</keyword>
-	</CyBOK>
+    <keyword>BRUTEFORCE</keyword>
+  </CyBOK>
 
 
   <system>
@@ -101,7 +100,7 @@
 
   <system>
     <system_name>web_server</system_name>
-		<base distro="Debian 10" type="desktop" name="KDE"/>
+    <base distro="Debian 10" type="desktop" name="KDE"/>
 
     <input into_datastore="organisation">
       <encoder type="line_selector">
@@ -114,19 +113,19 @@
     <!-- bludit requires a password >= 6 characters long -->
     <input into_datastore="password">
         <generator type="random_sanitised_word">
-				<input into="wordlist">
-					<value>wordlist</value>
-				</input>
-				<input into="min_length">
-					<value>6</value>
-				</input>
-			</generator>
+        <input into="wordlist">
+          <value>wordlist</value>
+        </input>
+        <input into="min_length">
+          <value>6</value>
+        </input>
+      </generator>
     </input>
 
 
-		<!--Create the user-->
-		<utility module_path=".*/parameterised_accounts">
-			<input into="accounts">
+    <!--Create the user-->
+    <utility module_path=".*/parameterised_accounts">
+      <input into="accounts">
         <generator type="account">
           <input into="username">
             <datastore access_json="['manager']['username']">organisation</datastore>
@@ -144,8 +143,8 @@
             <generator type="flag_generator"/>
           </input>
         </generator>
-			</input>
-		</utility>
+      </input>
+    </utility>
 
     <vulnerability module_path=".*/bludit_upload_images_exec">
       <input into="strings_to_leak">
@@ -176,27 +175,27 @@
       </input>
     </vulnerability>
 
-		<vulnerability type="zip_file">
-			<input into="base64_file">
-				<generator type="zip_file_generator">
-					<input into="password">
+    <vulnerability type="zip_file">
+      <input into="base64_file">
+        <generator type="zip_file_generator">
+          <input into="password">
             <datastore access_json="['manager']['name']">organisation</datastore>
-					</input>
-					<input into="strings_to_leak">
-						<generator type="flag_generator"/>
-						<value>
-							Congratulations you have cracked our protected zip file. Here is a flag for your troubles.
-						</value>
-					</input>
-				</generator>
-			</input>
-			<input into="leaked_filename">
-				<value>whatsmyname.zip</value>
-			</input>
-			<input into="storage_directory">
-				<value>/root</value>
-			</input>
-		</vulnerability>
+          </input>
+          <input into="strings_to_leak">
+            <generator type="flag_generator"/>
+            <value>
+              Congratulations you have cracked our protected zip file. Here is a flag for your troubles.
+            </value>
+          </input>
+        </generator>
+      </input>
+      <input into="leaked_filename">
+        <value>whatsmyname.zip</value>
+      </input>
+      <input into="storage_directory">
+        <value>/root</value>
+      </input>
+    </vulnerability>
 
 
     <network type="private_network">

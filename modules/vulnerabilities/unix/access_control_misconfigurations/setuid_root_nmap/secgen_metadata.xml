@@ -28,4 +28,15 @@
     <module_path>modules/utilities/unix/audit_tools/scanners/nmap</module_path>
   </requires>
 
+  <CyBOK KA="AAA" topic="Authorisation">
+    <keyword>access control</keyword>
+    <keyword>Elevated privileges</keyword>
+    <keyword>Vulnerabilities and attacks on access control misconfigurations</keyword>
+  </CyBOK>
+  <CyBOK KA="OSV" topic="Primitives for Isolation and Mediation">
+    <keyword>Access controls and operating systems</keyword>
+    <keyword>Linux security model</keyword>
+    <keyword>Attacks against SETUID</keyword>
+  </CyBOK>
+  
 </vulnerability>

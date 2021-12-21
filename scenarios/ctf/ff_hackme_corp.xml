@@ -13,10 +13,43 @@ Login to the attacker VM with user: root, password: toor. There are three server
 Happy hacking!
   </description>
 
-	<type>ctf</type>
-	<type>attack-ctf</type>
-	<type>pwn-ctf</type>
+  <type>ctf</type>
+  <type>attack-ctf</type>
+  <type>pwn-ctf</type>
   <difficulty>easy</difficulty>
+
+  <CyBOK KA="C" topic="Symmetric Cryptography">
+    <keyword>symmetric encryption and authentication</keyword>
+  </CyBOK>
+  <CyBOK KA="F" topic="Artifact Analysis">
+    <keyword>cryptographic hashing</keyword>
+    <keyword>Encoding and alternative data formats</keyword>
+  </CyBOK>
+  <CyBOK KA="MAT" topic="Attacks and exploitation">
+    <keyword>EXPLOITATION</keyword>
+    <keyword>EXPLOITATION FRAMEWORKS</keyword>
+  </CyBOK>
+  <CyBOK KA="SOIM" topic="PENETRATION TESTING">
+    <keyword>PENETRATION TESTING - SOFTWARE TOOLS</keyword>
+    <keyword>PENETRATION TESTING - ACTIVE PENETRATION</keyword>
+    <keyword>PENETRATION TESTING - NETWORK MAPPING - RECONNAISSANCE</keyword>
+  </CyBOK>
+  <CyBOK KA="NS" topic="PENETRATION TESTING">
+    <keyword>PENETRATION TESTING - NETWORK MAPPING - FINGERPRINTING</keyword>
+    <keyword>PENETRATION TESTING - NETWORK MAPPING - NMAP</keyword>
+  </CyBOK>
+
+  <!-- escalate to user and to root -->
+  <CyBOK KA="AAA" topic="Authorisation">
+    <keyword>Elevated privileges</keyword>
+  </CyBOK>
+
+  <CyBOK KA="AB" topic="Models">
+    <keyword>kill chains</keyword>
+  </CyBOK>
+  <CyBOK KA="MAT" topic="Malicious Activities by Malware">
+    <keyword>cyber kill chain</keyword>
+  </CyBOK>
 
   <system>
     <system_name>attack_vm</system_name>

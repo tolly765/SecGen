@@ -4,7 +4,7 @@
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://www.github/cliffe/SecGen/scenario">
 
-	<name>Rehearsing Reversing</name>
+  <name>Rehearsing Reversing</name>
   <author>Thomas Shaw</author>
   <author>Z. Cliffe Schreuders</author>
   <description>Some reverse engineering challenges.

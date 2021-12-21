@@ -14,33 +14,40 @@
   <type>pwn-ctf</type>
   <difficulty>medium</difficulty>
 
-  <!-- TODO: update cybok metadata -->
+  <!-- http -->
+  <CyBOK KA="WAM" topic="Server-Side Vulnerabilities and Mitigations">
+    <keyword>server-side misconfiguration and vulnerable components</keyword>
+    <keyword>Directory traversal</keyword>
+  </CyBOK>
+  <CyBOK KA="MAT" topic="Attacks and exploitation">
+    <keyword>EXPLOITATION</keyword>
+    <keyword>EXPLOITATION FRAMEWORKS</keyword>
+    <keyword>DIRECTORY TRAVERSAL</keyword>
+  </CyBOK>
+  <CyBOK KA="SS" topic="Categories of Vulnerabilities">
+    <keyword>CVEs and CWEs</keyword>
+  </CyBOK>
+  <CyBOK KA="SOIM" topic="PENETRATION TESTING">
+    <keyword>PENETRATION TESTING - SOFTWARE TOOLS</keyword>
+    <keyword>PENETRATION TESTING - ACTIVE PENETRATION</keyword>
+    <keyword>PENETRATION TESTING - NETWORK MAPPING - RECONNAISSANCE</keyword>
+  </CyBOK>
+  <CyBOK KA="NS" topic="PENETRATION TESTING">
+    <keyword>PENETRATION TESTING - NETWORK MAPPING - FINGERPRINTING</keyword>
+    <keyword>PENETRATION TESTING - NETWORK MAPPING - NMAP</keyword>
+  </CyBOK>
 
-
-
-	<CyBOK KA="MAT" topic="Attacks and exploitation">
-		<keyword>EXPLOITATION</keyword>
-		<keyword>EXPLOITATION FRAMEWORKS</keyword>
-	</CyBOK>
-	<CyBOK KA="SS" topic="Categories of Vulnerabilities">
-		<keyword>CVEs and CWEs</keyword>
-	</CyBOK>
-	<CyBOK KA="SOIM" topic="PENETRATION TESTING">
-		<keyword>PENETRATION TESTING - SOFTWARE TOOLS</keyword>
-		<keyword>PENETRATION TESTING - ACTIVE PENETRATION</keyword>
-	</CyBOK>
-
-  <!-- escalate to user and to root via sudo -->
+  <!-- escalate to user and to root via suid -->
   <CyBOK KA="AAA" topic="Authorisation">
-		<keyword>access control</keyword>
-		<keyword>Elevated privileges</keyword>
-		<keyword>Vulnerabilities and attacks on access control misconfigurations</keyword>
-	</CyBOK>
-	<CyBOK KA="OSV" topic="Primitives for Isolation and Mediation">
-		<keyword>Access controls and operating systems</keyword>
-		<keyword>Linux security model</keyword>
-		<keyword>Attacks against SUDO</keyword>
-	</CyBOK>
+    <keyword>access control</keyword>
+    <keyword>Elevated privileges</keyword>
+    <keyword>Vulnerabilities and attacks on access control misconfigurations</keyword>
+  </CyBOK>
+  <CyBOK KA="OSV" topic="Primitives for Isolation and Mediation">
+    <keyword>Access controls and operating systems</keyword>
+    <keyword>Linux security model</keyword>
+    <keyword>Attacks against SUID</keyword>
+  </CyBOK>
 
   <CyBOK KA="AB" topic="Models">
     <keyword>kill chains</keyword>
@@ -48,14 +55,6 @@
   <CyBOK KA="MAT" topic="Malicious Activities by Malware">
     <keyword>cyber kill chain</keyword>
   </CyBOK>
-
-  <!-- decrypt zip file -->
-  <CyBOK KA="C" topic="Symmetric Cryptography">
-    <keyword>symmetric encryption and authentication</keyword>
-  </CyBOK>
-  <CyBOK KA="AAA" topic="Authentication">
-		<keyword>BRUTEFORCE</keyword>
-	</CyBOK>
 
 
   <system>
@@ -91,7 +90,7 @@
 
   <system>
     <system_name>server</system_name>
-		<base distro="Debian 10" type="desktop" name="KDE"/>
+    <base distro="Debian 10" type="desktop" name="KDE"/>
 
     <vulnerability module_path=".*/nostromo_code_exec">
       <input into="strings_to_leak">

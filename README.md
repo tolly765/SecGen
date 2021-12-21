@@ -67,7 +67,7 @@ bundle update --bundler
 ```
 Update gems:
 ```bash
-bundle update 
+bundle update
 ```
 
 ### On Ubuntu (16.04) these commands will get you up and running
@@ -319,6 +319,7 @@ Many thanks to everyone who has contributed to the project. The above list is no
 This project is supported by a Higher Education Academy (HEA) learning and teaching in cyber security grant (2015-2017).
 This project is supported by a Leeds Beckett University Teaching Excellence Fund grant (2018-2019).
 This project is supported by a Cyber Security Body of Knowledge (CyBOK) resources around CyBOK 1.0 grant (2021).
+This project is supported by a Cyber Security Body of Knowledge (CyBOK) resources around CyBOK 1.1 grant (2021).
 
 ## Contributing
 We encourage contributions to the project.

@@ -15,25 +15,36 @@
   <type>web-hints</type>
   <difficulty>intermediate</difficulty>
 
+  <CyBOK KA="AAA" topic="Authorisation">
+    <keyword>access control</keyword>
+    <keyword>Elevated privileges</keyword>
+    <keyword>Real and effective identity</keyword>
+    <keyword>Vulnerabilities and attacks on access control misconfigurations</keyword>
+  </CyBOK>
+  <CyBOK KA="OSV" topic="Primitives for Isolation and Mediation">
+    <keyword>Access controls and operating systems</keyword>
+    <keyword>Linux security model</keyword>
+    <keyword>Unix File Permissions</keyword>
+    <keyword>setuid/setgid</keyword>
+  </CyBOK>
   <CyBOK KA="WAM" topic="Fundamental Concepts and Approaches">
-		<keyword>authentication</keyword>
-		<keyword>cookies</keyword>
-		<keyword>passwords and alternatives</keyword>
-		<keyword>JAVASCRIPT / HYPERTEXT MARKUP LANGUAGE (HTML) / CASCADING STYLE SHEETS (CSS) / HYPERTEXT TRANSFER PROTOCOL (HTTP)
-		COOKIES</keyword>
-		<keyword>Broken Access Control / Insecure Direct Object References</keyword>
-	</CyBOK>
+    <keyword>authentication</keyword>
+    <keyword>cookies</keyword>
+    <keyword>passwords and alternatives</keyword>
+    <keyword>JAVASCRIPT / HYPERTEXT MARKUP LANGUAGE (HTML) / CASCADING STYLE SHEETS (CSS) / HYPERTEXT TRANSFER PROTOCOL (HTTP)
+    COOKIES</keyword>
+    <keyword>Broken Access Control / Insecure Direct Object References</keyword>
+  </CyBOK>
   <CyBOK KA="WAM" topic="Server-Side Vulnerabilities and Mitigations">
-		<keyword>injection vulnerabilities</keyword>
-		<keyword>server-side misconfiguration and vulnerable components</keyword>
-		<keyword>CROSS-SITE SCRIPTING (XSS)</keyword>
-		<keyword>SAME ORIGIN POLICY (SOP)</keyword>
-		<keyword>COMMAND INJECTION</keyword>
-		<keyword>SQL-INJECTION</keyword>
-	</CyBOK>
+    <keyword>injection vulnerabilities</keyword>
+    <keyword>server-side misconfiguration and vulnerable components</keyword>
+    <keyword>CROSS-SITE SCRIPTING (XSS)</keyword>
+    <keyword>COMMAND INJECTION</keyword>
+    <keyword>SQL-INJECTION</keyword>
+  </CyBOK>
   <CyBOK KA="SS" topic="Categories of Vulnerabilities">
-		<keyword>Web vulnerabilities / OWASP Top 10</keyword>
-	</CyBOK>
+    <keyword>Web vulnerabilities / OWASP Top 10</keyword>
+  </CyBOK>
 
   <system>
     <system_name>target_server</system_name>
