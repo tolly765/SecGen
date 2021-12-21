@@ -12,7 +12,7 @@ require_relative '../helpers/print.rb'
 require_relative '../helpers/constants.rb'
 
 scenarios_dir = "scenarios/labs"
-scenario_index_out = "#{ROOT_DIR}/README-CyBOK-Lab-Scenarios-Indexed.md"
+scenario_index_out = "#{ROOT_DIR}/README-CyBOK-Scenarios-Indexed.md"
 output_video_index = true
 scenario_type = "lab"
 
@@ -41,7 +41,7 @@ opts.each do |opt, arg|
     usage
   when '--lab'
     scenarios_dir = "scenarios/labs"
-    scenario_index_out = "#{ROOT_DIR}/README-CyBOK-Lab-Scenarios-Indexed.md"
+    scenario_index_out = "#{ROOT_DIR}/README-CyBOK-Scenarios-Indexed.md"
     output_video_index = true
     scenario_type = "practical lab"
   when '--ctf'

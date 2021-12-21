@@ -270,7 +270,7 @@ The Cyber Security Body of Knowledge (CyBOK) is a body of knowledge that aims to
 Scenarios within SecGen now contain XML elements linking them to CyBOK knowledge areas and specific topics within those knowledge areas.
 Additionally, video content for scenarios are tagged with CyBOK associations.
 
-For an index of lab scenarios in SecGen organised by CyBOK Knowledge Areas please see the **[Lab Scenarios and CyBOK](README-CyBOK-Scenarios-Indexed.md)**.
+For an index of lab scenarios in SecGen organised by CyBOK Knowledge Areas please see the **[Lab Scenarios and CyBOK](README-CyBOK-Scenarios-Indexed.md)**. Likewise, for **[CTF scenarios](README-CyBOK-CTF-Scenarios-Indexed.md)**.
 
 For a list of lecture and demo videos with CyBOK metadata please see the **[Lecture Videos and CyBOK](README-CyBOK-Lecture-Videos.md)**.
 
