@@ -12,69 +12,18 @@ You can browse the list below in terms of the [CyBOK Knowledge Areas, and Topics
 
 # Scenarios Indexed By CyBOK Knowledge Area (KA)
 
-[Authentication, Authorisation &amp; Accountability (AAA)](#authentication,-authorisation--accountability-aaa)</br>
-[Operating Systems &amp; Virtualisation (OSV)](#operating-systems--virtualisation-osv)</br>
-[Web &amp; Mobile Security (WAM)](#web--mobile-security-wam)</br>
-[Software Security (SS)](#software-security-ss)</br>
 [Network Security (NS)](#network-security-ns)</br>
 [Security Operations &amp; Incident Management (SOIM)](#security-operations--incident-management-soim)</br>
 [Malware &amp; Attack Technology (MAT)](#malware--attack-technology-mat)</br>
 [Adversarial Behaviours (AB)](#adversarial-behaviours-ab)</br>
+[Software Security (SS)](#software-security-ss)</br>
+[Authentication, Authorisation &amp; Accountability (AAA)](#authentication,-authorisation--accountability-aaa)</br>
+[Operating Systems &amp; Virtualisation (OSV)](#operating-systems--virtualisation-osv)</br>
 [Forensics (F)](#forensics-f)</br>
 [Cyber-Physical Systems Security (CPS)](#cyber-physical-systems-security-cps)</br>
+[Web &amp; Mobile Security (WAM)](#web--mobile-security-wam)</br>
 [Cryptography (C)](#cryptography-c)</br>
 
-
-## Authentication, Authorisation &amp; Accountability (AAA)
-
-### AAA Scenarios
-
-[authentication_and_access_controls/ads_1_authentication.xml](#authentication_and_access_controlsads_1_authenticationxml)</br>[authentication_and_access_controls/ads_2_pam.xml](#authentication_and_access_controlsads_2_pamxml)</br>[authentication_and_access_controls/ads_3_access_controls.xml](#authentication_and_access_controlsads_3_access_controlsxml)</br>[authentication_and_access_controls/ads_4_suid.xml](#authentication_and_access_controlsads_4_suidxml)</br>[authentication_and_access_controls/ads_5_facls.xml](#authentication_and_access_controlsads_5_faclsxml)</br>[authentication_and_access_controls/ads_6_containers.xml](#authentication_and_access_controlsads_6_containersxml)</br>[authentication_and_access_controls/ads_7_apparmor.xml](#authentication_and_access_controlsads_7_apparmorxml)</br>[labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/file-integrity.xml](#labtainersfile-integrityxml)</br>[labtainers/ldap.xml](#labtainersldapxml)</br>[labtainers/macs-hash.xml](#labtainersmacs-hashxml)</br>[labtainers/nix-commands.xml](#labtainersnix-commandsxml)</br>[labtainers/onewayhash.xml](#labtainersonewayhashxml)</br>[labtainers/radius.xml](#labtainersradiusxml)</br>[labtainers/setuid-env.xml](#labtainerssetuid-envxml)</br>[response_and_investigation/1_integrity_protection.xml](#response_and_investigation1_integrity_protectionxml)</br>[response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>[response_and_investigation/8_dead_analysis.xml](#response_and_investigation8_dead_analysisxml)</br>
-### AAA Scenarios by Topics
-| Topic | Scenario |
-| --- | --- |
-Authentication | [authentication_and_access_controls/ads_1_authentication.xml](#authentication_and_access_controlsads_1_authenticationxml)</br>[authentication_and_access_controls/ads_2_pam.xml](#authentication_and_access_controlsads_2_pamxml)</br>[labtainers/file-integrity.xml](#labtainersfile-integrityxml)</br>[labtainers/ldap.xml](#labtainersldapxml)</br>[labtainers/macs-hash.xml](#labtainersmacs-hashxml)</br>[labtainers/onewayhash.xml](#labtainersonewayhashxml)</br>[labtainers/radius.xml](#labtainersradiusxml)</br>
-Authorisation | [authentication_and_access_controls/ads_3_access_controls.xml](#authentication_and_access_controlsads_3_access_controlsxml)</br>[authentication_and_access_controls/ads_4_suid.xml](#authentication_and_access_controlsads_4_suidxml)</br>[authentication_and_access_controls/ads_5_facls.xml](#authentication_and_access_controlsads_5_faclsxml)</br>[authentication_and_access_controls/ads_6_containers.xml](#authentication_and_access_controlsads_6_containersxml)</br>[authentication_and_access_controls/ads_7_apparmor.xml](#authentication_and_access_controlsads_7_apparmorxml)</br>[labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/ldap.xml](#labtainersldapxml)</br>[labtainers/nix-commands.xml](#labtainersnix-commandsxml)</br>[labtainers/setuid-env.xml](#labtainerssetuid-envxml)</br>[response_and_investigation/1_integrity_protection.xml](#response_and_investigation1_integrity_protectionxml)</br>
-Accountability | [response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>[response_and_investigation/8_dead_analysis.xml](#response_and_investigation8_dead_analysisxml)</br>
-
-## Operating Systems &amp; Virtualisation (OSV)
-
-### OSV Scenarios
-
-[authentication_and_access_controls/ads_1_authentication.xml](#authentication_and_access_controlsads_1_authenticationxml)</br>[authentication_and_access_controls/ads_2_pam.xml](#authentication_and_access_controlsads_2_pamxml)</br>[authentication_and_access_controls/ads_3_access_controls.xml](#authentication_and_access_controlsads_3_access_controlsxml)</br>[authentication_and_access_controls/ads_4_suid.xml](#authentication_and_access_controlsads_4_suidxml)</br>[authentication_and_access_controls/ads_5_facls.xml](#authentication_and_access_controlsads_5_faclsxml)</br>[authentication_and_access_controls/ads_6_containers.xml](#authentication_and_access_controlsads_6_containersxml)</br>[authentication_and_access_controls/ads_7_apparmor.xml](#authentication_and_access_controlsads_7_apparmorxml)</br>[labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/capabilities.xml](#labtainerscapabilitiesxml)</br>[labtainers/setuid-env.xml](#labtainerssetuid-envxml)</br>[response_and_investigation/1_integrity_protection.xml](#response_and_investigation1_integrity_protectionxml)</br>[response_and_investigation/2_integrity_detection.xml](#response_and_investigation2_integrity_detectionxml)</br>[response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>
-### OSV Scenarios by Topics
-| Topic | Scenario |
-| --- | --- |
-Primitives for Isolation and Mediation | [authentication_and_access_controls/ads_1_authentication.xml](#authentication_and_access_controlsads_1_authenticationxml)</br>[authentication_and_access_controls/ads_2_pam.xml](#authentication_and_access_controlsads_2_pamxml)</br>[authentication_and_access_controls/ads_3_access_controls.xml](#authentication_and_access_controlsads_3_access_controlsxml)</br>[authentication_and_access_controls/ads_4_suid.xml](#authentication_and_access_controlsads_4_suidxml)</br>[authentication_and_access_controls/ads_5_facls.xml](#authentication_and_access_controlsads_5_faclsxml)</br>[authentication_and_access_controls/ads_6_containers.xml](#authentication_and_access_controlsads_6_containersxml)</br>[authentication_and_access_controls/ads_7_apparmor.xml](#authentication_and_access_controlsads_7_apparmorxml)</br>[labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/capabilities.xml](#labtainerscapabilitiesxml)</br>[labtainers/setuid-env.xml](#labtainerssetuid-envxml)</br>[response_and_investigation/1_integrity_protection.xml](#response_and_investigation1_integrity_protectionxml)</br>
-Role of Operating Systems | [authentication_and_access_controls/ads_3_access_controls.xml](#authentication_and_access_controlsads_3_access_controlsxml)</br>[authentication_and_access_controls/ads_6_containers.xml](#authentication_and_access_controlsads_6_containersxml)</br>[labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>
-OS Hardening | [response_and_investigation/2_integrity_detection.xml](#response_and_investigation2_integrity_detectionxml)</br>[response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>
-
-## Web &amp; Mobile Security (WAM)
-
-### WAM Scenarios
-
-[authentication_and_access_controls/ads_6_containers.xml](#authentication_and_access_controlsads_6_containersxml)</br>[labtainers/iptables-ics.xml](#labtainersiptables-icsxml)</br>[labtainers/iptables.xml](#labtainersiptablesxml)</br>[labtainers/iptables2.xml](#labtainersiptables2xml)</br>[labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[labtainers/webtrack.xml](#labtainerswebtrackxml)</br>[labtainers/xforge.xml](#labtainersxforgexml)</br>[labtainers/xsite.xml](#labtainersxsitexml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
-### WAM Scenarios by Topics
-| Topic | Scenario |
-| --- | --- |
-Fundamental Concepts and Approaches | [authentication_and_access_controls/ads_6_containers.xml](#authentication_and_access_controlsads_6_containersxml)</br>[labtainers/webtrack.xml](#labtainerswebtrackxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
-FIREWALLS | [labtainers/iptables-ics.xml](#labtainersiptables-icsxml)</br>[labtainers/iptables.xml](#labtainersiptablesxml)</br>[labtainers/iptables2.xml](#labtainersiptables2xml)</br>
-Server-Side Vulnerabilities and Mitigations | [labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[labtainers/xforge.xml](#labtainersxforgexml)</br>[labtainers/xsite.xml](#labtainersxsitexml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
-Client-Side Vulnerabilities and Mitigations | [web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
-
-## Software Security (SS)
-
-### SS Scenarios
-
-[authentication_and_access_controls/ads_7_apparmor.xml](#authentication_and_access_controlsads_7_apparmorxml)</br>[introducing_attacks/6_exploitation.xml](#introducing_attacks6_exploitationxml)</br>[labtainers/bufoverflow.xml](#labtainersbufoverflowxml)</br>[labtainers/formatstring.xml](#labtainersformatstringxml)</br>[labtainers/pass-crack.xml](#labtainerspass-crackxml)</br>[labtainers/retlibc.xml](#labtainersretlibcxml)</br>[labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[labtainers/xforge.xml](#labtainersxforgexml)</br>[labtainers/xsite.xml](#labtainersxsitexml)</br>[software_security_exploitation/1_c_asm_iof.xml](#software_security_exploitation1_c_asm_iofxml)</br>[software_security_exploitation/2_race_conditions_format_str.xml](#software_security_exploitation2_race_conditions_format_strxml)</br>[software_security_exploitation/3_bug_hunting_and_fuzzing.xml](#software_security_exploitation3_bug_hunting_and_fuzzingxml)</br>[software_security_exploitation/4_exploit_development.xml](#software_security_exploitation4_exploit_developmentxml)</br>[software_security_exploitation/5_linux_bof_format.xml](#software_security_exploitation5_linux_bof_formatxml)</br>[software_security_exploitation/6_linux_stack_bof.xml](#software_security_exploitation6_linux_stack_bofxml)</br>[software_security_exploitation/7_linux_nx_bypass.xml](#software_security_exploitation7_linux_nx_bypassxml)</br>[software_security_exploitation/8_linux_aslr_bypass.xml](#software_security_exploitation8_linux_aslr_bypassxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
-### SS Scenarios by Topics
-| Topic | Scenario |
-| --- | --- |
-Mitigating Exploitation | [authentication_and_access_controls/ads_7_apparmor.xml](#authentication_and_access_controlsads_7_apparmorxml)</br>[labtainers/bufoverflow.xml](#labtainersbufoverflowxml)</br>[labtainers/retlibc.xml](#labtainersretlibcxml)</br>[software_security_exploitation/7_linux_nx_bypass.xml](#software_security_exploitation7_linux_nx_bypassxml)</br>[software_security_exploitation/8_linux_aslr_bypass.xml](#software_security_exploitation8_linux_aslr_bypassxml)</br>
-Categories of Vulnerabilities | [introducing_attacks/6_exploitation.xml](#introducing_attacks6_exploitationxml)</br>[labtainers/bufoverflow.xml](#labtainersbufoverflowxml)</br>[labtainers/formatstring.xml](#labtainersformatstringxml)</br>[labtainers/retlibc.xml](#labtainersretlibcxml)</br>[labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[software_security_exploitation/1_c_asm_iof.xml](#software_security_exploitation1_c_asm_iofxml)</br>[software_security_exploitation/2_race_conditions_format_str.xml](#software_security_exploitation2_race_conditions_format_strxml)</br>[software_security_exploitation/4_exploit_development.xml](#software_security_exploitation4_exploit_developmentxml)</br>[software_security_exploitation/5_linux_bof_format.xml](#software_security_exploitation5_linux_bof_formatxml)</br>[software_security_exploitation/6_linux_stack_bof.xml](#software_security_exploitation6_linux_stack_bofxml)</br>[software_security_exploitation/7_linux_nx_bypass.xml](#software_security_exploitation7_linux_nx_bypassxml)</br>[software_security_exploitation/8_linux_aslr_bypass.xml](#software_security_exploitation8_linux_aslr_bypassxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
-Authentication | [labtainers/pass-crack.xml](#labtainerspass-crackxml)</br>
-Prevention of Vulnerabilities | [labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[labtainers/xforge.xml](#labtainersxforgexml)</br>[labtainers/xsite.xml](#labtainersxsitexml)</br>[software_security_exploitation/1_c_asm_iof.xml](#software_security_exploitation1_c_asm_iofxml)</br>[software_security_exploitation/2_race_conditions_format_str.xml](#software_security_exploitation2_race_conditions_format_strxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
-Detection of Vulnerabilities | [software_security_exploitation/3_bug_hunting_and_fuzzing.xml](#software_security_exploitation3_bug_hunting_and_fuzzingxml)</br>
 
 ## Network Security (NS)
 
@@ -111,13 +60,13 @@ Analyse: Analysis Methods | [labtainers/snort.xml](#labtainerssnortxml)</br>[res
 
 ### MAT Scenarios
 
-[introducing_attacks/2_malware_msf_payloads.xml](#introducing_attacks2_malware_msf_payloadsxml)</br>[introducing_attacks/3_vulnerabilities.xml](#introducing_attacks3_vulnerabilitiesxml)</br>[introducing_attacks/4_dns_footprinting.xml](#introducing_attacks4_dns_footprintingxml)</br>[introducing_attacks/5_scanning.xml](#introducing_attacks5_scanningxml)</br>[introducing_attacks/6_exploitation.xml](#introducing_attacks6_exploitationxml)</br>[introducing_attacks/7_post-exploitation.xml](#introducing_attacks7_post-exploitationxml)</br>[introducing_attacks/8_vulnerability_analysis.xml](#introducing_attacks8_vulnerability_analysisxml)</br>[labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/bufoverflow.xml](#labtainersbufoverflowxml)</br>[labtainers/formatstring.xml](#labtainersformatstringxml)</br>[labtainers/gdblesson.xml](#labtainersgdblessonxml)</br>[labtainers/ida.xml](#labtainersidaxml)</br>[labtainers/metasploit.xml](#labtainersmetasploitxml)</br>[labtainers/retlibc.xml](#labtainersretlibcxml)</br>[labtainers/snort.xml](#labtainerssnortxml)</br>[response_and_investigation/4_ids.xml](#response_and_investigation4_idsxml)</br>[response_and_investigation/5_ids_rules.xml](#response_and_investigation5_ids_rulesxml)</br>[response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>[response_and_investigation/8_dead_analysis.xml](#response_and_investigation8_dead_analysisxml)</br>[software_and_malware_analysis/10_anti_sre.xml](#software_and_malware_analysis10_anti_srexml)</br>[software_and_malware_analysis/1_dynamic_and_static_analysis.xml](#software_and_malware_analysis1_dynamic_and_static_analysisxml)</br>[software_and_malware_analysis/2_intro_to_c.xml](#software_and_malware_analysis2_intro_to_cxml)</br>[software_and_malware_analysis/3_c_and_asm.xml](#software_and_malware_analysis3_c_and_asmxml)</br>[software_and_malware_analysis/4_asm.xml](#software_and_malware_analysis4_asmxml)</br>[software_and_malware_analysis/5_ghidra.xml](#software_and_malware_analysis5_ghidraxml)</br>[software_and_malware_analysis/6_ghidra_analysis.xml](#software_and_malware_analysis6_ghidra_analysisxml)</br>[software_and_malware_analysis/6_ghidra_with_live_malware_samples.xml](#software_and_malware_analysis6_ghidra_with_live_malware_samplesxml)</br>[software_and_malware_analysis/7_dynamic.xml](#software_and_malware_analysis7_dynamicxml)</br>[software_and_malware_analysis/8_dynamic_continued.xml](#software_and_malware_analysis8_dynamic_continuedxml)</br>[software_and_malware_analysis/9_malware_behaviour.xml](#software_and_malware_analysis9_malware_behaviourxml)</br>[software_security_exploitation/4_exploit_development.xml](#software_security_exploitation4_exploit_developmentxml)</br>[software_security_exploitation/5_linux_bof_format.xml](#software_security_exploitation5_linux_bof_formatxml)</br>[software_security_exploitation/6_linux_stack_bof.xml](#software_security_exploitation6_linux_stack_bofxml)</br>[software_security_exploitation/7_linux_nx_bypass.xml](#software_security_exploitation7_linux_nx_bypassxml)</br>[software_security_exploitation/8_linux_aslr_bypass.xml](#software_security_exploitation8_linux_aslr_bypassxml)</br>
+[introducing_attacks/2_malware_msf_payloads.xml](#introducing_attacks2_malware_msf_payloadsxml)</br>[introducing_attacks/3_vulnerabilities.xml](#introducing_attacks3_vulnerabilitiesxml)</br>[introducing_attacks/4_dns_footprinting.xml](#introducing_attacks4_dns_footprintingxml)</br>[introducing_attacks/5_scanning.xml](#introducing_attacks5_scanningxml)</br>[introducing_attacks/6_exploitation.xml](#introducing_attacks6_exploitationxml)</br>[introducing_attacks/7_post-exploitation.xml](#introducing_attacks7_post-exploitationxml)</br>[introducing_attacks/8_vulnerability_analysis.xml](#introducing_attacks8_vulnerability_analysisxml)</br>[labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/bufoverflow.xml](#labtainersbufoverflowxml)</br>[labtainers/formatstring.xml](#labtainersformatstringxml)</br>[labtainers/gdblesson.xml](#labtainersgdblessonxml)</br>[labtainers/ida.xml](#labtainersidaxml)</br>[labtainers/metasploit.xml](#labtainersmetasploitxml)</br>[labtainers/retlibc.xml](#labtainersretlibcxml)</br>[labtainers/snort.xml](#labtainerssnortxml)</br>[response_and_investigation/4_ids.xml](#response_and_investigation4_idsxml)</br>[response_and_investigation/5_ids_rules.xml](#response_and_investigation5_ids_rulesxml)</br>[response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>[response_and_investigation/8_dead_analysis.xml](#response_and_investigation8_dead_analysisxml)</br>[software_and_malware_analysis/10_anti_sre.xml](#software_and_malware_analysis10_anti_srexml)</br>[software_and_malware_analysis/1_dynamic_and_static_analysis.xml](#software_and_malware_analysis1_dynamic_and_static_analysisxml)</br>[software_and_malware_analysis/2_intro_to_c.xml](#software_and_malware_analysis2_intro_to_cxml)</br>[software_and_malware_analysis/3_c_and_asm.xml](#software_and_malware_analysis3_c_and_asmxml)</br>[software_and_malware_analysis/4_asm.xml](#software_and_malware_analysis4_asmxml)</br>[software_and_malware_analysis/5_ghidra.xml](#software_and_malware_analysis5_ghidraxml)</br>[software_and_malware_analysis/6_ghidra_analysis.xml](#software_and_malware_analysis6_ghidra_analysisxml)</br>[software_and_malware_analysis/6_ghidra_with_live_malware_samples.xml](#software_and_malware_analysis6_ghidra_with_live_malware_samplesxml)</br>[software_and_malware_analysis/7_dynamic.xml](#software_and_malware_analysis7_dynamicxml)</br>[software_and_malware_analysis/8_dynamic_continued.xml](#software_and_malware_analysis8_dynamic_continuedxml)</br>[software_and_malware_analysis/9_malware_behaviour.xml](#software_and_malware_analysis9_malware_behaviourxml)</br>[software_security_exploitation/4_exploit_development.xml](#software_security_exploitation4_exploit_developmentxml)</br>[software_security_exploitation/5_linux_stack_bof.xml](#software_security_exploitation5_linux_stack_bofxml)</br>[software_security_exploitation/6_linux_nx_bypass.xml](#software_security_exploitation6_linux_nx_bypassxml)</br>[software_security_exploitation/7_linux_aslr_bypass.xml](#software_security_exploitation7_linux_aslr_bypassxml)</br>[software_security_exploitation/8_linux_bof_format.xml](#software_security_exploitation8_linux_bof_formatxml)</br>
 ### MAT Scenarios by Topics
 | Topic | Scenario |
 | --- | --- |
 Malware Taxonomy | [introducing_attacks/2_malware_msf_payloads.xml](#introducing_attacks2_malware_msf_payloadsxml)</br>[software_and_malware_analysis/1_dynamic_and_static_analysis.xml](#software_and_malware_analysis1_dynamic_and_static_analysisxml)</br>[software_and_malware_analysis/9_malware_behaviour.xml](#software_and_malware_analysis9_malware_behaviourxml)</br>
 Malware Analysis | [introducing_attacks/2_malware_msf_payloads.xml](#introducing_attacks2_malware_msf_payloadsxml)</br>[labtainers/gdblesson.xml](#labtainersgdblessonxml)</br>[labtainers/ida.xml](#labtainersidaxml)</br>[software_and_malware_analysis/10_anti_sre.xml](#software_and_malware_analysis10_anti_srexml)</br>[software_and_malware_analysis/1_dynamic_and_static_analysis.xml](#software_and_malware_analysis1_dynamic_and_static_analysisxml)</br>[software_and_malware_analysis/3_c_and_asm.xml](#software_and_malware_analysis3_c_and_asmxml)</br>[software_and_malware_analysis/4_asm.xml](#software_and_malware_analysis4_asmxml)</br>[software_and_malware_analysis/5_ghidra.xml](#software_and_malware_analysis5_ghidraxml)</br>[software_and_malware_analysis/6_ghidra_analysis.xml](#software_and_malware_analysis6_ghidra_analysisxml)</br>[software_and_malware_analysis/6_ghidra_with_live_malware_samples.xml](#software_and_malware_analysis6_ghidra_with_live_malware_samplesxml)</br>[software_and_malware_analysis/7_dynamic.xml](#software_and_malware_analysis7_dynamicxml)</br>[software_and_malware_analysis/8_dynamic_continued.xml](#software_and_malware_analysis8_dynamic_continuedxml)</br>[software_and_malware_analysis/9_malware_behaviour.xml](#software_and_malware_analysis9_malware_behaviourxml)</br>
-Attacks and exploitation | [introducing_attacks/2_malware_msf_payloads.xml](#introducing_attacks2_malware_msf_payloadsxml)</br>[introducing_attacks/3_vulnerabilities.xml](#introducing_attacks3_vulnerabilitiesxml)</br>[introducing_attacks/6_exploitation.xml](#introducing_attacks6_exploitationxml)</br>[introducing_attacks/7_post-exploitation.xml](#introducing_attacks7_post-exploitationxml)</br>[introducing_attacks/8_vulnerability_analysis.xml](#introducing_attacks8_vulnerability_analysisxml)</br>[labtainers/bufoverflow.xml](#labtainersbufoverflowxml)</br>[labtainers/formatstring.xml](#labtainersformatstringxml)</br>[labtainers/metasploit.xml](#labtainersmetasploitxml)</br>[labtainers/retlibc.xml](#labtainersretlibcxml)</br>[software_security_exploitation/4_exploit_development.xml](#software_security_exploitation4_exploit_developmentxml)</br>[software_security_exploitation/5_linux_bof_format.xml](#software_security_exploitation5_linux_bof_formatxml)</br>[software_security_exploitation/6_linux_stack_bof.xml](#software_security_exploitation6_linux_stack_bofxml)</br>[software_security_exploitation/7_linux_nx_bypass.xml](#software_security_exploitation7_linux_nx_bypassxml)</br>[software_security_exploitation/8_linux_aslr_bypass.xml](#software_security_exploitation8_linux_aslr_bypassxml)</br>
+Attacks and exploitation | [introducing_attacks/2_malware_msf_payloads.xml](#introducing_attacks2_malware_msf_payloadsxml)</br>[introducing_attacks/3_vulnerabilities.xml](#introducing_attacks3_vulnerabilitiesxml)</br>[introducing_attacks/6_exploitation.xml](#introducing_attacks6_exploitationxml)</br>[introducing_attacks/7_post-exploitation.xml](#introducing_attacks7_post-exploitationxml)</br>[introducing_attacks/8_vulnerability_analysis.xml](#introducing_attacks8_vulnerability_analysisxml)</br>[labtainers/bufoverflow.xml](#labtainersbufoverflowxml)</br>[labtainers/formatstring.xml](#labtainersformatstringxml)</br>[labtainers/metasploit.xml](#labtainersmetasploitxml)</br>[labtainers/retlibc.xml](#labtainersretlibcxml)</br>[software_security_exploitation/4_exploit_development.xml](#software_security_exploitation4_exploit_developmentxml)</br>[software_security_exploitation/5_linux_stack_bof.xml](#software_security_exploitation5_linux_stack_bofxml)</br>[software_security_exploitation/6_linux_nx_bypass.xml](#software_security_exploitation6_linux_nx_bypassxml)</br>[software_security_exploitation/7_linux_aslr_bypass.xml](#software_security_exploitation7_linux_aslr_bypassxml)</br>[software_security_exploitation/8_linux_bof_format.xml](#software_security_exploitation8_linux_bof_formatxml)</br>
 Malicious Activities by Malware | [introducing_attacks/4_dns_footprinting.xml](#introducing_attacks4_dns_footprintingxml)</br>[introducing_attacks/5_scanning.xml](#introducing_attacks5_scanningxml)</br>[introducing_attacks/6_exploitation.xml](#introducing_attacks6_exploitationxml)</br>[introducing_attacks/7_post-exploitation.xml](#introducing_attacks7_post-exploitationxml)</br>[labtainers/metasploit.xml](#labtainersmetasploitxml)</br>
 MALCODE/MALWARE | [labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>
 Malware Detection | [labtainers/snort.xml](#labtainerssnortxml)</br>[response_and_investigation/4_ids.xml](#response_and_investigation4_idsxml)</br>[response_and_investigation/5_ids_rules.xml](#response_and_investigation5_ids_rulesxml)</br>[response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>[response_and_investigation/8_dead_analysis.xml](#response_and_investigation8_dead_analysisxml)</br>
@@ -132,6 +81,44 @@ Technical Underpinning | [software_and_malware_analysis/2_intro_to_c.xml](#softw
 | Topic | Scenario |
 | --- | --- |
 Models | [introducing_attacks/4_dns_footprinting.xml](#introducing_attacks4_dns_footprintingxml)</br>[introducing_attacks/5_scanning.xml](#introducing_attacks5_scanningxml)</br>[introducing_attacks/6_exploitation.xml](#introducing_attacks6_exploitationxml)</br>[introducing_attacks/7_post-exploitation.xml](#introducing_attacks7_post-exploitationxml)</br>[labtainers/grfics.xml](#labtainersgrficsxml)</br>
+
+## Software Security (SS)
+
+### SS Scenarios
+
+[introducing_attacks/6_exploitation.xml](#introducing_attacks6_exploitationxml)</br>[labtainers/bufoverflow.xml](#labtainersbufoverflowxml)</br>[labtainers/formatstring.xml](#labtainersformatstringxml)</br>[labtainers/pass-crack.xml](#labtainerspass-crackxml)</br>[labtainers/retlibc.xml](#labtainersretlibcxml)</br>[labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[labtainers/xforge.xml](#labtainersxforgexml)</br>[labtainers/xsite.xml](#labtainersxsitexml)</br>[software_security_exploitation/1_c_asm_iof.xml](#software_security_exploitation1_c_asm_iofxml)</br>[software_security_exploitation/2_race_conditions_format_str.xml](#software_security_exploitation2_race_conditions_format_strxml)</br>[software_security_exploitation/3_bug_hunting_and_fuzzing.xml](#software_security_exploitation3_bug_hunting_and_fuzzingxml)</br>[software_security_exploitation/4_exploit_development.xml](#software_security_exploitation4_exploit_developmentxml)</br>[software_security_exploitation/5_linux_stack_bof.xml](#software_security_exploitation5_linux_stack_bofxml)</br>[software_security_exploitation/6_linux_nx_bypass.xml](#software_security_exploitation6_linux_nx_bypassxml)</br>[software_security_exploitation/7_linux_aslr_bypass.xml](#software_security_exploitation7_linux_aslr_bypassxml)</br>[software_security_exploitation/8_linux_bof_format.xml](#software_security_exploitation8_linux_bof_formatxml)</br>[systems_security/7_apparmor.xml](#systems_security7_apparmorxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
+### SS Scenarios by Topics
+| Topic | Scenario |
+| --- | --- |
+Categories of Vulnerabilities | [introducing_attacks/6_exploitation.xml](#introducing_attacks6_exploitationxml)</br>[labtainers/bufoverflow.xml](#labtainersbufoverflowxml)</br>[labtainers/formatstring.xml](#labtainersformatstringxml)</br>[labtainers/retlibc.xml](#labtainersretlibcxml)</br>[labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[software_security_exploitation/1_c_asm_iof.xml](#software_security_exploitation1_c_asm_iofxml)</br>[software_security_exploitation/2_race_conditions_format_str.xml](#software_security_exploitation2_race_conditions_format_strxml)</br>[software_security_exploitation/4_exploit_development.xml](#software_security_exploitation4_exploit_developmentxml)</br>[software_security_exploitation/5_linux_stack_bof.xml](#software_security_exploitation5_linux_stack_bofxml)</br>[software_security_exploitation/6_linux_nx_bypass.xml](#software_security_exploitation6_linux_nx_bypassxml)</br>[software_security_exploitation/7_linux_aslr_bypass.xml](#software_security_exploitation7_linux_aslr_bypassxml)</br>[software_security_exploitation/8_linux_bof_format.xml](#software_security_exploitation8_linux_bof_formatxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
+Mitigating Exploitation | [labtainers/bufoverflow.xml](#labtainersbufoverflowxml)</br>[labtainers/retlibc.xml](#labtainersretlibcxml)</br>[software_security_exploitation/6_linux_nx_bypass.xml](#software_security_exploitation6_linux_nx_bypassxml)</br>[software_security_exploitation/7_linux_aslr_bypass.xml](#software_security_exploitation7_linux_aslr_bypassxml)</br>[systems_security/7_apparmor.xml](#systems_security7_apparmorxml)</br>
+Authentication | [labtainers/pass-crack.xml](#labtainerspass-crackxml)</br>
+Prevention of Vulnerabilities | [labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[labtainers/xforge.xml](#labtainersxforgexml)</br>[labtainers/xsite.xml](#labtainersxsitexml)</br>[software_security_exploitation/1_c_asm_iof.xml](#software_security_exploitation1_c_asm_iofxml)</br>[software_security_exploitation/2_race_conditions_format_str.xml](#software_security_exploitation2_race_conditions_format_strxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
+Detection of Vulnerabilities | [software_security_exploitation/3_bug_hunting_and_fuzzing.xml](#software_security_exploitation3_bug_hunting_and_fuzzingxml)</br>
+
+## Authentication, Authorisation &amp; Accountability (AAA)
+
+### AAA Scenarios
+
+[labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/file-integrity.xml](#labtainersfile-integrityxml)</br>[labtainers/ldap.xml](#labtainersldapxml)</br>[labtainers/macs-hash.xml](#labtainersmacs-hashxml)</br>[labtainers/nix-commands.xml](#labtainersnix-commandsxml)</br>[labtainers/onewayhash.xml](#labtainersonewayhashxml)</br>[labtainers/radius.xml](#labtainersradiusxml)</br>[labtainers/setuid-env.xml](#labtainerssetuid-envxml)</br>[response_and_investigation/1_integrity_protection.xml](#response_and_investigation1_integrity_protectionxml)</br>[response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>[response_and_investigation/8_dead_analysis.xml](#response_and_investigation8_dead_analysisxml)</br>[systems_security/1_authentication.xml](#systems_security1_authenticationxml)</br>[systems_security/2_pam.xml](#systems_security2_pamxml)</br>[systems_security/3_access_controls.xml](#systems_security3_access_controlsxml)</br>[systems_security/4_suid.xml](#systems_security4_suidxml)</br>[systems_security/5_facls.xml](#systems_security5_faclsxml)</br>[systems_security/6_containers.xml](#systems_security6_containersxml)</br>[systems_security/7_apparmor.xml](#systems_security7_apparmorxml)</br>
+### AAA Scenarios by Topics
+| Topic | Scenario |
+| --- | --- |
+Authorisation | [labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/ldap.xml](#labtainersldapxml)</br>[labtainers/nix-commands.xml](#labtainersnix-commandsxml)</br>[labtainers/setuid-env.xml](#labtainerssetuid-envxml)</br>[response_and_investigation/1_integrity_protection.xml](#response_and_investigation1_integrity_protectionxml)</br>[systems_security/3_access_controls.xml](#systems_security3_access_controlsxml)</br>[systems_security/4_suid.xml](#systems_security4_suidxml)</br>[systems_security/5_facls.xml](#systems_security5_faclsxml)</br>[systems_security/6_containers.xml](#systems_security6_containersxml)</br>[systems_security/7_apparmor.xml](#systems_security7_apparmorxml)</br>
+Authentication | [labtainers/file-integrity.xml](#labtainersfile-integrityxml)</br>[labtainers/ldap.xml](#labtainersldapxml)</br>[labtainers/macs-hash.xml](#labtainersmacs-hashxml)</br>[labtainers/onewayhash.xml](#labtainersonewayhashxml)</br>[labtainers/radius.xml](#labtainersradiusxml)</br>[systems_security/1_authentication.xml](#systems_security1_authenticationxml)</br>[systems_security/2_pam.xml](#systems_security2_pamxml)</br>
+Accountability | [response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>[response_and_investigation/8_dead_analysis.xml](#response_and_investigation8_dead_analysisxml)</br>
+
+## Operating Systems &amp; Virtualisation (OSV)
+
+### OSV Scenarios
+
+[labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/capabilities.xml](#labtainerscapabilitiesxml)</br>[labtainers/setuid-env.xml](#labtainerssetuid-envxml)</br>[response_and_investigation/1_integrity_protection.xml](#response_and_investigation1_integrity_protectionxml)</br>[response_and_investigation/2_integrity_detection.xml](#response_and_investigation2_integrity_detectionxml)</br>[response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>[systems_security/1_authentication.xml](#systems_security1_authenticationxml)</br>[systems_security/2_pam.xml](#systems_security2_pamxml)</br>[systems_security/3_access_controls.xml](#systems_security3_access_controlsxml)</br>[systems_security/4_suid.xml](#systems_security4_suidxml)</br>[systems_security/5_facls.xml](#systems_security5_faclsxml)</br>[systems_security/6_containers.xml](#systems_security6_containersxml)</br>[systems_security/7_apparmor.xml](#systems_security7_apparmorxml)</br>
+### OSV Scenarios by Topics
+| Topic | Scenario |
+| --- | --- |
+Primitives for Isolation and Mediation | [labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/capabilities.xml](#labtainerscapabilitiesxml)</br>[labtainers/setuid-env.xml](#labtainerssetuid-envxml)</br>[response_and_investigation/1_integrity_protection.xml](#response_and_investigation1_integrity_protectionxml)</br>[systems_security/1_authentication.xml](#systems_security1_authenticationxml)</br>[systems_security/2_pam.xml](#systems_security2_pamxml)</br>[systems_security/3_access_controls.xml](#systems_security3_access_controlsxml)</br>[systems_security/4_suid.xml](#systems_security4_suidxml)</br>[systems_security/5_facls.xml](#systems_security5_faclsxml)</br>[systems_security/6_containers.xml](#systems_security6_containersxml)</br>[systems_security/7_apparmor.xml](#systems_security7_apparmorxml)</br>
+Role of Operating Systems | [labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[systems_security/3_access_controls.xml](#systems_security3_access_controlsxml)</br>[systems_security/6_containers.xml](#systems_security6_containersxml)</br>
+OS Hardening | [response_and_investigation/2_integrity_detection.xml](#response_and_investigation2_integrity_detectionxml)</br>[response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>
 
 ## Forensics (F)
 
@@ -157,6 +144,19 @@ WEB | [labtainers/webtrack.xml](#labtainerswebtrackxml)</br>
 Cyber-Physical Systems | [labtainers/grassmarlin.xml](#labtainersgrassmarlinxml)</br>[labtainers/grfics.xml](#labtainersgrficsxml)</br>[labtainers/iptables-ics.xml](#labtainersiptables-icsxml)</br>[labtainers/plc-app.xml](#labtainersplc-appxml)</br>[labtainers/plc-forensics-adv.xml](#labtainersplc-forensics-advxml)</br>[labtainers/plc-forensics.xml](#labtainersplc-forensicsxml)</br>[labtainers/plc.xml](#labtainersplcxml)</br>[labtainers/softplc.xml](#labtainerssoftplcxml)</br>[labtainers/softplc2.xml](#labtainerssoftplc2xml)</br>[labtainers/ssl.xml](#labtainerssslxml)</br>
 Cyber-Physical Systems Domains | [labtainers/grassmarlin.xml](#labtainersgrassmarlinxml)</br>[labtainers/grfics.xml](#labtainersgrficsxml)</br>[labtainers/iptables-ics.xml](#labtainersiptables-icsxml)</br>[labtainers/plc-app.xml](#labtainersplc-appxml)</br>[labtainers/plc-forensics-adv.xml](#labtainersplc-forensics-advxml)</br>[labtainers/plc-forensics.xml](#labtainersplc-forensicsxml)</br>[labtainers/plc.xml](#labtainersplcxml)</br>[labtainers/softplc.xml](#labtainerssoftplcxml)</br>[labtainers/softplc2.xml](#labtainerssoftplc2xml)</br>[labtainers/ssl.xml](#labtainerssslxml)</br>
 
+## Web &amp; Mobile Security (WAM)
+
+### WAM Scenarios
+
+[labtainers/iptables-ics.xml](#labtainersiptables-icsxml)</br>[labtainers/iptables.xml](#labtainersiptablesxml)</br>[labtainers/iptables2.xml](#labtainersiptables2xml)</br>[labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[labtainers/webtrack.xml](#labtainerswebtrackxml)</br>[labtainers/xforge.xml](#labtainersxforgexml)</br>[labtainers/xsite.xml](#labtainersxsitexml)</br>[systems_security/6_containers.xml](#systems_security6_containersxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
+### WAM Scenarios by Topics
+| Topic | Scenario |
+| --- | --- |
+FIREWALLS | [labtainers/iptables-ics.xml](#labtainersiptables-icsxml)</br>[labtainers/iptables.xml](#labtainersiptablesxml)</br>[labtainers/iptables2.xml](#labtainersiptables2xml)</br>
+Server-Side Vulnerabilities and Mitigations | [labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[labtainers/xforge.xml](#labtainersxforgexml)</br>[labtainers/xsite.xml](#labtainersxsitexml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
+Fundamental Concepts and Approaches | [labtainers/webtrack.xml](#labtainerswebtrackxml)</br>[systems_security/6_containers.xml](#systems_security6_containersxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
+Client-Side Vulnerabilities and Mitigations | [web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
+
 ## Cryptography (C)
 
 ### C Scenarios
@@ -172,213 +172,6 @@ Symmetric Cryptography | [labtainers/symkeylab.xml](#labtainerssymkeylabxml)</br
 # Scenario CyBOK Keywords
 
 
-  ## authentication_and_access_controls/ads_1_authentication.xml
-
-  ### Details
-
-| Key | Data |
-| --- | --- |
-|Name | Authentication lab |
-|Description | </br> Lecture</br>[Slides here](http://z.cliffe.schreuders.org/presentations/slides/1718/ADS_slides_out_week_6/WNS_ADS_Lectures_5_Authentication.html)</br></br> Reading</br>[Chapter 11 "Authentication": Bishop, M. (2004), Introduction to Computer Security, Addison-Wesley. (ISBN-10:  0321247442)](https://my.leedsbeckett.ac.uk/bbcswebdav/pid-2221598-dt-content-rid-4451698_1/institution/Online%20Learning/AET/CT/MSc%20Computer%20Security/Principles%20of%20Digital%20Security/Readings/Week%205/DCS-85139%20%281%29.pdf)</br></br> Lab</br>A Hackerbot lab. Work through the lab instructions, then when prompted interact with Hackerbot.</br>	|
-|Type | ctf-lab; hackerbot-lab; lab-sheet |
-|Author | Z. Cliffe Schreuders |
-|Linked videos| https://youtu.be/2I_JSdTu-oI; https://youtu.be/pGcJEML1mRo; https://youtu.be/icC2Zrno_uM; https://youtu.be/Wrg6XZu6Luw|
-|VM names|  desktop; server; hackerbot_server; kali_cracker |
-
-
-
-  ### CyBOK KAs, Topics, and Keywords
-| KA | Topic | Keywords
-| --- | --- | --- |
-| Authentication, Authorisation &amp; Accountability (AAA) | Authentication | identity management; user authentication; facets of authentication; Cryptography and authentication (hashes and attacks against authentication schemes / passwords) |
-| Operating Systems &amp; Virtualisation (OSV) | Primitives for Isolation and Mediation | authentication and identification; Linux authentication; Types of user accounts |
-
-
-Command to build VMs and start scenario:
-
-```ruby secgen.rb -s scenarios/labs/authentication_and_access_controls/ads_1_authentication.xml run```
-
-[View source](scenarios/labs/authentication_and_access_controls/ads_1_authentication.xml)
-
-
-  ## authentication_and_access_controls/ads_2_pam.xml
-
-  ### Details
-
-| Key | Data |
-| --- | --- |
-|Name | Pluggable Authentication Modules lab |
-|Description | </br> Lecture</br>[Slides continued here](http://z.cliffe.schreuders.org/presentations/slides/1718/ADS_slides_out_week_6/WNS_ADS_Lectures_5_Authentication.html)</br></br> Reading</br>[Chapter 4 "Users, Passwords, and Authentication": Garfinkel, S. Spafford, G. and Schwartz, A. (2003), Practical Unix and Internet Security, O'Reilly. (ISBN-10: 0596003234)](https://www-dawsonera-com.ezproxy.leedsbeckett.ac.uk/abstract/9781449310325)</br></br> Lab</br>A short lab this week, exploring PAM. Work through the labsheet, then when prompted interact with Hackerbot.</br>	|
-|Type | ctf-lab; hackerbot-lab; lab-sheet |
-|Author | Z. Cliffe Schreuders |
-|Linked videos| https://youtu.be/z4L6Yv5ry1A; https://youtu.be/-zcnfmoLjYI; https://youtu.be/xHs3LB4Yyrk; https://youtu.be/c2dPdQmaVyo; https://youtu.be/dCBabesIXo8; https://youtu.be/rhdcxhSDqp4; https://youtu.be/PCXK2cK8tpE|
-|VM names|  desktop; server; hackerbot_server |
-
-
-
-  ### CyBOK KAs, Topics, and Keywords
-| KA | Topic | Keywords
-| --- | --- | --- |
-| Authentication, Authorisation &amp; Accountability (AAA) | Authentication | identity management; user authentication; facets of authentication |
-| Operating Systems &amp; Virtualisation (OSV) | Primitives for Isolation and Mediation | authentication and identification; Linux authentication; Authentication frameworks (PAM) |
-
-
-Command to build VMs and start scenario:
-
-```ruby secgen.rb -s scenarios/labs/authentication_and_access_controls/ads_2_pam.xml run```
-
-[View source](scenarios/labs/authentication_and_access_controls/ads_2_pam.xml)
-
-
-  ## authentication_and_access_controls/ads_3_access_controls.xml
-
-  ### Details
-
-| Key | Data |
-| --- | --- |
-|Name | Access Controls lab |
-|Description | </br> Lecture</br>[Slides here](http://z.cliffe.schreuders.org/presentations/slides/1718/ADS_slides_out_week_7/ADS_PDS_Lectures_7_Access_Control.html)</br></br> Reading</br>[Chapter 1 "Foundations of Security and Access Control in Computing": Benantar, M. (2006), Access Control Systems: Security, Identity Management and Trust Models, Springer. (ISBN-10: 0387004459)](https://www-dawsonera-com.ezproxy.leedsbeckett.ac.uk/readonline/9780387277165)</br></br> Lab</br>A Hackerbot lab. Work through the labsheet, then when prompted interact with Hackerbot.</br>	|
-|Type | ctf-lab; hackerbot-lab; lab-sheet |
-|Author | Z. Cliffe Schreuders |
-|Linked videos| https://youtu.be/yWJyZEFbchQ; https://youtu.be/i0kO_3ExJv4|
-|VM names|  shared_desktop; server; hackerbot_server |
-
-
-
-  ### CyBOK KAs, Topics, and Keywords
-| KA | Topic | Keywords
-| --- | --- | --- |
-| Authentication, Authorisation &amp; Accountability (AAA) | Authorisation | access control; enforcing access control; ACCESS CONTROL - DAC (DISCRETIONARY ACCESS CONTROL); Vulnerabilities and attacks on access control misconfigurations |
-| Operating Systems &amp; Virtualisation (OSV) | Primitives for Isolation and Mediation | Access controls and operating systems; Linux security model; Unix File Permissions; Filesystems; inodes; and commands; umask |
-| Operating Systems &amp; Virtualisation (OSV) | Role of Operating Systems | mediation |
-
-
-Command to build VMs and start scenario:
-
-```ruby secgen.rb -s scenarios/labs/authentication_and_access_controls/ads_3_access_controls.xml run```
-
-[View source](scenarios/labs/authentication_and_access_controls/ads_3_access_controls.xml)
-
-
-  ## authentication_and_access_controls/ads_4_suid.xml
-
-  ### Details
-
-| Key | Data |
-| --- | --- |
-|Name | Set User ID lab |
-|Description | </br> Lecture</br>[Slides continued here](http://z.cliffe.schreuders.org/presentations/slides/1718/ADS_slides_out_week_7/ADS_PDS_Lectures_7_Access_Control.html)</br></br> Reading</br>[Chapter 6 "Filesystems and Security": Garfinkel, S. Spafford, G. and Schwartz, A. (2003), Practical Unix and Internet Security, O'Reilly. (ISBN-10: 0596003234)](https://www-dawsonera-com.ezproxy.leedsbeckett.ac.uk/abstract/9781449310325)</br></br> Lab</br>A Hackerbot lab. Work through the labsheet, then when prompted interact with Hackerbot.</br>	|
-|Type | ctf-lab; hackerbot-lab; lab-sheet |
-|Author | Z. Cliffe Schreuders |
-|Linked videos| https://youtu.be/viSkkNB777k; https://youtu.be/PGHsb3bg_h4|
-|VM names|  shared_desktop; server; hackerbot_server |
-
-
-
-  ### CyBOK KAs, Topics, and Keywords
-| KA | Topic | Keywords
-| --- | --- | --- |
-| Authentication, Authorisation &amp; Accountability (AAA) | Authorisation | access control; Elevated privileges; Real and effective identity; Vulnerabilities and attacks on access control misconfigurations |
-| Operating Systems &amp; Virtualisation (OSV) | Primitives for Isolation and Mediation | Access controls and operating systems; Linux security model; Unix File Permissions; setuid/setgid; Hardlink protections |
-
-
-Command to build VMs and start scenario:
-
-```ruby secgen.rb -s scenarios/labs/authentication_and_access_controls/ads_4_suid.xml run```
-
-[View source](scenarios/labs/authentication_and_access_controls/ads_4_suid.xml)
-
-
-  ## authentication_and_access_controls/ads_5_facls.xml
-
-  ### Details
-
-| Key | Data |
-| --- | --- |
-|Name | Access Control Lists (ACLs) lab |
-|Description | </br> Lecture</br>[Slides continued here](http://z.cliffe.schreuders.org/presentations/slides/1718/ADS_slides_out_week_7/ADS_PDS_Lectures_7_Access_Control.html)</br></br> Reading</br>[Grunbacher, Andreas. "POSIX Access Control Lists on Linux." *USENIX Annual Technical Conference*, FREENIX Track. 2003.](https://www.usenix.org/legacy/events/usenix03/tech/freenix03/full_papers/gruenbacher/gruenbacher.pdf)</br></br> Lab</br>A Hackerbot lab. Work through the labsheet, then when prompted interact with Hackerbot.</br></br>	|
-|Type | ctf-lab; hackerbot-lab; lab-sheet |
-|Author | Z. Cliffe Schreuders |
-|Linked videos| https://youtu.be/Bn3NJhgmdLk; https://youtu.be/OT7ifs8PkHI|
-|VM names|  shared_desktop; server; hackerbot_server |
-
-
-
-  ### CyBOK KAs, Topics, and Keywords
-| KA | Topic | Keywords
-| --- | --- | --- |
-| Authentication, Authorisation &amp; Accountability (AAA) | Authorisation | access control; ACCESS CONTROL LIST (ACL); Vulnerabilities and attacks on access control misconfigurations |
-| Operating Systems &amp; Virtualisation (OSV) | Primitives for Isolation and Mediation | Access controls and operating systems; Linux security model; Linux Extended Access Control Lists (facl) |
-
-
-Command to build VMs and start scenario:
-
-```ruby secgen.rb -s scenarios/labs/authentication_and_access_controls/ads_5_facls.xml run```
-
-[View source](scenarios/labs/authentication_and_access_controls/ads_5_facls.xml)
-
-
-  ## authentication_and_access_controls/ads_6_containers.xml
-
-  ### Details
-
-| Key | Data |
-| --- | --- |
-|Name | Containers lab |
-|Description | </br> Lecture</br>[Slides here](http://z.cliffe.schreuders.org/presentations/slides/slides_out_sandboxing/ADS_PDS_Lectures_8_Sandboxes_and_Virtualisation.html)</br></br> Reading</br>[Z. C. Schreuders, T. McGill, and C. Payne, "The State of the Art of Application Restrictions and Sandboxes: A Survey of Application-oriented Access Controls and their Shortfalls," Computers and Security, Volume 32, Elsevier B.V., 2013. DOI: 10.1016/j.cose.2012.09.007](http://z.cliffe.schreuders.org/publications/Computers&Security%20-%20The%20State%20of%20the%20Art%20of%20Application%20Restrictions%20and%20Sandboxes%20-%20Author%20Version.pdf)</br></br> Lab</br>A Hackerbot lab. Work through the labsheet, then when prompted interact with Hackerbot.</br>  |
-|Type | ctf-lab; hackerbot-lab; lab-sheet |
-|Author | Z. Cliffe Schreuders |
-|Linked videos| https://youtu.be/f4yBcKkb12g|
-|VM names|  desktop; hackerbot_server; chroot_esc_server; docker_esc_server |
-
-
-
-  ### CyBOK KAs, Topics, and Keywords
-| KA | Topic | Keywords
-| --- | --- | --- |
-| Authentication, Authorisation &amp; Accountability (AAA) | Authorisation | SANDBOX; Application-based access controls: user-based access controls insufficiently limit privileges |
-| Operating Systems &amp; Virtualisation (OSV) | Primitives for Isolation and Mediation | capabilities; Container-based sandboxes: chroot; Docker; Rule-based controls: Course grained: Linux capabilities; Vulnerabilities and attacks on sandboxing misconfigurations |
-| Operating Systems &amp; Virtualisation (OSV) | Role of Operating Systems | isolation; CONTAINERS |
-| Web &amp; Mobile Security (WAM) | Fundamental Concepts and Approaches | sandboxing |
-
-
-Command to build VMs and start scenario:
-
-```ruby secgen.rb -s scenarios/labs/authentication_and_access_controls/ads_6_containers.xml run```
-
-[View source](scenarios/labs/authentication_and_access_controls/ads_6_containers.xml)
-
-
-  ## authentication_and_access_controls/ads_7_apparmor.xml
-
-  ### Details
-
-| Key | Data |
-| --- | --- |
-|Name | AppArmor lab |
-|Description | </br> Lecture</br>[Slides continued here](http://z.cliffe.schreuders.org/presentations/slides/slides_out_sandboxing/ADS_PDS_Lectures_8_Sandboxes_and_Virtualisation.html)</br></br> Lectures for the next two weeks</br>[Secure software development](https://leedsbeckettreplay.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=31ee4531-1834-4028-8829-aa1d00a73a7e)</br></br>[Secure design principles](https://leedsbeckettreplay.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6f409b1c-2daa-4798-8bc7-aa2400952d29)</br></br>[Slides](http://z.cliffe.schreuders.org/presentations/slides/slides_secure_design/ADS_PDS_Lectures_3_Secure_Software_Development_and_Bug_Hunting.html)</br></br> Lab</br>A Hackerbot lab. Work through the labsheet, then when prompted interact with Hackerbot.</br>	|
-|Type | ctf-lab; hackerbot-lab; lab-sheet |
-|Author | Z. Cliffe Schreuders |
-|Linked videos| https://youtu.be/Xgs5akM6ayc|
-|VM names|  desktop; hackerbot_server |
-
-
-
-  ### CyBOK KAs, Topics, and Keywords
-| KA | Topic | Keywords
-| --- | --- | --- |
-| Authentication, Authorisation &amp; Accountability (AAA) | Authorisation | ACCESS CONTROL - MAC (MANDATORY ACCESS CONTROL); ACCESS CONTROL - NDAC (NON-DISCRETIONARY ACCESS CONTROL); Application-based access controls: user-based access controls insufficiently limit privileges; Rule-based sandboxes |
-| Operating Systems &amp; Virtualisation (OSV) | Primitives for Isolation and Mediation | Rule-based controls: Fine grained: AppArmor; Vulnerabilities and attacks on sandboxing misconfigurations |
-| Software Security (SS) | Mitigating Exploitation | limiting privileges |
-
-
-Command to build VMs and start scenario:
-
-```ruby secgen.rb -s scenarios/labs/authentication_and_access_controls/ads_7_apparmor.xml run```
-
-[View source](scenarios/labs/authentication_and_access_controls/ads_7_apparmor.xml)
-
-
   ## introducing_attacks/1_intro_linux.xml
 
   ### Details
@@ -386,7 +179,7 @@ Command to build VMs and start scenario:
 | Key | Data |
 | --- | --- |
 |Name | Introduction to Linux and Security lab |
-|Description | </br> Introduction</br>This topic covers lots of ground regarding fundamentals of Linux and free open source software (FOSS).</br></br> Lecture</br>[Slides here](http://z.cliffe.schreuders.org/presentations/slides/DSL_DS_OSPT_Lectures_1_Intro_to_Unix_FOSS_and_Linux.html)</br></br> Reading</br>[Chapters 1 "Introduction" and 2 "Unix History and Lineage": Garfinkel, S. and Spafford, G. and Schwartz, A. (2003), Practical Unix and Internet Security, O'Reilly. (ISBN-10: 0596003234)](http://www.dawsonera.com.ezproxy.leedsbeckett.ac.uk/depp/reader/protected/external/AbstractView/S9781449310325)</br></br>Suggested:</br></br>Chapter 1 "An Overview of Computer Security": Bishop, M. (2005), Introduction to Computer Security, Addison-Wesley. (ISBN-10: 0321247442)</br></br> Lab</br>[Lab sheet here](https://docs.google.com/document/d/1vA_Ev_GPqPg3cGZblgVclWmTU-sUEEBqwYpFH09mQjg/edit?usp=sharing).</br>	|
+|Description | </br> Introduction</br>This topic covers lots of ground regarding fundamentals of Linux and free open source software (FOSS).</br></br> Lecture</br>[Slides here](http://z.cliffe.schreuders.org/presentations/slides/DSL_DS_OSPT_Lectures_1_Intro_to_Unix_FOSS_and_Linux.html)</br></br> Reading</br>[Chapters 1 "Introduction" and 2 "Unix History and Lineage": Garfinkel, S. and Spafford, G. and Schwartz, A. (2003), Practical Unix and Internet Security, O'Reilly. (ISBN-10: 0596003234)](http://www.dawsonera.com.ezproxy.leedsbeckett.ac.uk/depp/reader/protected/external/AbstractView/S9781449310325)</br></br>Suggested:</br></br>Chapter 1 "An Overview of Computer Security": Bishop, M. (2005), Introduction to Computer Security, Addison-Wesley. (ISBN-10: 0321247442)</br></br> Lab</br>[Lab sheet here](https://docs.google.com/document/d/1vA_Ev_GPqPg3cGZblgVclWmTU-sUEEBqwYpFH09mQjg/edit?usp=sharing).</br>  |
 |Type | ctf-lab; lab-sheet |
 |Author | Z. Cliffe Schreuders |
 |Linked videos| |
@@ -415,7 +208,7 @@ Command to build VMs and start scenario:
 | Key | Data |
 | --- | --- |
 |Name | Malware and an Introduction to Metasploit and Payloads |
-|Description | </br> Introduction</br>This week we will cover the ever present danger of malicious code, the problems with the traditional approaches such as anti-malware, and you will try your hand at using the Metasploit Framework to create a Trojan horse program.</br></br> Lecture</br>[Slides here](http://z.cliffe.schreuders.org/presentations/slides/DSL_DS_OSPT_Lectures_2_Malware.html)</br></br> Reading</br>[Chapter 23 "Protecting Against Programmed Threats": Garfinkel, S. and Spafford, G. and Schwartz, A. (2003), Practical Unix and Internet Security, O'Reilly. (ISBN-10: 0596003234) Available online via the library](http://www.dawsonera.com.ezproxy.leedsbeckett.ac.uk/depp/reader/protected/external/AbstractView/S9781449310325)</br></br>Suggested:</br></br>Chapter 3 "Program Security": Pfleeger, C.P. and Pfleeger, S.L. (2007), Security in Computing, Prentice Hall. (ISBN-10: 0132390779)</br></br>Chapter 19 "Malicious Logic": Bishop, M. (2005), Introduction to Computer Security, Addison-Wesley. (ISBN-10: 0321247442)</br> Lab</br>[Lab sheet here](https://docs.google.com/document/d/1QsOLdqwBP6njIoKbeQRdattbLBLPFCB-eKHW0OxdE8U/edit?usp=sharing).</br>	|
+|Description | </br> Introduction</br>This week we will cover the ever present danger of malicious code, the problems with the traditional approaches such as anti-malware, and you will try your hand at using the Metasploit Framework to create a Trojan horse program.</br></br> Lecture</br>[Slides here](http://z.cliffe.schreuders.org/presentations/slides/DSL_DS_OSPT_Lectures_2_Malware.html)</br></br> Reading</br>[Chapter 23 "Protecting Against Programmed Threats": Garfinkel, S. and Spafford, G. and Schwartz, A. (2003), Practical Unix and Internet Security, O'Reilly. (ISBN-10: 0596003234) Available online via the library](http://www.dawsonera.com.ezproxy.leedsbeckett.ac.uk/depp/reader/protected/external/AbstractView/S9781449310325)</br></br>Suggested:</br></br>Chapter 3 "Program Security": Pfleeger, C.P. and Pfleeger, S.L. (2007), Security in Computing, Prentice Hall. (ISBN-10: 0132390779)</br></br>Chapter 19 "Malicious Logic": Bishop, M. (2005), Introduction to Computer Security, Addison-Wesley. (ISBN-10: 0321247442)</br> Lab</br>[Lab sheet here](https://docs.google.com/document/d/1QsOLdqwBP6njIoKbeQRdattbLBLPFCB-eKHW0OxdE8U/edit?usp=sharing).</br>  |
 |Type | lab-sheet |
 |Author | Z. Cliffe Schreuders |
 |Linked videos| |
@@ -446,7 +239,7 @@ Command to build VMs and start scenario:
 | Key | Data |
 | --- | --- |
 |Name | Vulnerabilities, Exploits, and Remote Access Payloads |
-|Description | </br> Introduction</br>This week we will cover one of the major threats in computer security: software vulnerabilities. You will learn about the danger these pose, and start to learn about the power of the Metasploit framework, a popular hacking and penetration testing tool. You will learn and apply a number of important concepts such as payloads, shell code, bind and reverse shells, and both remote and local (client-side) exploits.</br></br> Lecture</br>[Slides here](http://z.cliffe.schreuders.org/presentations/slides/DSL_DS_OSPT_Lectures_3_Vulnerabilities.html)</br></br> Reading</br>[Chapter 8: Using Metasploit. Harper, A. and Harris, S. and Ness, J. and Eagle, C. and Lenkey, G, and Williams, T. (2011), Gray hat hacking : the ethical hacker's handbook, McGraw-Hill. (ISBN: 978-0-07-174256-6) Available online via the library](https://www-dawsonera-com.ezproxy.leedsbeckett.ac.uk/readonline/9780071742566)</br></br> Lab</br>[Lab sheet here](https://docs.google.com/document/d/11I8xMUXrT5ArJIsAhwGDtQ4RkH4l9CR4C2wh9_wz8xM/edit?usp=sharing).</br>	|
+|Description | </br> Introduction</br>This week we will cover one of the major threats in computer security: software vulnerabilities. You will learn about the danger these pose, and start to learn about the power of the Metasploit framework, a popular hacking and penetration testing tool. You will learn and apply a number of important concepts such as payloads, shell code, bind and reverse shells, and both remote and local (client-side) exploits.</br></br> Lecture</br>[Slides here](http://z.cliffe.schreuders.org/presentations/slides/DSL_DS_OSPT_Lectures_3_Vulnerabilities.html)</br></br> Reading</br>[Chapter 8: Using Metasploit. Harper, A. and Harris, S. and Ness, J. and Eagle, C. and Lenkey, G, and Williams, T. (2011), Gray hat hacking : the ethical hacker's handbook, McGraw-Hill. (ISBN: 978-0-07-174256-6) Available online via the library](https://www-dawsonera-com.ezproxy.leedsbeckett.ac.uk/readonline/9780071742566)</br></br> Lab</br>[Lab sheet here](https://docs.google.com/document/d/11I8xMUXrT5ArJIsAhwGDtQ4RkH4l9CR4C2wh9_wz8xM/edit?usp=sharing).</br>  |
 |Type | ctf-lab; lab-sheet |
 |Author | Z. Cliffe Schreuders |
 |Linked videos| |
@@ -475,7 +268,7 @@ Command to build VMs and start scenario:
 | Key | Data |
 | --- | --- |
 |Name | Information Gathering: Footprinting |
-|Description | </br> Introduction</br>The topic of information gathering spans two weeks, and covers practical steps that an attacker needs to take in order to attack a system, starting with footprinting (discovering systems to attack) and scanning (learning more about the systems such as what kinds of attacks they are vulnerable to).</br></br> Lecture</br>[Slides here](http://z.cliffe.schreuders.org/presentations/slides/DSL_DS_OSPT_Lectures_4_Information_gathering.html)</br></br> Reading</br>[Part I Casing the establishment. McClure, S. and Scambray, J. and Kurtz, G. (2009), Hacking exposed, McGraw-Hill. (ISBN: 978-0-07-161375-0) Available online via the library](https://www-dawsonera-com.ezproxy.leedsbeckett.ac.uk/readonline/9780071613750)</br></br> Lab</br>[Lab sheet here](https://docs.google.com/document/d/1Whs4c_mN7fFjtrYgg_uzmCGBH_EYjr7fTAgoM-OZTqQ/edit?usp=sharing).</br>	|
+|Description | </br> Introduction</br>The topic of information gathering spans two weeks, and covers practical steps that an attacker needs to take in order to attack a system, starting with footprinting (discovering systems to attack) and scanning (learning more about the systems such as what kinds of attacks they are vulnerable to).</br></br> Lecture</br>[Slides here](http://z.cliffe.schreuders.org/presentations/slides/DSL_DS_OSPT_Lectures_4_Information_gathering.html)</br></br> Reading</br>[Part I Casing the establishment. McClure, S. and Scambray, J. and Kurtz, G. (2009), Hacking exposed, McGraw-Hill. (ISBN: 978-0-07-161375-0) Available online via the library](https://www-dawsonera-com.ezproxy.leedsbeckett.ac.uk/readonline/9780071613750)</br></br> Lab</br>[Lab sheet here](https://docs.google.com/document/d/1Whs4c_mN7fFjtrYgg_uzmCGBH_EYjr7fTAgoM-OZTqQ/edit?usp=sharing).</br>  |
 |Type | lab-sheet |
 |Author | Z. Cliffe Schreuders |
 |Linked videos| |
@@ -506,7 +299,7 @@ Command to build VMs and start scenario:
 | Key | Data |
 | --- | --- |
 |Name | Information Gathering: Scanning |
-|Description | </br> Introduction</br>This week we learn how to scan networks to get an understanding of and to map out a network. Scanning is a critical stage for an attacker, since it can give them the information they need in order to launch an attack.</br></br> Reading</br>[Chapter 2 Reconnaissance and Chapter 3 Scanning. Engebretson, P. (2011), The Basics of Hacking and Penetration Testing: Ethical Hacking and Penetration Testing Made Easy, Elsevier Inc. (ISBN: 978-1-59749-655-1) Available online via the library](http://www.sciencedirect.com/science/book/9781597496551)</br></br> Lab</br>[Lab sheet here](https://docs.google.com/document/d/1KScKw7M4Bt_FE5F_2tI6tnK1NrKNAJkyh5F2TpOh9hA/edit?usp=sharing).</br>	|
+|Description | </br> Introduction</br>This week we learn how to scan networks to get an understanding of and to map out a network. Scanning is a critical stage for an attacker, since it can give them the information they need in order to launch an attack.</br></br> Reading</br>[Chapter 2 Reconnaissance and Chapter 3 Scanning. Engebretson, P. (2011), The Basics of Hacking and Penetration Testing: Ethical Hacking and Penetration Testing Made Easy, Elsevier Inc. (ISBN: 978-1-59749-655-1) Available online via the library](http://www.sciencedirect.com/science/book/9781597496551)</br></br> Lab</br>[Lab sheet here](https://docs.google.com/document/d/1KScKw7M4Bt_FE5F_2tI6tnK1NrKNAJkyh5F2TpOh9hA/edit?usp=sharing).</br>  |
 |Type | ctf-lab; lab-sheet |
 |Author | Z. Cliffe Schreuders |
 |Linked videos| |
@@ -537,7 +330,7 @@ Command to build VMs and start scenario:
 | Key | Data |
 | --- | --- |
 |Name | From Scanning to Exploitation |
-|Description | </br> Introduction</br>This week we learn how we can scan networks to discover vulnerable services, and exploit them.</br></br> Reading</br>[Chapter 2 Reconnaissance and Chapter 3 Scanning. Engebretson, P. (2011), The Basics of Hacking and Penetration Testing: Ethical Hacking and Penetration Testing Made Easy, Elsevier Inc. (ISBN: 978-1-59749-655-1) Available online via the library](http://www.sciencedirect.com/science/book/9781597496551)</br></br> Lab</br>[Lab sheet here](https://docs.google.com/document/d/1puLuKwqiFMTAZhMKKLhS_aK7kKwWnKw1e3StJBiFmFA/edit?usp=sharing).</br>	|
+|Description | </br> Introduction</br>This week we learn how we can scan networks to discover vulnerable services, and exploit them.</br></br> Reading</br>[Chapter 2 Reconnaissance and Chapter 3 Scanning. Engebretson, P. (2011), The Basics of Hacking and Penetration Testing: Ethical Hacking and Penetration Testing Made Easy, Elsevier Inc. (ISBN: 978-1-59749-655-1) Available online via the library](http://www.sciencedirect.com/science/book/9781597496551)</br></br> Lab</br>[Lab sheet here](https://docs.google.com/document/d/1puLuKwqiFMTAZhMKKLhS_aK7kKwWnKw1e3StJBiFmFA/edit?usp=sharing).</br>  |
 |Type | ctf-lab; lab-sheet |
 |Author | Z. Cliffe Schreuders |
 |Linked videos| |
@@ -569,7 +362,7 @@ Command to build VMs and start scenario:
 | Key | Data |
 | --- | --- |
 |Name | Post-exploitation |
-|Description | </br> Introduction</br>Once an attacker has a foothold in a system, they can misuse the privileges they have “appropriated” to take actions on the system, or go on to try to gain even more access on this or other connected systems. You will learn the skills used by an attacker or security tester, to take action once an exploit has been successful.</br></br> Suggested reading</br>[An excellent resource is Metasploit Unleashed.](http://www.offensive-security.com/metasploit-unleashed/Exploits)</br></br> Lab</br>[Lab sheet here](https://docs.google.com/document/d/1bt0yKzKjExEih5cmXyl-D__loGwV0UJxQJEDIXxCGxw/edit?usp=sharing).</br>	|
+|Description | </br> Introduction</br>Once an attacker has a foothold in a system, they can misuse the privileges they have “appropriated” to take actions on the system, or go on to try to gain even more access on this or other connected systems. You will learn the skills used by an attacker or security tester, to take action once an exploit has been successful.</br></br> Suggested reading</br>[An excellent resource is Metasploit Unleashed.](http://www.offensive-security.com/metasploit-unleashed/Exploits)</br></br> Lab</br>[Lab sheet here](https://docs.google.com/document/d/1bt0yKzKjExEih5cmXyl-D__loGwV0UJxQJEDIXxCGxw/edit?usp=sharing).</br>  |
 |Type | ctf-lab; lab-sheet |
 |Author | Z. Cliffe Schreuders |
 |Linked videos| |
@@ -600,7 +393,7 @@ Command to build VMs and start scenario:
 | Key | Data |
 | --- | --- |
 |Name | Vulnerability Analysis |
-|Description | </br> Introduction</br>It is important for organisations to manage the security of their systems and for security professionals to efficiently scan networks for vulnerabilities.</br></br> Lab</br>[Lab sheet here](https://docs.google.com/document/d/1rdNcOmYOjsRu97Gh3ds8HbTpORGxbMcd2Q7U4TATIbw/edit?usp=sharing).</br>	|
+|Description | </br> Introduction</br>It is important for organisations to manage the security of their systems and for security professionals to efficiently scan networks for vulnerabilities.</br></br> Lab</br>[Lab sheet here](https://docs.google.com/document/d/1rdNcOmYOjsRu97Gh3ds8HbTpORGxbMcd2Q7U4TATIbw/edit?usp=sharing).</br>  |
 |Type | ctf-lab; lab-sheet |
 |Author | Z. Cliffe Schreuders |
 |Linked videos| |
@@ -2961,7 +2754,7 @@ Command to build VMs and start scenario:
 | Key | Data |
 | --- | --- |
 |Name | Understanding Software Vulnerabilities: C, Debugging Assembly, and Buffer Overflows |
-|Description | </br></br>		A MetaCTF lab. In your home directory you will find some binaries that you need to reverse engineer in order to determine the password that the program expects. Once you determing the password, run the program and enter the password to receive the file.</br></br>	[Lab sheet here](https://docs.google.com/document/d/1AxTve1RBzqvdPxt8Wziga2x2e3lZp4k5YsMq3KxkXzM/edit?usp=sharing).</br>	|
+|Description | </br></br>    A MetaCTF lab. In your home directory you will find some binaries that you need to reverse engineer in order to determine the password that the program expects. Once you determing the password, run the program and enter the password to receive the file.</br></br>  [Lab sheet here](https://docs.google.com/document/d/1AxTve1RBzqvdPxt8Wziga2x2e3lZp4k5YsMq3KxkXzM/edit?usp=sharing).</br>  |
 |Type | ctf-lab; lab-sheet |
 |Author | Z. Cliffe Schreuders |
 |Linked videos| https://youtu.be/jo_07iOplzA; https://youtu.be/1Hy_166CwRk|
@@ -2990,7 +2783,7 @@ Command to build VMs and start scenario:
 | Key | Data |
 | --- | --- |
 |Name | Understanding Software Vulnerabilities: Injection Attacks, Race Conditions, and Format String Attacks |
-|Description | </br></br>		A MetaCTF lab. In your home directory you will find some binaries that you need to reverse engineer in order to determine the password that the program expects. Once you determing the password, run the program and enter the password to receive the file.</br></br>	[Lab sheet here](https://docs.google.com/document/d/1GKmNARyF2-RQ-jK1_w4Y7V9vNtXsJvMmvXSbnadyEoE/edit?usp=sharing).</br>	|
+|Description | </br></br>    A MetaCTF lab. In your home directory you will find some binaries that you need to reverse engineer in order to determine the password that the program expects. Once you determing the password, run the program and enter the password to receive the file.</br></br>  [Lab sheet here](https://docs.google.com/document/d/1GKmNARyF2-RQ-jK1_w4Y7V9vNtXsJvMmvXSbnadyEoE/edit?usp=sharing).</br>  |
 |Type | ctf-lab; lab-sheet |
 |Author | Z. Cliffe Schreuders |
 |Linked videos| https://youtu.be/nVpqjsfii6c; https://youtu.be/PH73lpG2B1M; https://youtu.be/Du3fVc_ZLiI|
@@ -3019,7 +2812,7 @@ Command to build VMs and start scenario:
 | Key | Data |
 | --- | --- |
 |Name | Bug Hunting and Fuzzing |
-|Description | </br>[Lab sheet here](https://docs.google.com/document/d/1tsKUaCetdqwDmey4JK9DYrcO9XDx4EwE2RIvSbP6zQQ/edit?usp=sharing).</br>	|
+|Description | </br>[Lab sheet here](https://docs.google.com/document/d/1yuDcFkI2-KD4Xfti4PahE038o-6324LKSx075ZSsuKw/edit?usp=sharing).</br>  |
 |Type | ctf-lab; lab-sheet |
 |Author | Z. Cliffe Schreuders |
 |Linked videos| https://youtu.be/nwxtlR31hvw; https://youtu.be/vT2PP7VnSNw|
@@ -3047,7 +2840,7 @@ Command to build VMs and start scenario:
 | Key | Data |
 | --- | --- |
 |Name | Exploit Development |
-|Description | </br>[Lab sheet here](https://docs.google.com/document/d/1tsKUaCetdqwDmey4JK9DYrcO9XDx4EwE2RIvSbP6zQQ/edit?usp=sharing).</br>	|
+|Description | </br>[Lab sheet here](https://docs.google.com/document/d/1tsKUaCetdqwDmey4JK9DYrcO9XDx4EwE2RIvSbP6zQQ/edit?usp=sharing).</br>  |
 |Type | ctf-lab; lab-sheet |
 |Author | Z. Cliffe Schreuders |
 |Linked videos| https://youtu.be/Zh7IdmnCfy0; https://youtu.be/WU06L-u0t2Q; https://youtu.be/j2S-XgY-Fyg; https://youtu.be/Lf1UPaqPJMM; https://youtu.be/5OUQ7ExlgKI|
@@ -3069,36 +2862,7 @@ Command to build VMs and start scenario:
 [View source](scenarios/labs/software_security_exploitation/4_exploit_development.xml)
 
 
-  ## software_security_exploitation/5_linux_bof_format.xml
-
-  ### Details
-
-| Key | Data |
-| --- | --- |
-|Name | Linux Buffer Overflows and Advanced Format String Attacks |
-|Description | </br>    [Lab sheet here](https://docs.google.com/document/d/1Ap-h6YSDtfU4bLwiKhxP5x2nf1vjSJ2V2zEL5wzW84U/edit?usp=sharing).</br>  |
-|Type | ctf-lab; lab-sheet |
-|Author | Thomas Shaw |
-|Linked videos| https://youtu.be/oi_CfBe_umU; https://youtu.be/Wry2get_RRc|
-|VM names|  metactf_desktop |
-
-
-
-  ### CyBOK KAs, Topics, and Keywords
-| KA | Topic | Keywords
-| --- | --- | --- |
-| Software Security (SS) | Categories of Vulnerabilities | memory management vulnerabilities; Stack smashing buffer overflows; Format string attacks |
-| Malware &amp; Attack Technology (MAT) | Attacks and exploitation | EXPLOITATION; EXPLOITATION FRAMEWORKS; Exploit development; Metasploit Framework development |
-
-
-Command to build VMs and start scenario:
-
-```ruby secgen.rb -s scenarios/labs/software_security_exploitation/5_linux_bof_format.xml run```
-
-[View source](scenarios/labs/software_security_exploitation/5_linux_bof_format.xml)
-
-
-  ## software_security_exploitation/6_linux_stack_bof.xml
+  ## software_security_exploitation/5_linux_stack_bof.xml
 
   ### Details
 
@@ -3108,7 +2872,7 @@ Command to build VMs and start scenario:
 |Description | </br>    [Lab sheet here](https://docs.google.com/document/d/1wgxLYHkdeLknRcbzZY73xZt36TWExuu-lfIJhRuHE-I/).</br>  |
 |Type | ctf-lab; lab-sheet |
 |Author | Thomas Shaw |
-|Linked videos| https://youtu.be/ywLXfSR5YWk|
+|Linked videos| https://youtu.be/oi_CfBe_umU; https://youtu.be/Wry2get_RRc|
 |VM names|  metactf_desktop; kali |
 
 
@@ -3122,12 +2886,12 @@ Command to build VMs and start scenario:
 
 Command to build VMs and start scenario:
 
-```ruby secgen.rb -s scenarios/labs/software_security_exploitation/6_linux_stack_bof.xml run```
+```ruby secgen.rb -s scenarios/labs/software_security_exploitation/5_linux_stack_bof.xml run```
 
-[View source](scenarios/labs/software_security_exploitation/6_linux_stack_bof.xml)
+[View source](scenarios/labs/software_security_exploitation/5_linux_stack_bof.xml)
 
 
-  ## software_security_exploitation/7_linux_nx_bypass.xml
+  ## software_security_exploitation/6_linux_nx_bypass.xml
 
   ### Details
 
@@ -3137,7 +2901,7 @@ Command to build VMs and start scenario:
 |Description | </br>    Similar to last week. Same C code, just compiled w/ stack protections and non-executable stack.</br></br>    [Lab sheet here](https://docs.google.com/document/d/1eUOb1cR-D8qv0NmlGXYUN1JYwmgrwOBNtfsDVdxnPpw/).</br>  |
 |Type | ctf-lab; lab-sheet |
 |Author | Thomas Shaw |
-|Linked videos| https://youtu.be/v2rChKDAmFg; https://youtu.be/xwsBaNQZozg|
+|Linked videos| https://youtu.be/ywLXfSR5YWk|
 |VM names|  metactf_desktop; kali |
 
 
@@ -3152,12 +2916,12 @@ Command to build VMs and start scenario:
 
 Command to build VMs and start scenario:
 
-```ruby secgen.rb -s scenarios/labs/software_security_exploitation/7_linux_nx_bypass.xml run```
+```ruby secgen.rb -s scenarios/labs/software_security_exploitation/6_linux_nx_bypass.xml run```
 
-[View source](scenarios/labs/software_security_exploitation/7_linux_nx_bypass.xml)
+[View source](scenarios/labs/software_security_exploitation/6_linux_nx_bypass.xml)
 
 
-  ## software_security_exploitation/8_linux_aslr_bypass.xml
+  ## software_security_exploitation/7_linux_aslr_bypass.xml
 
   ### Details
 
@@ -3167,7 +2931,7 @@ Command to build VMs and start scenario:
 |Description | </br>    Practical challenges to bypass ASLR, PIE and RelRO.</br></br>    [Lab sheet here](https://docs.google.com/document/d/1NVWjD257EN0pv14G6dD44VpSPYlrR6IC2HPihrsGPnY/).</br>  |
 |Type | ctf-lab; lab-sheet |
 |Author | Thomas Shaw |
-|Linked videos| |
+|Linked videos| https://youtu.be/v2rChKDAmFg; https://youtu.be/xwsBaNQZozg|
 |VM names|  metactf_desktop; kali |
 
 
@@ -3182,9 +2946,245 @@ Command to build VMs and start scenario:
 
 Command to build VMs and start scenario:
 
-```ruby secgen.rb -s scenarios/labs/software_security_exploitation/8_linux_aslr_bypass.xml run```
+```ruby secgen.rb -s scenarios/labs/software_security_exploitation/7_linux_aslr_bypass.xml run```
 
-[View source](scenarios/labs/software_security_exploitation/8_linux_aslr_bypass.xml)
+[View source](scenarios/labs/software_security_exploitation/7_linux_aslr_bypass.xml)
+
+
+  ## software_security_exploitation/8_linux_bof_format.xml
+
+  ### Details
+
+| Key | Data |
+| --- | --- |
+|Name | Linux Buffer Overflows and Advanced Format String Attacks |
+|Description | </br>    [Lab sheet here](https://docs.google.com/document/d/1Ap-h6YSDtfU4bLwiKhxP5x2nf1vjSJ2V2zEL5wzW84U/edit?usp=sharing).</br>  |
+|Type | ctf-lab; lab-sheet |
+|Author | Thomas Shaw |
+|Linked videos| |
+|VM names|  metactf_desktop |
+
+
+
+  ### CyBOK KAs, Topics, and Keywords
+| KA | Topic | Keywords
+| --- | --- | --- |
+| Software Security (SS) | Categories of Vulnerabilities | memory management vulnerabilities; Stack smashing buffer overflows; Format string attacks |
+| Malware &amp; Attack Technology (MAT) | Attacks and exploitation | EXPLOITATION; EXPLOITATION FRAMEWORKS; Exploit development; Metasploit Framework development |
+
+
+Command to build VMs and start scenario:
+
+```ruby secgen.rb -s scenarios/labs/software_security_exploitation/8_linux_bof_format.xml run```
+
+[View source](scenarios/labs/software_security_exploitation/8_linux_bof_format.xml)
+
+
+  ## systems_security/1_authentication.xml
+
+  ### Details
+
+| Key | Data |
+| --- | --- |
+|Name | Authentication lab |
+|Description | </br> Lecture</br>[Slides here](http://z.cliffe.schreuders.org/presentations/slides/1718/ADS_slides_out_week_6/WNS_ADS_Lectures_5_Authentication.html)</br></br> Reading</br>[Chapter 11 "Authentication": Bishop, M. (2004), Introduction to Computer Security, Addison-Wesley. (ISBN-10:  0321247442)](https://my.leedsbeckett.ac.uk/bbcswebdav/pid-2221598-dt-content-rid-4451698_1/institution/Online%20Learning/AET/CT/MSc%20Computer%20Security/Principles%20of%20Digital%20Security/Readings/Week%205/DCS-85139%20%281%29.pdf)</br></br> Lab</br>A Hackerbot lab. Work through the lab instructions, then when prompted interact with Hackerbot.</br>  |
+|Type | ctf-lab; hackerbot-lab; lab-sheet |
+|Author | Z. Cliffe Schreuders |
+|Linked videos| https://youtu.be/2I_JSdTu-oI; https://youtu.be/pGcJEML1mRo; https://youtu.be/icC2Zrno_uM; https://youtu.be/Wrg6XZu6Luw|
+|VM names|  desktop; server; hackerbot_server; kali_cracker |
+
+
+
+  ### CyBOK KAs, Topics, and Keywords
+| KA | Topic | Keywords
+| --- | --- | --- |
+| Authentication, Authorisation &amp; Accountability (AAA) | Authentication | identity management; user authentication; facets of authentication; Cryptography and authentication (hashes and attacks against authentication schemes / passwords) |
+| Operating Systems &amp; Virtualisation (OSV) | Primitives for Isolation and Mediation | authentication and identification; Linux authentication; Types of user accounts |
+
+
+Command to build VMs and start scenario:
+
+```ruby secgen.rb -s scenarios/labs/systems_security/1_authentication.xml run```
+
+[View source](scenarios/labs/systems_security/1_authentication.xml)
+
+
+  ## systems_security/2_pam.xml
+
+  ### Details
+
+| Key | Data |
+| --- | --- |
+|Name | Pluggable Authentication Modules lab |
+|Description | </br> Lecture</br>[Slides continued here](http://z.cliffe.schreuders.org/presentations/slides/1718/ADS_slides_out_week_6/WNS_ADS_Lectures_5_Authentication.html)</br></br> Reading</br>[Chapter 4 "Users, Passwords, and Authentication": Garfinkel, S. Spafford, G. and Schwartz, A. (2003), Practical Unix and Internet Security, O'Reilly. (ISBN-10: 0596003234)](https://www-dawsonera-com.ezproxy.leedsbeckett.ac.uk/abstract/9781449310325)</br></br> Lab</br>A short lab this week, exploring PAM. Work through the labsheet, then when prompted interact with Hackerbot.</br>  |
+|Type | ctf-lab; hackerbot-lab; lab-sheet |
+|Author | Z. Cliffe Schreuders |
+|Linked videos| https://youtu.be/z4L6Yv5ry1A; https://youtu.be/-zcnfmoLjYI; https://youtu.be/xHs3LB4Yyrk; https://youtu.be/c2dPdQmaVyo; https://youtu.be/dCBabesIXo8; https://youtu.be/rhdcxhSDqp4; https://youtu.be/PCXK2cK8tpE|
+|VM names|  desktop; server; hackerbot_server |
+
+
+
+  ### CyBOK KAs, Topics, and Keywords
+| KA | Topic | Keywords
+| --- | --- | --- |
+| Authentication, Authorisation &amp; Accountability (AAA) | Authentication | identity management; user authentication; facets of authentication |
+| Operating Systems &amp; Virtualisation (OSV) | Primitives for Isolation and Mediation | authentication and identification; Linux authentication; Authentication frameworks (PAM) |
+
+
+Command to build VMs and start scenario:
+
+```ruby secgen.rb -s scenarios/labs/systems_security/2_pam.xml run```
+
+[View source](scenarios/labs/systems_security/2_pam.xml)
+
+
+  ## systems_security/3_access_controls.xml
+
+  ### Details
+
+| Key | Data |
+| --- | --- |
+|Name | Access Controls lab |
+|Description | </br> Lecture</br>[Slides here](http://z.cliffe.schreuders.org/presentations/slides/1718/ADS_slides_out_week_7/ADS_PDS_Lectures_7_Access_Control.html)</br></br> Reading</br>[Chapter 1 "Foundations of Security and Access Control in Computing": Benantar, M. (2006), Access Control Systems: Security, Identity Management and Trust Models, Springer. (ISBN-10: 0387004459)](https://www-dawsonera-com.ezproxy.leedsbeckett.ac.uk/readonline/9780387277165)</br></br> Lab</br>A Hackerbot lab. Work through the labsheet, then when prompted interact with Hackerbot.</br>  |
+|Type | ctf-lab; hackerbot-lab; lab-sheet |
+|Author | Z. Cliffe Schreuders |
+|Linked videos| https://youtu.be/yWJyZEFbchQ; https://youtu.be/i0kO_3ExJv4|
+|VM names|  shared_desktop; server; hackerbot_server |
+
+
+
+  ### CyBOK KAs, Topics, and Keywords
+| KA | Topic | Keywords
+| --- | --- | --- |
+| Authentication, Authorisation &amp; Accountability (AAA) | Authorisation | access control; enforcing access control; ACCESS CONTROL - DAC (DISCRETIONARY ACCESS CONTROL); Vulnerabilities and attacks on access control misconfigurations |
+| Operating Systems &amp; Virtualisation (OSV) | Primitives for Isolation and Mediation | Access controls and operating systems; Linux security model; Unix File Permissions; Filesystems; inodes; and commands; umask |
+| Operating Systems &amp; Virtualisation (OSV) | Role of Operating Systems | mediation |
+
+
+Command to build VMs and start scenario:
+
+```ruby secgen.rb -s scenarios/labs/systems_security/3_access_controls.xml run```
+
+[View source](scenarios/labs/systems_security/3_access_controls.xml)
+
+
+  ## systems_security/4_suid.xml
+
+  ### Details
+
+| Key | Data |
+| --- | --- |
+|Name | Set User ID lab |
+|Description | </br> Lecture</br>[Slides continued here](http://z.cliffe.schreuders.org/presentations/slides/1718/ADS_slides_out_week_7/ADS_PDS_Lectures_7_Access_Control.html)</br></br> Reading</br>[Chapter 6 "Filesystems and Security": Garfinkel, S. Spafford, G. and Schwartz, A. (2003), Practical Unix and Internet Security, O'Reilly. (ISBN-10: 0596003234)](https://www-dawsonera-com.ezproxy.leedsbeckett.ac.uk/abstract/9781449310325)</br></br> Lab</br>A Hackerbot lab. Work through the labsheet, then when prompted interact with Hackerbot.</br>  |
+|Type | ctf-lab; hackerbot-lab; lab-sheet |
+|Author | Z. Cliffe Schreuders |
+|Linked videos| https://youtu.be/viSkkNB777k; https://youtu.be/PGHsb3bg_h4|
+|VM names|  shared_desktop; server; hackerbot_server |
+
+
+
+  ### CyBOK KAs, Topics, and Keywords
+| KA | Topic | Keywords
+| --- | --- | --- |
+| Authentication, Authorisation &amp; Accountability (AAA) | Authorisation | access control; Elevated privileges; Real and effective identity; Vulnerabilities and attacks on access control misconfigurations |
+| Operating Systems &amp; Virtualisation (OSV) | Primitives for Isolation and Mediation | Access controls and operating systems; Linux security model; Unix File Permissions; setuid/setgid; Hardlink protections |
+
+
+Command to build VMs and start scenario:
+
+```ruby secgen.rb -s scenarios/labs/systems_security/4_suid.xml run```
+
+[View source](scenarios/labs/systems_security/4_suid.xml)
+
+
+  ## systems_security/5_facls.xml
+
+  ### Details
+
+| Key | Data |
+| --- | --- |
+|Name | Access Control Lists (ACLs) lab |
+|Description | </br> Lecture</br>[Slides continued here](http://z.cliffe.schreuders.org/presentations/slides/1718/ADS_slides_out_week_7/ADS_PDS_Lectures_7_Access_Control.html)</br></br> Reading</br>[Grunbacher, Andreas. "POSIX Access Control Lists on Linux." *USENIX Annual Technical Conference*, FREENIX Track. 2003.](https://www.usenix.org/legacy/events/usenix03/tech/freenix03/full_papers/gruenbacher/gruenbacher.pdf)</br></br> Lab</br>A Hackerbot lab. Work through the labsheet, then when prompted interact with Hackerbot.</br></br>  |
+|Type | ctf-lab; hackerbot-lab; lab-sheet |
+|Author | Z. Cliffe Schreuders |
+|Linked videos| https://youtu.be/Bn3NJhgmdLk; https://youtu.be/OT7ifs8PkHI|
+|VM names|  shared_desktop; server; hackerbot_server |
+
+
+
+  ### CyBOK KAs, Topics, and Keywords
+| KA | Topic | Keywords
+| --- | --- | --- |
+| Authentication, Authorisation &amp; Accountability (AAA) | Authorisation | access control; ACCESS CONTROL LIST (ACL); Vulnerabilities and attacks on access control misconfigurations |
+| Operating Systems &amp; Virtualisation (OSV) | Primitives for Isolation and Mediation | Access controls and operating systems; Linux security model; Linux Extended Access Control Lists (facl) |
+
+
+Command to build VMs and start scenario:
+
+```ruby secgen.rb -s scenarios/labs/systems_security/5_facls.xml run```
+
+[View source](scenarios/labs/systems_security/5_facls.xml)
+
+
+  ## systems_security/6_containers.xml
+
+  ### Details
+
+| Key | Data |
+| --- | --- |
+|Name | Containers lab |
+|Description | </br> Lecture</br>[Slides here](http://z.cliffe.schreuders.org/presentations/slides/slides_out_sandboxing/ADS_PDS_Lectures_8_Sandboxes_and_Virtualisation.html)</br></br> Reading</br>[Z. C. Schreuders, T. McGill, and C. Payne, "The State of the Art of Application Restrictions and Sandboxes: A Survey of Application-oriented Access Controls and their Shortfalls," Computers and Security, Volume 32, Elsevier B.V., 2013. DOI: 10.1016/j.cose.2012.09.007](http://z.cliffe.schreuders.org/publications/Computers&Security%20-%20The%20State%20of%20the%20Art%20of%20Application%20Restrictions%20and%20Sandboxes%20-%20Author%20Version.pdf)</br></br> Lab</br>A Hackerbot lab. Work through the labsheet, then when prompted interact with Hackerbot.</br>  |
+|Type | ctf-lab; hackerbot-lab; lab-sheet |
+|Author | Z. Cliffe Schreuders |
+|Linked videos| https://youtu.be/f4yBcKkb12g|
+|VM names|  desktop; hackerbot_server; chroot_esc_server; docker_esc_server |
+
+
+
+  ### CyBOK KAs, Topics, and Keywords
+| KA | Topic | Keywords
+| --- | --- | --- |
+| Authentication, Authorisation &amp; Accountability (AAA) | Authorisation | SANDBOX; Application-based access controls: user-based access controls insufficiently limit privileges |
+| Operating Systems &amp; Virtualisation (OSV) | Primitives for Isolation and Mediation | capabilities; Container-based sandboxes: chroot; Docker; Rule-based controls: Course grained: Linux capabilities; Vulnerabilities and attacks on sandboxing misconfigurations |
+| Operating Systems &amp; Virtualisation (OSV) | Role of Operating Systems | isolation; CONTAINERS |
+| Web &amp; Mobile Security (WAM) | Fundamental Concepts and Approaches | sandboxing |
+
+
+Command to build VMs and start scenario:
+
+```ruby secgen.rb -s scenarios/labs/systems_security/6_containers.xml run```
+
+[View source](scenarios/labs/systems_security/6_containers.xml)
+
+
+  ## systems_security/7_apparmor.xml
+
+  ### Details
+
+| Key | Data |
+| --- | --- |
+|Name | AppArmor lab |
+|Description | </br> Lecture</br>[Slides continued here](http://z.cliffe.schreuders.org/presentations/slides/slides_out_sandboxing/ADS_PDS_Lectures_8_Sandboxes_and_Virtualisation.html)</br></br> Lectures for the next two weeks</br>[Secure software development](https://leedsbeckettreplay.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=31ee4531-1834-4028-8829-aa1d00a73a7e)</br></br>[Secure design principles](https://leedsbeckettreplay.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6f409b1c-2daa-4798-8bc7-aa2400952d29)</br></br>[Slides](http://z.cliffe.schreuders.org/presentations/slides/slides_secure_design/ADS_PDS_Lectures_3_Secure_Software_Development_and_Bug_Hunting.html)</br></br> Lab</br>A Hackerbot lab. Work through the labsheet, then when prompted interact with Hackerbot.</br>  |
+|Type | ctf-lab; hackerbot-lab; lab-sheet |
+|Author | Z. Cliffe Schreuders |
+|Linked videos| https://youtu.be/Xgs5akM6ayc|
+|VM names|  desktop; hackerbot_server |
+
+
+
+  ### CyBOK KAs, Topics, and Keywords
+| KA | Topic | Keywords
+| --- | --- | --- |
+| Authentication, Authorisation &amp; Accountability (AAA) | Authorisation | ACCESS CONTROL - MAC (MANDATORY ACCESS CONTROL); ACCESS CONTROL - NDAC (NON-DISCRETIONARY ACCESS CONTROL); Application-based access controls: user-based access controls insufficiently limit privileges; Rule-based sandboxes |
+| Operating Systems &amp; Virtualisation (OSV) | Primitives for Isolation and Mediation | Rule-based controls: Fine grained: AppArmor; Vulnerabilities and attacks on sandboxing misconfigurations |
+| Software Security (SS) | Mitigating Exploitation | limiting privileges |
+
+
+Command to build VMs and start scenario:
+
+```ruby secgen.rb -s scenarios/labs/systems_security/7_apparmor.xml run```
+
+[View source](scenarios/labs/systems_security/7_apparmor.xml)
 
 
   ## web_security/websec_lab.xml
@@ -3205,7 +3205,7 @@ Command to build VMs and start scenario:
   ### CyBOK KAs, Topics, and Keywords
 | KA | Topic | Keywords
 | --- | --- | --- |
-| Web &amp; Mobile Security (WAM) | Fundamental Concepts and Approaches | web PKI and HTTPS; authentication; cookies; passwords and alternatives; JAVASCRIPT / HYPERTEXT MARKUP LANGUAGE (HTML) / CASCADING STYLE SHEETS (CSS) / HYPERTEXT TRANSFER PROTOCOL (HTTP)\n\t\tCOOKIES; HYPERTEXT TRANSFER PROTOCOL (HTTP) - PROXYING; Broken Access Control / Insecure Direct Object References; SESSION HIJACKING; REPRESENTATIONAL STATE TRANSFER (REST) |
+| Web &amp; Mobile Security (WAM) | Fundamental Concepts and Approaches | web PKI and HTTPS; authentication; cookies; passwords and alternatives; JAVASCRIPT / HYPERTEXT MARKUP LANGUAGE (HTML) / CASCADING STYLE SHEETS (CSS) / HYPERTEXT TRANSFER PROTOCOL (HTTP)\n    COOKIES; HYPERTEXT TRANSFER PROTOCOL (HTTP) - PROXYING; Broken Access Control / Insecure Direct Object References; SESSION HIJACKING; REPRESENTATIONAL STATE TRANSFER (REST) |
 | Web &amp; Mobile Security (WAM) | Client-Side Vulnerabilities and Mitigations | client-side storage; CLIENT-SIDE VALIDATION; clickjacking |
 | Web &amp; Mobile Security (WAM) | Server-Side Vulnerabilities and Mitigations | injection vulnerabilities; server-side misconfiguration and vulnerable components; CROSS-SITE SCRIPTING (XSS); SAME ORIGIN POLICY (SOP); COMMAND INJECTION; SQL-INJECTION; CROSS-SITE REQUEST FORGERY (CSRF); CONFUSED DEPUTY ATTACKS |
 | Software Security (SS) | Categories of Vulnerabilities | Web vulnerabilities / OWASP Top 10; API vulnerabilities |
