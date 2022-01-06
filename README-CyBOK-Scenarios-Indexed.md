@@ -86,12 +86,12 @@ Models | [introducing_attacks/4_dns_footprinting.xml](#introducing_attacks4_dns_
 
 ### SS Scenarios
 
-[introducing_attacks/6_exploitation.xml](#introducing_attacks6_exploitationxml)</br>[labtainers/bufoverflow.xml](#labtainersbufoverflowxml)</br>[labtainers/formatstring.xml](#labtainersformatstringxml)</br>[labtainers/pass-crack.xml](#labtainerspass-crackxml)</br>[labtainers/retlibc.xml](#labtainersretlibcxml)</br>[labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[labtainers/xforge.xml](#labtainersxforgexml)</br>[labtainers/xsite.xml](#labtainersxsitexml)</br>[software_security_exploitation/1_c_asm_iof.xml](#software_security_exploitation1_c_asm_iofxml)</br>[software_security_exploitation/2_race_conditions_format_str.xml](#software_security_exploitation2_race_conditions_format_strxml)</br>[software_security_exploitation/3_bug_hunting_and_fuzzing.xml](#software_security_exploitation3_bug_hunting_and_fuzzingxml)</br>[software_security_exploitation/4_exploit_development.xml](#software_security_exploitation4_exploit_developmentxml)</br>[software_security_exploitation/5_linux_stack_bof.xml](#software_security_exploitation5_linux_stack_bofxml)</br>[software_security_exploitation/6_linux_nx_bypass.xml](#software_security_exploitation6_linux_nx_bypassxml)</br>[software_security_exploitation/7_linux_aslr_bypass.xml](#software_security_exploitation7_linux_aslr_bypassxml)</br>[software_security_exploitation/8_linux_bof_format.xml](#software_security_exploitation8_linux_bof_formatxml)</br>[systems_security/7_apparmor.xml](#systems_security7_apparmorxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
+[introducing_attacks/6_exploitation.xml](#introducing_attacks6_exploitationxml)</br>[labtainers/bufoverflow.xml](#labtainersbufoverflowxml)</br>[labtainers/formatstring.xml](#labtainersformatstringxml)</br>[labtainers/pass-crack.xml](#labtainerspass-crackxml)</br>[labtainers/retlibc.xml](#labtainersretlibcxml)</br>[labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[labtainers/xforge.xml](#labtainersxforgexml)</br>[labtainers/xsite.xml](#labtainersxsitexml)</br>[software_security_exploitation/1_c_asm_iof.xml](#software_security_exploitation1_c_asm_iofxml)</br>[software_security_exploitation/2_race_conditions_format_str.xml](#software_security_exploitation2_race_conditions_format_strxml)</br>[software_security_exploitation/3_bug_hunting_and_fuzzing.xml](#software_security_exploitation3_bug_hunting_and_fuzzingxml)</br>[software_security_exploitation/4_exploit_development.xml](#software_security_exploitation4_exploit_developmentxml)</br>[software_security_exploitation/5_linux_stack_bof.xml](#software_security_exploitation5_linux_stack_bofxml)</br>[software_security_exploitation/6_linux_nx_bypass.xml](#software_security_exploitation6_linux_nx_bypassxml)</br>[software_security_exploitation/7_linux_aslr_bypass.xml](#software_security_exploitation7_linux_aslr_bypassxml)</br>[software_security_exploitation/8_linux_bof_format.xml](#software_security_exploitation8_linux_bof_formatxml)</br>[systems_security/8_apparmor.xml](#systems_security8_apparmorxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
 ### SS Scenarios by Topics
 | Topic | Scenario |
 | --- | --- |
 Categories of Vulnerabilities | [introducing_attacks/6_exploitation.xml](#introducing_attacks6_exploitationxml)</br>[labtainers/bufoverflow.xml](#labtainersbufoverflowxml)</br>[labtainers/formatstring.xml](#labtainersformatstringxml)</br>[labtainers/retlibc.xml](#labtainersretlibcxml)</br>[labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[software_security_exploitation/1_c_asm_iof.xml](#software_security_exploitation1_c_asm_iofxml)</br>[software_security_exploitation/2_race_conditions_format_str.xml](#software_security_exploitation2_race_conditions_format_strxml)</br>[software_security_exploitation/4_exploit_development.xml](#software_security_exploitation4_exploit_developmentxml)</br>[software_security_exploitation/5_linux_stack_bof.xml](#software_security_exploitation5_linux_stack_bofxml)</br>[software_security_exploitation/6_linux_nx_bypass.xml](#software_security_exploitation6_linux_nx_bypassxml)</br>[software_security_exploitation/7_linux_aslr_bypass.xml](#software_security_exploitation7_linux_aslr_bypassxml)</br>[software_security_exploitation/8_linux_bof_format.xml](#software_security_exploitation8_linux_bof_formatxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
-Mitigating Exploitation | [labtainers/bufoverflow.xml](#labtainersbufoverflowxml)</br>[labtainers/retlibc.xml](#labtainersretlibcxml)</br>[software_security_exploitation/6_linux_nx_bypass.xml](#software_security_exploitation6_linux_nx_bypassxml)</br>[software_security_exploitation/7_linux_aslr_bypass.xml](#software_security_exploitation7_linux_aslr_bypassxml)</br>[systems_security/7_apparmor.xml](#systems_security7_apparmorxml)</br>
+Mitigating Exploitation | [labtainers/bufoverflow.xml](#labtainersbufoverflowxml)</br>[labtainers/retlibc.xml](#labtainersretlibcxml)</br>[software_security_exploitation/6_linux_nx_bypass.xml](#software_security_exploitation6_linux_nx_bypassxml)</br>[software_security_exploitation/7_linux_aslr_bypass.xml](#software_security_exploitation7_linux_aslr_bypassxml)</br>[systems_security/8_apparmor.xml](#systems_security8_apparmorxml)</br>
 Authentication | [labtainers/pass-crack.xml](#labtainerspass-crackxml)</br>
 Prevention of Vulnerabilities | [labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[labtainers/xforge.xml](#labtainersxforgexml)</br>[labtainers/xsite.xml](#labtainersxsitexml)</br>[software_security_exploitation/1_c_asm_iof.xml](#software_security_exploitation1_c_asm_iofxml)</br>[software_security_exploitation/2_race_conditions_format_str.xml](#software_security_exploitation2_race_conditions_format_strxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
 Detection of Vulnerabilities | [software_security_exploitation/3_bug_hunting_and_fuzzing.xml](#software_security_exploitation3_bug_hunting_and_fuzzingxml)</br>
@@ -100,11 +100,11 @@ Detection of Vulnerabilities | [software_security_exploitation/3_bug_hunting_and
 
 ### AAA Scenarios
 
-[labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/file-integrity.xml](#labtainersfile-integrityxml)</br>[labtainers/ldap.xml](#labtainersldapxml)</br>[labtainers/macs-hash.xml](#labtainersmacs-hashxml)</br>[labtainers/nix-commands.xml](#labtainersnix-commandsxml)</br>[labtainers/onewayhash.xml](#labtainersonewayhashxml)</br>[labtainers/radius.xml](#labtainersradiusxml)</br>[labtainers/setuid-env.xml](#labtainerssetuid-envxml)</br>[response_and_investigation/1_integrity_protection.xml](#response_and_investigation1_integrity_protectionxml)</br>[response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>[response_and_investigation/8_dead_analysis.xml](#response_and_investigation8_dead_analysisxml)</br>[systems_security/1_authentication.xml](#systems_security1_authenticationxml)</br>[systems_security/2_pam.xml](#systems_security2_pamxml)</br>[systems_security/3_access_controls.xml](#systems_security3_access_controlsxml)</br>[systems_security/4_suid.xml](#systems_security4_suidxml)</br>[systems_security/5_facls.xml](#systems_security5_faclsxml)</br>[systems_security/6_containers.xml](#systems_security6_containersxml)</br>[systems_security/7_apparmor.xml](#systems_security7_apparmorxml)</br>
+[labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/file-integrity.xml](#labtainersfile-integrityxml)</br>[labtainers/ldap.xml](#labtainersldapxml)</br>[labtainers/macs-hash.xml](#labtainersmacs-hashxml)</br>[labtainers/nix-commands.xml](#labtainersnix-commandsxml)</br>[labtainers/onewayhash.xml](#labtainersonewayhashxml)</br>[labtainers/radius.xml](#labtainersradiusxml)</br>[labtainers/setuid-env.xml](#labtainerssetuid-envxml)</br>[response_and_investigation/1_integrity_protection.xml](#response_and_investigation1_integrity_protectionxml)</br>[response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>[response_and_investigation/8_dead_analysis.xml](#response_and_investigation8_dead_analysisxml)</br>[systems_security/1_authentication.xml](#systems_security1_authenticationxml)</br>[systems_security/2_pam.xml](#systems_security2_pamxml)</br>[systems_security/4_access_controls.xml](#systems_security4_access_controlsxml)</br>[systems_security/5_suid.xml](#systems_security5_suidxml)</br>[systems_security/6_facls.xml](#systems_security6_faclsxml)</br>[systems_security/7_containers.xml](#systems_security7_containersxml)</br>[systems_security/8_apparmor.xml](#systems_security8_apparmorxml)</br>
 ### AAA Scenarios by Topics
 | Topic | Scenario |
 | --- | --- |
-Authorisation | [labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/ldap.xml](#labtainersldapxml)</br>[labtainers/nix-commands.xml](#labtainersnix-commandsxml)</br>[labtainers/setuid-env.xml](#labtainerssetuid-envxml)</br>[response_and_investigation/1_integrity_protection.xml](#response_and_investigation1_integrity_protectionxml)</br>[systems_security/3_access_controls.xml](#systems_security3_access_controlsxml)</br>[systems_security/4_suid.xml](#systems_security4_suidxml)</br>[systems_security/5_facls.xml](#systems_security5_faclsxml)</br>[systems_security/6_containers.xml](#systems_security6_containersxml)</br>[systems_security/7_apparmor.xml](#systems_security7_apparmorxml)</br>
+Authorisation | [labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/ldap.xml](#labtainersldapxml)</br>[labtainers/nix-commands.xml](#labtainersnix-commandsxml)</br>[labtainers/setuid-env.xml](#labtainerssetuid-envxml)</br>[response_and_investigation/1_integrity_protection.xml](#response_and_investigation1_integrity_protectionxml)</br>[systems_security/4_access_controls.xml](#systems_security4_access_controlsxml)</br>[systems_security/5_suid.xml](#systems_security5_suidxml)</br>[systems_security/6_facls.xml](#systems_security6_faclsxml)</br>[systems_security/7_containers.xml](#systems_security7_containersxml)</br>[systems_security/8_apparmor.xml](#systems_security8_apparmorxml)</br>
 Authentication | [labtainers/file-integrity.xml](#labtainersfile-integrityxml)</br>[labtainers/ldap.xml](#labtainersldapxml)</br>[labtainers/macs-hash.xml](#labtainersmacs-hashxml)</br>[labtainers/onewayhash.xml](#labtainersonewayhashxml)</br>[labtainers/radius.xml](#labtainersradiusxml)</br>[systems_security/1_authentication.xml](#systems_security1_authenticationxml)</br>[systems_security/2_pam.xml](#systems_security2_pamxml)</br>
 Accountability | [response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>[response_and_investigation/8_dead_analysis.xml](#response_and_investigation8_dead_analysisxml)</br>
 
@@ -112,12 +112,12 @@ Accountability | [response_and_investigation/7_live_analysis.xml](#response_and_
 
 ### OSV Scenarios
 
-[labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/capabilities.xml](#labtainerscapabilitiesxml)</br>[labtainers/setuid-env.xml](#labtainerssetuid-envxml)</br>[response_and_investigation/1_integrity_protection.xml](#response_and_investigation1_integrity_protectionxml)</br>[response_and_investigation/2_integrity_detection.xml](#response_and_investigation2_integrity_detectionxml)</br>[response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>[systems_security/1_authentication.xml](#systems_security1_authenticationxml)</br>[systems_security/2_pam.xml](#systems_security2_pamxml)</br>[systems_security/3_access_controls.xml](#systems_security3_access_controlsxml)</br>[systems_security/4_suid.xml](#systems_security4_suidxml)</br>[systems_security/5_facls.xml](#systems_security5_faclsxml)</br>[systems_security/6_containers.xml](#systems_security6_containersxml)</br>[systems_security/7_apparmor.xml](#systems_security7_apparmorxml)</br>
+[labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/capabilities.xml](#labtainerscapabilitiesxml)</br>[labtainers/setuid-env.xml](#labtainerssetuid-envxml)</br>[response_and_investigation/1_integrity_protection.xml](#response_and_investigation1_integrity_protectionxml)</br>[response_and_investigation/2_integrity_detection.xml](#response_and_investigation2_integrity_detectionxml)</br>[response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>[systems_security/1_authentication.xml](#systems_security1_authenticationxml)</br>[systems_security/2_pam.xml](#systems_security2_pamxml)</br>[systems_security/4_access_controls.xml](#systems_security4_access_controlsxml)</br>[systems_security/5_suid.xml](#systems_security5_suidxml)</br>[systems_security/6_facls.xml](#systems_security6_faclsxml)</br>[systems_security/7_containers.xml](#systems_security7_containersxml)</br>[systems_security/8_apparmor.xml](#systems_security8_apparmorxml)</br>
 ### OSV Scenarios by Topics
 | Topic | Scenario |
 | --- | --- |
-Primitives for Isolation and Mediation | [labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/capabilities.xml](#labtainerscapabilitiesxml)</br>[labtainers/setuid-env.xml](#labtainerssetuid-envxml)</br>[response_and_investigation/1_integrity_protection.xml](#response_and_investigation1_integrity_protectionxml)</br>[systems_security/1_authentication.xml](#systems_security1_authenticationxml)</br>[systems_security/2_pam.xml](#systems_security2_pamxml)</br>[systems_security/3_access_controls.xml](#systems_security3_access_controlsxml)</br>[systems_security/4_suid.xml](#systems_security4_suidxml)</br>[systems_security/5_facls.xml](#systems_security5_faclsxml)</br>[systems_security/6_containers.xml](#systems_security6_containersxml)</br>[systems_security/7_apparmor.xml](#systems_security7_apparmorxml)</br>
-Role of Operating Systems | [labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[systems_security/3_access_controls.xml](#systems_security3_access_controlsxml)</br>[systems_security/6_containers.xml](#systems_security6_containersxml)</br>
+Primitives for Isolation and Mediation | [labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[labtainers/capabilities.xml](#labtainerscapabilitiesxml)</br>[labtainers/setuid-env.xml](#labtainerssetuid-envxml)</br>[response_and_investigation/1_integrity_protection.xml](#response_and_investigation1_integrity_protectionxml)</br>[systems_security/1_authentication.xml](#systems_security1_authenticationxml)</br>[systems_security/2_pam.xml](#systems_security2_pamxml)</br>[systems_security/4_access_controls.xml](#systems_security4_access_controlsxml)</br>[systems_security/5_suid.xml](#systems_security5_suidxml)</br>[systems_security/6_facls.xml](#systems_security6_faclsxml)</br>[systems_security/7_containers.xml](#systems_security7_containersxml)</br>[systems_security/8_apparmor.xml](#systems_security8_apparmorxml)</br>
+Role of Operating Systems | [labtainers/acl-hackerbot-flags.xml](#labtainersacl-hackerbot-flagsxml)</br>[labtainers/acl.xml](#labtainersaclxml)</br>[systems_security/4_access_controls.xml](#systems_security4_access_controlsxml)</br>[systems_security/7_containers.xml](#systems_security7_containersxml)</br>
 OS Hardening | [response_and_investigation/2_integrity_detection.xml](#response_and_investigation2_integrity_detectionxml)</br>[response_and_investigation/7_live_analysis.xml](#response_and_investigation7_live_analysisxml)</br>
 
 ## Forensics (F)
@@ -148,13 +148,13 @@ Cyber-Physical Systems Domains | [labtainers/grassmarlin.xml](#labtainersgrassma
 
 ### WAM Scenarios
 
-[labtainers/iptables-ics.xml](#labtainersiptables-icsxml)</br>[labtainers/iptables.xml](#labtainersiptablesxml)</br>[labtainers/iptables2.xml](#labtainersiptables2xml)</br>[labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[labtainers/webtrack.xml](#labtainerswebtrackxml)</br>[labtainers/xforge.xml](#labtainersxforgexml)</br>[labtainers/xsite.xml](#labtainersxsitexml)</br>[systems_security/6_containers.xml](#systems_security6_containersxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
+[labtainers/iptables-ics.xml](#labtainersiptables-icsxml)</br>[labtainers/iptables.xml](#labtainersiptablesxml)</br>[labtainers/iptables2.xml](#labtainersiptables2xml)</br>[labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[labtainers/webtrack.xml](#labtainerswebtrackxml)</br>[labtainers/xforge.xml](#labtainersxforgexml)</br>[labtainers/xsite.xml](#labtainersxsitexml)</br>[systems_security/7_containers.xml](#systems_security7_containersxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
 ### WAM Scenarios by Topics
 | Topic | Scenario |
 | --- | --- |
 FIREWALLS | [labtainers/iptables-ics.xml](#labtainersiptables-icsxml)</br>[labtainers/iptables.xml](#labtainersiptablesxml)</br>[labtainers/iptables2.xml](#labtainersiptables2xml)</br>
 Server-Side Vulnerabilities and Mitigations | [labtainers/sql-inject.xml](#labtainerssql-injectxml)</br>[labtainers/xforge.xml](#labtainersxforgexml)</br>[labtainers/xsite.xml](#labtainersxsitexml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
-Fundamental Concepts and Approaches | [labtainers/webtrack.xml](#labtainerswebtrackxml)</br>[systems_security/6_containers.xml](#systems_security6_containersxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
+Fundamental Concepts and Approaches | [labtainers/webtrack.xml](#labtainerswebtrackxml)</br>[systems_security/7_containers.xml](#systems_security7_containersxml)</br>[web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
 Client-Side Vulnerabilities and Mitigations | [web_security/websec_lab.xml](#web_securitywebsec_labxml)</br>
 
 ## Cryptography (C)
@@ -3038,7 +3038,7 @@ Command to build VMs and start scenario:
 [View source](scenarios/labs/systems_security/2_pam.xml)
 
 
-  ## systems_security/3_access_controls.xml
+  ## systems_security/4_access_controls.xml
 
   ### Details
 
@@ -3063,12 +3063,12 @@ Command to build VMs and start scenario:
 
 Command to build VMs and start scenario:
 
-```ruby secgen.rb -s scenarios/labs/systems_security/3_access_controls.xml run```
+```ruby secgen.rb -s scenarios/labs/systems_security/4_access_controls.xml run```
 
-[View source](scenarios/labs/systems_security/3_access_controls.xml)
+[View source](scenarios/labs/systems_security/4_access_controls.xml)
 
 
-  ## systems_security/4_suid.xml
+  ## systems_security/5_suid.xml
 
   ### Details
 
@@ -3092,12 +3092,12 @@ Command to build VMs and start scenario:
 
 Command to build VMs and start scenario:
 
-```ruby secgen.rb -s scenarios/labs/systems_security/4_suid.xml run```
+```ruby secgen.rb -s scenarios/labs/systems_security/5_suid.xml run```
 
-[View source](scenarios/labs/systems_security/4_suid.xml)
+[View source](scenarios/labs/systems_security/5_suid.xml)
 
 
-  ## systems_security/5_facls.xml
+  ## systems_security/6_facls.xml
 
   ### Details
 
@@ -3121,12 +3121,12 @@ Command to build VMs and start scenario:
 
 Command to build VMs and start scenario:
 
-```ruby secgen.rb -s scenarios/labs/systems_security/5_facls.xml run```
+```ruby secgen.rb -s scenarios/labs/systems_security/6_facls.xml run```
 
-[View source](scenarios/labs/systems_security/5_facls.xml)
+[View source](scenarios/labs/systems_security/6_facls.xml)
 
 
-  ## systems_security/6_containers.xml
+  ## systems_security/7_containers.xml
 
   ### Details
 
@@ -3152,12 +3152,12 @@ Command to build VMs and start scenario:
 
 Command to build VMs and start scenario:
 
-```ruby secgen.rb -s scenarios/labs/systems_security/6_containers.xml run```
+```ruby secgen.rb -s scenarios/labs/systems_security/7_containers.xml run```
 
-[View source](scenarios/labs/systems_security/6_containers.xml)
+[View source](scenarios/labs/systems_security/7_containers.xml)
 
 
-  ## systems_security/7_apparmor.xml
+  ## systems_security/8_apparmor.xml
 
   ### Details
 
@@ -3182,9 +3182,9 @@ Command to build VMs and start scenario:
 
 Command to build VMs and start scenario:
 
-```ruby secgen.rb -s scenarios/labs/systems_security/7_apparmor.xml run```
+```ruby secgen.rb -s scenarios/labs/systems_security/8_apparmor.xml run```
 
-[View source](scenarios/labs/systems_security/7_apparmor.xml)
+[View source](scenarios/labs/systems_security/8_apparmor.xml)
 
 
   ## web_security/websec_lab.xml
