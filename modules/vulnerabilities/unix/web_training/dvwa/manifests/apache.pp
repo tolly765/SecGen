@@ -8,7 +8,13 @@ class dvwa::apache {
 
   if ($operatingsystem == 'Debian') {
     case $operatingsystemrelease {
-      /^(9|10).*/: { # do 9.x stretch stuff
+      /^(10).*/: { # do 10.x buster stuff
+        $php_version = "php7.3"
+        package { 'mysql-server':
+          ensure => installed,
+        }
+      }
+      /^(9).*/: { # do 9.x stretch stuff
         $php_version = "php7.0"
         package { 'mysql-server':
           ensure => installed,
@@ -22,6 +28,9 @@ class dvwa::apache {
       }
       'kali-rolling': { # do kali
         $php_version = "php7.4"
+        package { 'php7.4-mysql':
+          ensure => installed,
+        }
       }
       default: {
         $php_version = "php"
