@@ -36,8 +36,7 @@ You will need to install the following:
 This project has been adapted to work with the Ubuntu (20.04) release due to (16.04) coming to end of life as of April 2021, though it will still work on that version it is not guaranteed to support the security updates needed for your development environment.
 
 
-### Updated Installation Instruction's to support Ubuntu (20.04)
-### These commands will get you up and running
+### On Ubuntu (20.04) these commands will get you up and running
 
 Ensure Ubuntu is updated using the following commands:
 ```bash
@@ -167,6 +166,9 @@ SecGen accepts arguments to change the way that it behaves, the currently implem
       delete-all-projects: Deletes all current projects in the projects directory
 
 ```
+
+## Troubleshooting: updating VirtualBox base boxes
+If SecGen experiences errors installing packages, the template VMs (base boxes) we publish on Vagrant cloud may need updating (especially Kali, which is a rolling-release). After you have built some VMs, browse in your home directory `.vagrant.d/boxes/`, from here you can manually launch the VMs that are used as templates, and apply software updates `sudo apt-get update; sudo apt-get upgrade`. Then power down the VM, and try SecGen again.
 
 ## Scenarios
 SecGen generates VMs based on a scenario specification, which describes the constraints and properties of the VMs to be created.
