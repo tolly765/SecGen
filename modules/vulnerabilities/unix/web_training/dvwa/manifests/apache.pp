@@ -6,7 +6,7 @@ class dvwa::apache {
 
   # TODO: there is probably a better way to get the PHP module name
 
-  ensure_packages(['php', 'php-gd', 'libapache2-mod-php'])
+  ensure_packages(['php', 'php-gd'])
 
   if ($operatingsystem == 'Debian') {
     case $operatingsystemrelease {
@@ -34,6 +34,7 @@ class dvwa::apache {
   } else {
     $php_version = "php"
   }
+  ensure_packages(['libapache2-mod-php'])
 
 
   class { '::apache':
