@@ -6,14 +6,11 @@ class dvwa::apache {
 
   # TODO: there is probably a better way to get the PHP module name
 
-  ensure_packages(['php', 'php-gd'])
-
   if ($operatingsystem == 'Debian') {
     case $operatingsystemrelease {
       /^(10).*/: { # do 10.x buster stuff
         $php_version = "php7.3"
         ensure_packages(["mysql-server", 'php-mysqli'])
-
       }
       /^(9).*/: { # do 9.x stretch stuff
         $php_version = "php7.0"
@@ -25,7 +22,7 @@ class dvwa::apache {
       }
       'kali-rolling': { # do kali
         $php_version = "php7.4"
-        ensure_packages(["mysql-server", 'php7.4-mysql'])
+        ensure_packages(["default-mysql-server", 'php7.4-mysql'])
       }
       default: {
         $php_version = "php"
@@ -35,6 +32,7 @@ class dvwa::apache {
     $php_version = "php"
   }
   ensure_packages(['libapache2-mod-php'])
+  ensure_packages(['php', 'php-gd'])
 
 
   class { '::apache':
