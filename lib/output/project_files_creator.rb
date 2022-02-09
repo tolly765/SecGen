@@ -256,7 +256,8 @@ class ProjectFilesCreator
       memory = @options[:memory_per_vm]
     elsif @options.has_key? :total_memory
       memory = @options[:total_memory].to_i / @systems.length.to_i
-    elsif (@options.has_key? :ovirtuser) && (@options.has_key? :ovirtpass) && (@base_type.include? 'desktop')
+    elsif (@options.has_key? :ovirtuser) && (@options.has_key? :ovirtpass)
+      # all ovirt vms -- could be more specific: && (@base_type.include? 'desktop')
       memory = '3000'
     else
       memory = '1024'
