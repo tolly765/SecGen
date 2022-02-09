@@ -65,9 +65,6 @@
     </utility>
 
     <utility module_path=".*/kde_minimal">
-      <input into="autologin_user">
-        <datastore access="0" access_json="['username']">user_accounts</datastore>
-      </input>
       <input into="accounts">
         <datastore>user_accounts</datastore>
       </input>
@@ -128,9 +125,6 @@
     </utility>
 
     <utility module_path=".*/kde_minimal">
-      <input into="autologin_user">
-        <datastore access="0" access_json="['username']">user_accounts</datastore>
-      </input>
       <input into="accounts">
         <datastore>user_accounts</datastore>
       </input>
@@ -253,13 +247,6 @@
   <system>
     <system_name>windows_2016_dc</system_name>
     <base platform="windows" distro="server 2016"/>
-
-    <utility module_path=".*/parameterised_accounts" platform="windows">
-      <input into="accounts">
-        <datastore>user_accounts</datastore>
-      </input>
-    </utility>
-
 
     <network type="private_network">
       <input into="IP_address">
