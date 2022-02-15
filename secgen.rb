@@ -34,6 +34,7 @@ def usage
    --no-tests: Prevent post-provisioning tests from running.
    --no-destroy-on-failure: Don't delete VMs that fail to build (except when retrying).
    --retries [number]: Retry building vms that fail to build this many attempts.
+   --no-parallel: Build one VM at a time.
 
    VIRTUALBOX OPTIONS:
    --gui-output, -g: Show the running VM (not headless)
@@ -121,6 +122,9 @@ def build_vms(scenario, project_dir, options)
   end
   if options.has_key? :reload
     command = '--provision reload'
+  end
+  if options.has_key? :noparallel
+    command = "#{command} --no-parallel"
   end
 
   # retry count, for when things fail to build
@@ -452,6 +456,7 @@ opts = GetoptLong.new(
     ['--snapshot', GetoptLong::NO_ARGUMENT],
     ['--no-tests', GetoptLong::NO_ARGUMENT],
     ['--no-destroy-on-failure', GetoptLong::NO_ARGUMENT],
+    ['--no-parallel', GetoptLong::NO_ARGUMENT],
     ['--retries', GetoptLong::REQUIRED_ARGUMENT],
     ['--esxiuser', GetoptLong::REQUIRED_ARGUMENT],
     ['--esxipass', GetoptLong::REQUIRED_ARGUMENT],
@@ -576,6 +581,9 @@ opts.each do |opt, arg|
   when '--no-destroy-on-failure'
     Print.info "Will not destroy VMs when they fail to build"
     options[:nodestroy] = true
+  when '--no-parallel'
+    Print.info "Will not build VMs in parallel"
+    options[:noparallel] = true
   when '--retries'
     Print.info "Number of retries to build vms : #{arg}"
     options[:retries] = arg
