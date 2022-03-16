@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+
+<scenario xmlns="http://www.github/cliffe/SecGen/scenario"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.github/cliffe/SecGen/scenario">
+
+  <name>Let's go phishing</name>
+  <author>Z. Cliffe Schreuders</author>
+  <description>
+# Introduction
+
+# Lab
+[Lab sheet here]().
+  </description>
+
+  <type>ctf-lab</type>
+  <type>lab-sheet</type>
+  <difficulty>easy</difficulty>
+
+<!-- TODO: CyBOK -->
+
+  <system>
+    <system_name>victim_server</system_name>
+    <base distro="Debian 10" type="desktop" name="KDE"/>
+
+    <input into_datastore="IP_addresses">
+      <!-- 0 victim -->
+      <value>172.16.0.2</value>
+      <!-- 1 kali -->
+      <value>172.16.0.3</value>
+    </input>
+
+
+    <service module_path=".*/phish_me_website"/>
+    <service module_path=".*/mailserver"/>
+    <vulnerability module_path=".*/phish_victim_bot">
+      <input into="usernames">
+        <value>s.lord</value>
+        <value>m.pierce</value>
+        <value>c.hampshire</value>
+        <value>j.addams</value>
+        <value>j.baker</value>
+        <value>j.wilkinson</value>
+      </input>
+      <input into="strings_to_leak">
+        <generator type="flag_generator" />
+        <generator type="flag_generator" />
+        <generator type="flag_generator" />
+        <generator type="flag_generator" />
+        <generator type="message_generator" />
+        <generator type="message_generator" />
+      </input>
+
+
+      <input into="phish_victim_bot_configs">
+<value>user=s.lord
+pass=newbie
+server=localhost
+recipients_name=sofia|lord
+trusted_sender=j.addams@
+senders_name=john|addams
+relevant_keyword=intern|update|install
+num_keywords=1
+accepted_file_extension=
+suspicious_of_file_name=false
+reject_all=false</value>
+<value>user=m.pierce
+pass=oldguy
+server=localhost
+recipients_name=melanie|pierce
+trusted_sender=j.baker@
+senders_name=jed|baker
+relevant_keyword=finance|balance|sheet|profit|loss|account
+num_keywords=2
+accepted_file_extension=ods
+suspicious_of_file_name=false
+reject_all=false</value>
+<value>user=c.hampshire
+pass=jobgiver
+server=localhost
+recipients_name=
+trusted_sender=careers@
+senders_name=
+relevant_keyword=
+num_keywords=0
+accepted_file_extension=odt
+suspicious_of_file_name=true
+reject_all=false</value>
+<value>user=j.addams
+pass=kingmaker
+server=localhost
+recipients_name=
+trusted_sender=
+senders_name=
+relevant_keyword=cat|joke
+num_keywords=1
+accepted_file_extension=
+suspicious_of_file_name=false
+reject_all=false</value>
+        <generator type="phish_victim_bot_config_generator">
+          <input into="user">
+            <value>j.baker</value>
+          </input>
+          <input into="pass">
+            <value>monkeys</value>
+          </input>
+          <input into="reject_all">
+            <value>true</value>
+          </input>
+        </generator>
+        <generator type="phish_victim_bot_config_generator">
+          <input into="user">
+            <value>j.wilkinson</value>
+          </input>
+          <input into="pass">
+            <value>monkeys</value>
+          </input>
+          <input into="reject_all">
+            <value>true</value>
+          </input>
+        </generator>
+      </input>
+    </vulnerability>
+
+    <utility module_path=".*/handy_cli_tools"/>
+
+    <input into_datastore="desktop_root_password">
+      <generator type="strong_password_generator"/>
+    </input>
+    <vulnerability module_path=".*/ssh_root_login">
+      <input into="root_password">
+        <datastore>desktop_root_password</datastore>
+      </input>
+    </vulnerability>
+
+    <network type="private_network">
+      <input into="IP_address">
+        <datastore access="0">IP_addresses</datastore>
+      </input>
+    </network>
+  </system>
+
+  <system>
+    <system_name>kali</system_name>
+    <base distro="Kali" name="MSF"/>
+
+    <input into_datastore="kali_root_account">
+      <value>{"username":"root","password":"toor","super_user":"","strings_to_leak":[],"leaked_filenames":[]}</value>
+    </input>
+
+    <utility module_path=".*/kali_pwtools"/>
+    <utility module_path=".*/metasploit_framework"/>
+    <utility module_path=".*/handy_cli_tools"/>
+    <utility module_path=".*/nmap"/>
+    <utility module_path=".*/thunderbird"/>
+    <!-- TODO user a normal user, and pass accounts to thunderbird -->
+
+    <network type="private_network" >
+      <input into="IP_address">
+        <datastore access="1">IP_addresses</datastore>
+      </input>
+    </network>
+  </system>
+
+</scenario>
