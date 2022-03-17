@@ -14,7 +14,8 @@
 
   <type>phishing</type>
   <privilege>user_rwx</privilege>
-  <access>email</access>
+  <!-- TODO: this can lead to local access, but need to test the default config does before setting here -->
+  <access>user_action</access>
   <platform>unix</platform>
   <difficulty>medium</difficulty>
 
