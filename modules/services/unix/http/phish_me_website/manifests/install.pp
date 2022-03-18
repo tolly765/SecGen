@@ -11,7 +11,7 @@ class phish_me_website::install {
   file { "$docroot/":
     ensure => directory,
     recurse => true,
-    source => 'puppet:///modules/parameterised_website/',
+    source => 'puppet:///modules/phish_me_website/www',
     # require => File[$docroot],
   }
 
