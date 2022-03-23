@@ -42,6 +42,14 @@
         <value>j.baker</value>
         <value>j.wilkinson</value>
       </input>
+      <input into="passwords">
+        <value>newbie</value>
+        <value>oldguy</value>
+        <value>jobgiver</value>
+        <value>kingmaker</value>
+        <value>monkeys</value>
+        <value>monkeys</value>
+      </input>
       <input into="strings_to_leak">
         <generator type="flag_generator" />
         <generator type="flag_generator" />
@@ -50,7 +58,18 @@
         <generator type="message_generator" />
         <generator type="message_generator" />
       </input>
+      <input into="leaked_filenames">
+        <value>flag</value>
+        <value>flag</value>
+        <value>flag</value>
+        <value>flag</value>
+        <value>file</value>
+        <value>file</value>
+      </input>
 
+      <input into="server_ip">
+        <datastore access="0">IP_addresses</datastore>
+      </input>
 
       <input into="phish_victim_bot_configs">
 <value>user=s.lord

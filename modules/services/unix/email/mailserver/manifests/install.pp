@@ -1,6 +1,8 @@
 class mailserver::install {
-  $secgen_params = secgen_functions::get_parameters($::base64_inputs_file)
-  $ip = $secgen_params['server_ip'][0]
+  # $secgen_parameters = secgen_functions::get_parameters($::base64_inputs_file)
+  # $ip = $secgen_parameters['server_ip'][0]
+  # TODO: read this from parameter
+  $ip = "accountingnow.com"
 
   package { 'postfix':
     ensure => installed,

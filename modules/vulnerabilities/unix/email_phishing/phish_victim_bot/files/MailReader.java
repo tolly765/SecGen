@@ -127,8 +127,9 @@ public class MailReader implements AutoCloseable {
 	public void sendEmail(Message prevMessage, ArrayList<String> reasons) throws MessagingException {
 		// Step 3: Create a message
 		MimeMessage message = new MimeMessage(session);
-		message.setFrom(new InternetAddress(username + "@worklink.vm"));
-		message.setRecipients(Message.RecipientType.TO, "email@local.vm");
+		// Cliffe TODO: read domain name from preferences
+		message.setFrom(new InternetAddress(username + "@" + prevMessage.getRecipients(Message.RecipientType.TO)[0].toString().split("@")[1]));
+		message.setRecipients(Message.RecipientType.TO, "guest@localhost");
 		message.setSubject("RE: " + prevMessage.getSubject());
 		// message.setText();
 		// Create the message part
@@ -207,8 +208,10 @@ public class MailReader implements AutoCloseable {
 		// A filter to check whether message body has enough keywords
 		return m -> {
 			int counter = 0;
-			for (String keyword : keywords)
+			for (String keyword : keywords) {
+				System.out.println("keyword " + keyword); // removing this line breaks things? when passing in a .split string?
 				if (getMessageBody(m).toLowerCase().contains(keyword.toLowerCase())) counter++;
+			}
 			return counter >= amount;
 		};
 	}
@@ -234,18 +237,25 @@ public class MailReader implements AutoCloseable {
 			String userConfigPath = System.getProperty("user.home") + "/.user.properties";
 			Properties userProps = new Properties();
 			userProps.load(new FileInputStream(userConfigPath));
-			String server = userProps.getProperty("server");
-			String user = userProps.getProperty("user");
-			String pass = userProps.getProperty("pass");
-			String trusted_sender = userProps.getProperty("trusted_sender");
-			String senders_name = userProps.getProperty("senders_name");
-			String recipients_name = userProps.getProperty("recipients_name");
-			String relevant_keyword = userProps.getProperty("relevant_keyword");
-			int num_keywords = Integer.parseInt(userProps.getProperty("num_keywords"));
-			String accepted_file_extension = userProps.getProperty("accepted_file_extension");
-			boolean reject_all = Boolean.parseBoolean(userProps.getProperty("reject_all"));
-			boolean suspicious_of_file_name = Boolean.parseBoolean(userProps.getProperty("suspicious_of_file_name"));
+			String server = userProps.getProperty("server").trim();
+			String user = userProps.getProperty("user").trim();
+			String pass = userProps.getProperty("pass").trim();
+			String trusted_sender = userProps.getProperty("trusted_sender").trim();
+			String senders_name = userProps.getProperty("senders_name").trim();
+			String recipients_name = userProps.getProperty("recipients_name").trim();
+			String relevant_keyword = userProps.getProperty("relevant_keyword").trim();
+			int num_keywords = Integer.parseInt(userProps.getProperty("num_keywords").trim());
+			String accepted_file_extension = userProps.getProperty("accepted_file_extension").trim();
+			boolean reject_all = Boolean.parseBoolean(userProps.getProperty("reject_all".trim()));
+			boolean suspicious_of_file_name = Boolean.parseBoolean(userProps.getProperty("suspicious_of_file_name").trim());
 			System.out.println("Configured as " + user);
+			System.out.println("password " + pass);
+			System.out.println("trusted_sender " + trusted_sender);
+			System.out.println("senders_name " + senders_name);
+			System.out.println("recipients_name " + recipients_name);
+			System.out.println("relevant_keyword " + relevant_keyword);
+			System.out.println("num_keywords " + num_keywords);
+			System.out.println("accepted_file_extension " + accepted_file_extension);
 
 			// Try connecting to the mailserver
 			MailReader reader = new MailReader(server, user, pass);
@@ -256,29 +266,29 @@ public class MailReader implements AutoCloseable {
 				messageFilters.add(m -> false);
 				messageReasons.add("I think this is a phishing email");
 			} else {
-				if(trusted_sender != "") {
+				if(trusted_sender != null && !trusted_sender.isBlank()) {
 					// Message sender
 					messageFilters.add(m -> getSender(m).startsWith(trusted_sender));
 					messageReasons.add("I don't trust the sender");
 				}
-				if(senders_name != "") {
+				if(senders_name != null && !senders_name.isBlank()) {
 					// Message body contains sender name (either first or last name at least once)
-					messageFilters.add(containsKeywords(senders_name.split("|"), 1));
+					messageFilters.add(containsKeywords(senders_name.split("\\|", -1), 1)); //new String[] { "jed", "jd" }, 1));
 					messageReasons.add("The message doesn't include the sender's name");
 				}
-				if(recipients_name != "") {
+				if(recipients_name != null && !recipients_name.isBlank()) {
 					// Message body contains recipient name (either name at least once)
-					messageFilters.add(containsKeywords(recipients_name.split("|"), 1));
+					messageFilters.add(containsKeywords(recipients_name.split("\\|", -1), 1));
 					messageReasons.add("It's not addressed to me");
 				}
-				if(relevant_keyword != "" && num_keywords != 0) {
+				if((relevant_keyword != null && !relevant_keyword.isBlank()) && num_keywords != 0) {
 					// Message body seems relevant (contains keywords)
-					messageFilters.add(containsKeywords(relevant_keyword.split("|"), num_keywords));
+					messageFilters.add(containsKeywords(relevant_keyword.split("\\|", -1), num_keywords));
 					messageReasons.add("It's unrelated to me");
 				}
 				// Attachment has file extension (i.e. is an executable file, or document)
 				attachmentFilters.add(a -> getFileExtension(a).equals(accepted_file_extension));
-				if(accepted_file_extension == "") {
+				if(accepted_file_extension != null && !accepted_file_extension.isBlank()) {
 					attachmentReasons.add("I cannot run that file extension");
 				} else {
 					attachmentReasons.add("I can only open " + accepted_file_extension + "files");

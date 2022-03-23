@@ -22,7 +22,8 @@
   <read_fact>strings_to_leak</read_fact>
   <read_fact>leaked_filenames</read_fact>
   <read_fact>phish_victim_bot_config</read_fact>
-  <read_fact>username</read_fact>
+  <read_fact>usernames</read_fact>
+  <read_fact>passwords</read_fact>
 
   <default_input into="strings_to_leak">
     <generator type="message_generator"/>
@@ -41,6 +42,12 @@
   <default_input into="usernames">
     <value>mailuser</value>
   </default_input>
+  <default_input into="passwords">
+    <value>password</value>
+  </default_input>
+
+<!-- https://www.cs.bham.ac.uk/~tpc/LearnToPhish/ -->
+<!-- https://www.usenix.org/system/files/conference/ase18/ase18-paper_chothia.pdf -->
 
   <requires>
     <type>update</type>
