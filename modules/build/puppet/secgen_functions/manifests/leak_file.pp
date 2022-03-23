@@ -18,7 +18,7 @@ define secgen_functions::leak_file($leaked_filename, $storage_directory, $string
     } else {
       exec { "$leaked_from-$path_to_leak-mkdir":
         path    => ['/bin', '/usr/bin', '/usr/local/bin', '/sbin', '/usr/sbin'],
-        command => "mkdir -p `dirname $path_to_leak`;chown $owner. `dirname $path_to_leak`",
+        command => "mkdir -p `dirname $path_to_leak`;chown $owner:$owner `dirname $path_to_leak`",
         provider => shell,
       }
 
