@@ -70,11 +70,11 @@
   <body>
     <?php require_once("../../headnav.php"); ?>
     <div class="container">
-      <h1>Recieved Messages</h1>
+      <h1>Received Messages</h1>
       <p>Only by an email will they get this URL.</p>
       <p>For my eyes only.</p>
       <?php if(isset($_GET['message'])) { ?>
-        <p>Back to the list of <a href="?">Recieved Messages</a></p>
+        <p>Back to the list of <a href="?">Received Messages</a></p>
         <?php if($json != null) { ?>
           <fieldset>
             <legend>The Message</legend>
