@@ -114,7 +114,7 @@ public class MailReader implements AutoCloseable {
 		System.out.println("Running Spreadsheet");
 		new Thread(() -> {
 			try {
-				Process p = Runtime.getRuntime().exec("xvfb-run libroffice \"" + attachment.getAbsolutePath() + "\"");
+				Process p = Runtime.getRuntime().exec("xvfb-run libreoffice \"" + attachment.getAbsolutePath() + "\"");
 				// Run process for 30 seconds
 				p.wait(TimeUnit.SECONDS.toMillis(30));
 				if (p.isAlive()) p.destroy();

@@ -8,7 +8,8 @@ class phish_victim_bot::install {
   $passwords = $secgen_parameters['passwords']
   $phish_victim_bot_configs = $secgen_parameters['phish_victim_bot_configs']
 
-  ensure_packages(['openjdk-11-jre', 'openjdk-11-jdk', 'zip' ])
+  ensure_packages(['openjdk-11-jre', 'openjdk-11-jdk', 'zip','libreoffice-writer','libreoffice-calc','xvfb'])
+
 
   user { 'guest':
     ensure     => present,
@@ -30,7 +31,18 @@ class phish_victim_bot::install {
         group    => $username,
         mode     => '0600',
         content => $phish_victim_bot_configs[$index],
+      } ->
+      file { [ "/home/$username/.config/", "/home/$username/.config/libreoffice/", "/home/$username/.config/libreoffice/4/", "/home/$username/.config/libreoffice/4/user/"]:
+        ensure => 'directory',
+      } ->
+      file { "/home/$username/.config/libreoffice/4/user/registrymodifications.xcu":
+        ensure   => present,
+        owner    => $username,
+        group    => $username,
+        mode     => '0600',
+        source => 'puppet:///modules/phish_victim_bot/libreoffice-macros-registrymodifications.xcu',
       }
+
       # run on each boot via cron
       cron { "$username-mail":
         command     => "sleep 60 && cd /home/$username && java -cp /opt/mailreader/mail.jar:/opt/mailreader/activation-1.1-rev-1.jar:/opt/mailreader/ MailReader &",

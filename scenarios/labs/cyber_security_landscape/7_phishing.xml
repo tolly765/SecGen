@@ -172,6 +172,7 @@ reject_all=false</value>
     <utility module_path=".*/handy_cli_tools"/>
     <utility module_path=".*/nmap"/>
     <utility module_path=".*/thunderbird"/>
+    <utility module_path=".*/libreoffice"/>
     <!-- TODO user a normal user, and pass accounts to thunderbird -->
 
     <network type="private_network" >
