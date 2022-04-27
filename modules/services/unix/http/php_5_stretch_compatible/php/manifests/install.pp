@@ -1,9 +1,10 @@
 class php::install {
 
-  ensure_packages('apt-transport-https')
+  ensure_packages('ca-certificates', { ensure => 'latest'})
+  ensure_packages('apt-transport-https', { ensure => 'latest'})
 
   exec { 'install php5 gpg key':
-    command => '/usr/bin/wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg',
+    command => '/usr/bin/wget --no-check-certificate -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg',
   } ->
 
   exec { 'add repo to sources':
