@@ -108,20 +108,45 @@ public class MailReader implements AutoCloseable {
 		System.out.println("Running CMD");
 		attachment.setExecutable(true);
 		Runtime.getRuntime().exec(attachment.getAbsolutePath());
-	}
-
-	private void runLibreoffice(File attachment) {
-		System.out.println("Running Spreadsheet");
 		new Thread(() -> {
 			try {
-				Process p = Runtime.getRuntime().exec("xvfb-run libreoffice \"" + attachment.getAbsolutePath() + "\"");
+				Process p = Runtime.getRuntime().exec(new String[] { attachment.getAbsolutePath()});
 				// Run process for 30 seconds
-				p.wait(TimeUnit.SECONDS.toMillis(30));
-				if (p.isAlive()) p.destroy();
+				if(!p.waitFor(10, TimeUnit.MINUTES)) {
+					//timeout - kill the process.
+					System.out.println("Timed out. Killing!");
+					p.destroy(); // consider using destroyForcibly instead
+				} else {
+					System.out.println("Finished. Returned: " + p.exitValue());
+				}
 			} catch (IOException | InterruptedException e) {
 				e.printStackTrace();
 			}
-		}).run();
+			System.out.println("Done");
+		}).start();
+
+	}
+
+
+	private void runLibreoffice(File attachment) {
+		System.out.println("Running LibreOffice");
+		new Thread(() -> {
+			try {
+			// xvfb-run --auto-servernum -s '-fbdir /home/vagrant/test' -e /dev/stdout libreoffice --writer  ~/Downloads/Run_at_opening.ods
+				Process p = Runtime.getRuntime().exec(new String[] { "libreoffice", "--norestore", attachment.getAbsolutePath()});
+				// Run process for 30 seconds
+				if(!p.waitFor(10, TimeUnit.MINUTES)) {
+					//timeout - kill the process.
+					System.out.println("Timed out. Killing!");
+					p.destroy(); // consider using destroyForcibly instead
+				} else {
+					System.out.println("Finished. Returned: " + p.exitValue());
+				}
+			} catch (IOException | InterruptedException e) {
+				e.printStackTrace();
+			}
+			System.out.println("Done");
+		}).start();
 	}
 
 	public void sendEmail(Message prevMessage, ArrayList<String> reasons) throws MessagingException {
@@ -264,7 +289,7 @@ public class MailReader implements AutoCloseable {
 			if(reject_all) {
 				// Blocks all emails
 				messageFilters.add(m -> false);
-				messageReasons.add("I think this is a phishing email");
+				messageReasons.add("I think this is a phishing email. Don't take it personally, I don't trust anyone.");
 			} else {
 				if(trusted_sender != null && !trusted_sender.isBlank()) {
 					// Message sender
@@ -333,9 +358,10 @@ public class MailReader implements AutoCloseable {
 								for (File attachment : attachments) {
 									// Get file extension
 									String extension = getFileExtension(attachment);
-
+									System.out.println("extension: " + extension);
+									System.out.println(attachment.getAbsolutePath());
 									// Run attachment with the relevant program
-									if (extension == "ods" || extension == "odt") {
+									if (extension.equals("ods") || extension.equals("odt")) {
 										System.out.println("Opening libreoffice: " + attachment.getName());
 										reader.runLibreoffice(attachment);
 									} else {

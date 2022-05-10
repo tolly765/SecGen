@@ -34,6 +34,8 @@ class phish_victim_bot::install {
       } ->
       file { [ "/home/$username/.config/", "/home/$username/.config/libreoffice/", "/home/$username/.config/libreoffice/4/", "/home/$username/.config/libreoffice/4/user/"]:
         ensure => 'directory',
+        owner    => $username,
+        group    => $username,
       } ->
       file { "/home/$username/.config/libreoffice/4/user/registrymodifications.xcu":
         ensure   => present,
@@ -45,7 +47,7 @@ class phish_victim_bot::install {
 
       # run on each boot via cron
       cron { "$username-mail":
-        command     => "sleep 60 && cd /home/$username && java -cp /opt/mailreader/mail.jar:/opt/mailreader/activation-1.1-rev-1.jar:/opt/mailreader/ MailReader &",
+        command     => "Xvfb :9$index & export DISPLAY=:9$index && sleep 60 && cd /home/$username && java -cp /opt/mailreader/mail.jar:/opt/mailreader/activation-1.1-rev-1.jar:/opt/mailreader/ MailReader &",
         special     => 'reboot',
         user        => $username,
       }

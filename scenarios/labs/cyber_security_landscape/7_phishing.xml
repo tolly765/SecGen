@@ -152,6 +152,19 @@ reject_all=false</value>
       </input>
     </vulnerability>
 
+    <utility module_path=".*/hosts">
+      <input into="hosts">
+        <value>victim_server</value>
+        <value>accountingnow.com</value>
+        <value>kali</value>
+      </input>
+      <input into="IP_addresses">
+        <datastore access="0">IP_addresses</datastore>
+        <datastore access="0">IP_addresses</datastore>
+        <datastore access="1">IP_addresses</datastore>
+      </input>
+    </utility>
+
     <network type="private_network">
       <input into="IP_address">
         <datastore access="0">IP_addresses</datastore>
@@ -174,6 +187,19 @@ reject_all=false</value>
     <utility module_path=".*/thunderbird"/>
     <utility module_path=".*/libreoffice"/>
     <!-- TODO user a normal user, and pass accounts to thunderbird -->
+
+    <utility module_path=".*/hosts">
+      <input into="hosts">
+        <value>victim_server</value>
+        <value>accountingnow.com</value>
+        <value>kali</value>
+      </input>
+      <input into="IP_addresses">
+        <datastore access="0">IP_addresses</datastore>
+        <datastore access="0">IP_addresses</datastore>
+        <datastore access="1">IP_addresses</datastore>
+      </input>
+    </utility>
 
     <network type="private_network" >
       <input into="IP_address">

@@ -33,17 +33,20 @@ class PhishConfigGenerator < StringEncoder
 
   def encode_all
     # ensure variables are populated
-    self.outputs << "user=#{self.user}"
-    self.outputs << "pass=#{self.pass}"
-    self.outputs << "server=#{self.server}"
-    self.outputs << "recipients_name=#{self.recipients_name}"
-    self.outputs << "trusted_sender=#{self.trusted_sender}"
-    self.outputs << "senders_name=#{self.senders_name}"
-    self.outputs << "relevant_keyword=#{self.relevant_keyword}"
-    self.outputs << "num_keywords=#{self.num_keywords}"
-    self.outputs << "accepted_file_extension=#{self.accepted_file_extension}"
-    self.outputs << "suspicious_of_file_name=#{self.suspicious_of_file_name}"
-    self.outputs << "reject_all=#{self.reject_all}"
+output = <<-FOO
+user=#{self.user}
+pass=#{self.pass}
+server=#{self.server}
+recipients_name=#{self.recipients_name}
+trusted_sender=#{self.trusted_sender}
+senders_name=#{self.senders_name}
+relevant_keyword=#{self.relevant_keyword}
+num_keywords=#{self.num_keywords}
+accepted_file_extension=#{self.accepted_file_extension}
+suspicious_of_file_name=#{self.suspicious_of_file_name}
+reject_all=#{self.reject_all}
+FOO
+    self.outputs << output
   end
 
   def get_options_array
@@ -62,7 +65,7 @@ class PhishConfigGenerator < StringEncoder
   def process_options(opt, arg)
     super
     case opt
-    when '--user'
+      when '--user'
         self.user = arg;
       when '--pass'
         self.pass = arg;
