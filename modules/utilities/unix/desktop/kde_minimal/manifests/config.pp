@@ -40,7 +40,15 @@ class kde_minimal::config {
         ensure => directory,
         owner  => $username,
         group  => $username,
+      } ~>
+      # automatically refresh screen resolution everytime it changes
+      file { "/home/$username/.config/autostart/auto-resolution.desktop":
+        ensure => file,
+        source => 'puppet:///modules/kde_minimal/auto-resolution.desktop',
+        owner  => $username,
+        group  => $username,
       }
+
       # autostart konsole
       if $autostart_konsole {
         file { "/home/$username/.config/autostart/":
