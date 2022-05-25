@@ -34,7 +34,7 @@
   </default_input>
 
   <default_input into="subdirectory">
-    <generator type="challenges"/>
+    <value>/srv/</value>
   </default_input>
 
   <output_type>array</output_type>
