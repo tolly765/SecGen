@@ -24,7 +24,7 @@ class WordFlagGenerator < StringGenerator
     }
 
     flag_string.gsub!(/[^0-9a-z ]/i, '')  # strip special characters from the word string. removes umlauts/accents etc.
-    self.outputs << 'flag{' + flag_string + '}'
+    self.outputs << 'flag{' + flag_string.downcase + '}'
   end
 end
 
