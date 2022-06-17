@@ -15,4 +15,4 @@ class SUIDviewTest < PostProvisionTest
 
 end
 
-SUIDviTest.new.run
+SUIDviewTest.new.run
