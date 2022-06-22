@@ -10,7 +10,7 @@ class phish_me_website::apache {
 
   apache::vhost { 'accountingnow.com':
     port    => $port,
-    docroot => '/var/www/accountingnow',
+    docroot => '/var/www/accountingnow/',
     notify => Tidy['pws remove default site'],
   }
 
