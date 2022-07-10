@@ -25,6 +25,11 @@
           <input into="strings_to_leak">
             <value>flag{test_flag}</value>
             <generator type="flag_generator"/>
+            <generator type="concat_flag.*">
+              <input into="strings_to_join">
+                <value>test_flag_concat</value>
+              </input>
+            </generator>
           </input>
           <input into="leaked_filenames">
             <value>flag</value>
