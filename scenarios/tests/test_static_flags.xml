@@ -23,11 +23,49 @@
             <value>test</value>
           </input>
           <input into="strings_to_leak">
-            <value>flag{test_flag}</value>
-            <generator type="flag_generator"/>
             <generator type="concat_flag.*">
               <input into="strings_to_join">
                 <value>test_flag_concat</value>
+              </input>
+            </generator>
+            <generator type="concat_flag.*">
+              <input into="strings_to_join">
+                <value>test_flag_concat2</value>
+              </input>
+            </generator>
+            <generator type="concat_flag.*">
+              <input into="strings_to_join">
+                <value>test_flag_concat3</value>
+              </input>
+            </generator>
+            <generator type="concat_flag.*">
+              <input into="strings_to_join">
+                <value>test_flag_concat4</value>
+              </input>
+            </generator>
+            <generator type="concat_flag.*">
+              <input into="strings_to_join">
+                <value>test_flag_concat5</value>
+              </input>
+            </generator>
+            <generator type="concat_flag.*">
+              <input into="strings_to_join">
+                <value>test_flag_concat6</value>
+              </input>
+            </generator>
+            <generator type="concat_flag.*">
+              <input into="strings_to_join">
+                <value>test_flag_concat7</value>
+              </input>
+            </generator>
+            <generator type="concat_flag.*">
+              <input into="strings_to_join">
+                <value>test_flag_concat8</value>
+              </input>
+            </generator>
+            <generator type="concat_flag.*">
+              <input into="strings_to_join">
+                <value>test_flag_concat9</value>
               </input>
             </generator>
           </input>
