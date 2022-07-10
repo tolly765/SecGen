@@ -11,10 +11,27 @@
       <value>172.16.0.2</value>
     </input>
 
-    <input into="flags">
-      <value>flag{test_from_aaa}</value>
-      <value>flag{test}</value>
-    </input>
+    <vulnerability module_path=".*readable_shadow.*"/>
+
+    <utility module_path=".*parameterised_accounts">
+      <input into="accounts">
+        <generator type="account">
+          <input into="username">
+            <value>test</value>
+          </input>
+          <input into="password">
+            <value>test</value>
+          </input>
+          <input into="strings_to_leak">
+            <value>flag{test_flag}</value>
+            <generator type="flag_generator"/>
+          </input>
+          <input into="leaked_filenames">
+            <value>flag</value>
+          </input>
+        </generator>
+      </input>
+    </utility>
 
     <network type="private_network">
       <input into="IP_address">
