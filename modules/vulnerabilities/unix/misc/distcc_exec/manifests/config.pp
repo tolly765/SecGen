@@ -12,18 +12,25 @@ class distcc_exec::config{
     content  => template('distcc_exec/distcc.erb')
   }
 
-  # distccd home directory
+  user { 'distccd':
+    ensure => present,
+    home   => '/home/distccd/',
+  } ->
+  group {'distccd':
+    ensure => present,
+  } ->
+  # distccd home directory permissions
   file { '/home/distccd/':
     ensure => directory,
     owner => 'distccd',
     mode  =>  '0750',
   }
-
+  # ->
   #exec usermod home directory for distccd
-  exec { 'change-home-dir':
-    path => ['/usr/bin/', '/usr/sbin'],
-    command => 'usermod -d /home/distccd distccd'
-  }
+  #exec { 'change-home-dir':
+  #  path => ['/usr/bin/', '/usr/sbin'],
+  #  command => 'usermod -d /home/distccd distccd'
+  #}
 
   # newer versions of distcc have a directory of symlinks for whitelisting compilers
   exec {"check_presence_compiler_list":
