@@ -7,11 +7,23 @@ class cleanup::init {
 
   Exec { path => ['/bin','/sbin','/usr/bin', '/usr/sbin'] }
 
-  # Set root password
-  ::accounts::user { 'root':
-    shell      => '/bin/bash',
-    password   => pw_hash($root_password, 'SHA-512', 'mysalt'),
-    managehome => true,
+  file_line { 'comment_out_legacy_login_config1':
+    line   => '# NONEXISTENT',
+    match  => 'NONEXISTENT.*',
+    path => "/etc/login.defs",
+  } ->
+  file_line { 'comment_out_legacy_login_config2':
+    line   => '# PREVENT_NO_AUTH',
+    match  => 'PREVENT_NO_AUTH.*',
+    path => "/etc/login.defs",
+  }
+
+  if $root_password {
+    # Set root password
+    ::accounts::user { 'root':
+      ensure => present,
+      password   => pw_hash($root_password, 'SHA-512', 'mysalt'),
+    }
   }
 
   # if kali_msf we have a default kali sudoer account by default, so change the kali user password too.
