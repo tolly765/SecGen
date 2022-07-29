@@ -1,3 +1,8 @@
+# @summary
+#   Installs `mod_peruser`.
+# 
+# @todo
+#   Add docs
 class apache::mod::peruser (
   $minspareprocessors = '2',
   $minprocessors = '2',
@@ -8,7 +13,7 @@ class apache::mod::peruser (
   $expiretimeout = '120',
   $keepalive = 'Off',
 ) {
-  include ::apache
+  include apache
   case $::osfamily {
     'freebsd' : {
       fail("Unsupported osfamily ${::osfamily}")
@@ -34,11 +39,11 @@ class apache::mod::peruser (
       }
       File {
         owner => 'root',
-        group => $::apache::params::root_group,
-        mode  => $::apache::file_mode,
+        group => $apache::params::root_group,
+        mode  => $apache::file_mode,
       }
 
-      $mod_dir = $::apache::mod_dir
+      $mod_dir = $apache::mod_dir
 
       # Template uses:
       # - $minspareprocessors
@@ -50,25 +55,25 @@ class apache::mod::peruser (
       # - $expiretimeout
       # - $keepalive
       # - $mod_dir
-      file { "${::apache::mod_dir}/peruser.conf":
+      file { "${apache::mod_dir}/peruser.conf":
         ensure  => file,
-        mode    => $::apache::file_mode,
+        mode    => $apache::file_mode,
         content => template('apache/mod/peruser.conf.erb'),
-        require => Exec["mkdir ${::apache::mod_dir}"],
-        before  => File[$::apache::mod_dir],
+        require => Exec["mkdir ${apache::mod_dir}"],
+        before  => File[$apache::mod_dir],
         notify  => Class['apache::service'],
       }
-      file { "${::apache::mod_dir}/peruser":
+      file { "${apache::mod_dir}/peruser":
         ensure  => directory,
-        require => File[$::apache::mod_dir],
+        require => File[$apache::mod_dir],
       }
-      file { "${::apache::mod_dir}/peruser/multiplexers":
+      file { "${apache::mod_dir}/peruser/multiplexers":
         ensure  => directory,
-        require => File["${::apache::mod_dir}/peruser"],
+        require => File["${apache::mod_dir}/peruser"],
       }
-      file { "${::apache::mod_dir}/peruser/processors":
+      file { "${apache::mod_dir}/peruser/processors":
         ensure  => directory,
-        require => File["${::apache::mod_dir}/peruser"],
+        require => File["${apache::mod_dir}/peruser"],
       }
 
       ::apache::peruser::multiplexer { '01-default': }

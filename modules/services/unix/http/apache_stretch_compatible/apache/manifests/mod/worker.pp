@@ -1,56 +1,46 @@
-# == Class: apache::mod::worker
+# @summary
+#   Installs and manages the MPM `worker`.
 #
+# @param startservers
+#   The number of child server processes created on startup
 #
-# === Parameters
-#
-#  [*startservers*]
-#   (optional) The number of child server processes created on startup
-#   Defaults is '2'
-#
-#  [*maxclients*]
-#   (optional) The max number of simultaneous requests that will be served.
+# @param maxclients
+#   The max number of simultaneous requests that will be served.
 #   This is the old name and is still supported. The new name is
 #   MaxRequestWorkers as of 2.3.13.
-#   Default is '150'
 #
-#  [*minsparethreads*]
-#   (optional) Minimum number of idle threads to handle request spikes.
-#   Default is '25'
+# @param minsparethreads
+#   Minimum number of idle threads to handle request spikes.
 #
-#  [*maxsparethreads*]
-#   (optional) Maximum number of idle threads.
-#   Default is '75'
+# @param maxsparethreads
+#   Maximum number of idle threads.
 #
-#  [*threadsperchild*]
-#   (optional) The number of threads created by each child process.
-#   Default is '25'
+# @param threadsperchild
+#   The number of threads created by each child process.
 #
-#  [*maxrequestsperchild*]
-#   (optional) Limit on the number of connectiojns an individual child server
+# @param maxrequestsperchild
+#   Limit on the number of connectiojns an individual child server
 #   process will handle. This is the old name and is still supported. The new
 #   name is MaxConnectionsPerChild as of 2.3.9+.
-#   Default is '0'
 #
-#  [*serverlimit*]
-#   (optional) With worker, use this directive only if your MaxRequestWorkers
+# @param serverlimit
+#   With worker, use this directive only if your MaxRequestWorkers
 #   and ThreadsPerChild settings require more than 16 server processes
 #   (default). Do not set the value of this directive any higher than the
 #   number of server processes required by what you may want for
 #   MaxRequestWorkers and ThreadsPerChild.
-#   Default is '25'
 #
-#  [*threadlimit*]
-#   (optional) This directive sets the maximum configured value for
+# @param threadlimit
+#   This directive sets the maximum configured value for
 #   ThreadsPerChild for the lifetime of the Apache httpd process.
-#   Default is '64'
 #
-#  [*listenbacklog*]
-#    (optional) Maximum length of the queue of pending connections.
-#    Defaults is '511'
+# @param listenbacklog
+#    Maximum length of the queue of pending connections.
 #
-#  [*apache_version*]
-#   (optional)
-#   Default is $::apache::apache_version
+# @param apache_version
+#   Used to verify that the Apache version you have requested is compatible with the module.
+#
+# @see https://httpd.apache.org/docs/current/mod/worker.html for additional documentation.
 #
 class apache::mod::worker (
   $startservers        = '2',
@@ -64,7 +54,7 @@ class apache::mod::worker (
   $listenbacklog       = '511',
   $apache_version      = undef,
 ) {
-  include ::apache
+  include apache
   $_apache_version = pick($apache_version, $apache::apache_version)
 
   if defined(Class['apache::mod::event']) {
@@ -81,8 +71,8 @@ class apache::mod::worker (
   }
   File {
     owner => 'root',
-    group => $::apache::params::root_group,
-    mode  => $::apache::file_mode,
+    group => $apache::params::root_group,
+    mode  => $apache::file_mode,
   }
 
   # Template uses:
@@ -95,19 +85,18 @@ class apache::mod::worker (
   # - $serverlimit
   # - $threadLimit
   # - $listenbacklog
-  file { "${::apache::mod_dir}/worker.conf":
+  file { "${apache::mod_dir}/worker.conf":
     ensure  => file,
     content => template('apache/mod/worker.conf.erb'),
-    require => Exec["mkdir ${::apache::mod_dir}"],
-    before  => File[$::apache::mod_dir],
+    require => Exec["mkdir ${apache::mod_dir}"],
+    before  => File[$apache::mod_dir],
     notify  => Class['apache::service'],
   }
 
   case $::osfamily {
     'redhat': {
-
       if versioncmp($_apache_version, '2.4') >= 0 {
-        ::apache::mpm{ 'worker':
+        ::apache::mpm { 'worker':
           apache_version => $_apache_version,
         }
       }
@@ -124,7 +113,7 @@ class apache::mod::worker (
     }
 
     'debian', 'freebsd': {
-      ::apache::mpm{ 'worker':
+      ::apache::mpm { 'worker':
         apache_version => $_apache_version,
       }
     }

@@ -1,5 +1,10 @@
+# @summary
+#   Installs `mod_cgid`.
+# 
+# @see https://httpd.apache.org/docs/current/mod/mod_cgid.html
+#
 class apache::mod::cgid {
-  include ::apache
+  include apache
   case $::osfamily {
     'FreeBSD': {}
     default: {
@@ -31,11 +36,11 @@ class apache::mod::cgid {
     # Template uses $cgisock_path
     file { 'cgid.conf':
       ensure  => file,
-      path    => "${::apache::mod_dir}/cgid.conf",
-      mode    => $::apache::file_mode,
+      path    => "${apache::mod_dir}/cgid.conf",
+      mode    => $apache::file_mode,
       content => template('apache/mod/cgid.conf.erb'),
-      require => Exec["mkdir ${::apache::mod_dir}"],
-      before  => File[$::apache::mod_dir],
+      require => Exec["mkdir ${apache::mod_dir}"],
+      before  => File[$apache::mod_dir],
       notify  => Class['apache::service'],
     }
   }

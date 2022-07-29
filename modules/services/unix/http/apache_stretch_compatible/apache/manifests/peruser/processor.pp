@@ -1,3 +1,7 @@
+# @summary
+#   Enables the `Peruser` module for FreeBSD only.
+#
+# @api private
 define apache::peruser::processor (
   $user,
   $group,
@@ -8,10 +12,10 @@ define apache::peruser::processor (
   } else {
     $filename = $file
   }
-  file { "${::apache::mod_dir}/peruser/processors/${filename}":
+  file { "${apache::mod_dir}/peruser/processors/${filename}":
     ensure  => file,
     content => "Processor ${user} ${group}\n",
-    require => File["${::apache::mod_dir}/peruser/processors"],
+    require => File["${apache::mod_dir}/peruser/processors"],
     notify  => Class['apache::service'],
   }
 }
