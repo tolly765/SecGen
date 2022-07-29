@@ -20,3 +20,4 @@ lib/resources/images/scenario
 Gemfile.lock
 .vagrant
 rgloader
+.ruby-version
