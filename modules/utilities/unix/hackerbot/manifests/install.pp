@@ -29,9 +29,14 @@ class hackerbot::install{
     ensure   => 'installed',
   }
 
-  package { ['nori', 'cinch', 'programr', 'nokogiri', 'thwait']:
+  package { ['nori', 'specific_install', 'programr', 'nokogiri', 'thwait']:
     ensure   => 'installed',
     provider => 'gem',
     require => [Package['zlibc'], Package['zlib1g'], Package['zlib1g-dev']],
+  }->
+  exec { 'install cinch gem from github':
+    command     => 'sudo gem specific_install -l https://github.com/cliffe/cinch.git',
+    path        => [ '/usr/bin', '/bin', '/usr/sbin' ],
   }
+
 }

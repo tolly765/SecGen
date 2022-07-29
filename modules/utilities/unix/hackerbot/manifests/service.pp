@@ -5,12 +5,14 @@ class hackerbot::service{
     ensure => 'link',
     target => '/opt/hackerbot/hackerbot.service',
   }->
-  service { 'NetworkManager':
-    ensure   => stopped,
-    enable   => false,
+  exec { 'hackerbot-systemd-reload':
+    command     => 'systemctl daemon-reload',
+    path        => [ '/usr/bin', '/bin', '/usr/sbin' ],
+    refreshonly => true,
   }->
   service { 'hackerbot':
     ensure   => running,
+    provider => systemd,
     enable   => true,
   }
 }

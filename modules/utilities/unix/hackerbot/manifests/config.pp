@@ -46,4 +46,9 @@ class hackerbot::config{
 
   ensure_resource('tidy','hb remove default site', {'path'=>'/etc/apache2/sites-enabled/000-default.conf'})
 
+  # not sure why the new kali apache module doesn't start on boot, this fixes it
+  exec { 'hackerbot-apache2-systemd-reload':
+    command     => 'systemctl daemon-reload; systemctl enable apache2',
+    path        => [ '/usr/bin', '/bin', '/usr/sbin' ],
+  }
 }
