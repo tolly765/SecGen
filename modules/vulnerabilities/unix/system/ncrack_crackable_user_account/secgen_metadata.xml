@@ -47,7 +47,7 @@
   <solution>Use the following command: 'ncrack -v --user username -P /usr/share/ncrack/default.pwd host_ip:22'</solution>
 
   <requires>
-    <module_path>utilities/unix/system/accounts</module_path>
+    <module_path>utilities/unix/system/.*/accounts</module_path>
   </requires>
 
 

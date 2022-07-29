@@ -48,7 +48,7 @@
   <solution>Use the following command: 'john -wordlist=/usr/share/john/password.lst yourhashfile'</solution>
 
   <requires>
-    <module_path>utilities/unix/system/accounts</module_path>
+    <module_path>utilities/unix/system/.*/accounts</module_path>
   </requires>
 
 

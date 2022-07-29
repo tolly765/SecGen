@@ -19,7 +19,7 @@
   <read_fact>hostnames</read_fact>
 
   <requires>
-    <module_path>utilities/unix/system/accounts</module_path>
+    <module_path>utilities/unix/system/.*/accounts</module_path>
   </requires>
 
 </utility>

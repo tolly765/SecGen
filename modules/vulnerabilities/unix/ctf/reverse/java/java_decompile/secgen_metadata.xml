@@ -60,7 +60,7 @@
   <reference>https://2013.picoctf.com</reference>
 
   <requires>
-    <module_path>utilities/unix/system/accounts</module_path>
+    <module_path>utilities/unix/system/.*/accounts</module_path>
   </requires>
   <requires>
     <type>java</type>

@@ -64,7 +64,7 @@
   </solution>
 
   <requires>
-    <module_path>utilities/unix/system/accounts</module_path>
+    <module_path>utilities/unix/system/.*/accounts</module_path>
   </requires>
 
   <CyBOK KA="AAA" topic="Authorisation">

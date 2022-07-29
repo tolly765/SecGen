@@ -16,4 +16,11 @@
   <!--optional details-->
   <reference>https://forge.puppet.com/puppetlabs/accounts</reference>
 
+  <conflict>
+    <module_path>.*/bases/.*wheezy.*</name>
+  </conflict>
+  <conflict>
+    <module_path>.*/bases/.*stretch.*</name>
+  </conflict>
+
 </utility>
