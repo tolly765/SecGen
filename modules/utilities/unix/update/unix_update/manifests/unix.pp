@@ -7,6 +7,13 @@ class unix_update::unix{
         try_sleep => 30,
       }
     }
+    'Kali': {
+      exec { 'update':
+        command => "/usr/bin/apt-get update --fix-missing",
+        tries => 5,
+        try_sleep => 30,
+      }
+    }
     'Ubuntu': {
       exec { 'update':
         command => "/usr/bin/apt-get update --fix-missing",
