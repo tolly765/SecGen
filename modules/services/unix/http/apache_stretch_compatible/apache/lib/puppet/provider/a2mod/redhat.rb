@@ -1,14 +1,12 @@
-# frozen_string_literal: true
-
 require 'puppet/provider/a2mod'
 
-Puppet::Type.type(:a2mod).provide(:redhat, parent: Puppet::Provider::A2mod) do
-  desc 'Manage Apache 2 modules on RedHat family OSs'
+Puppet::Type.type(:a2mod).provide(:redhat, :parent => Puppet::Provider::A2mod) do
+  desc "Manage Apache 2 modules on RedHat family OSs"
 
-  commands apachectl: 'apachectl'
+  commands :apachectl => "apachectl"
 
-  confine osfamily: :redhat
-  defaultfor osfamily: :redhat
+  confine :osfamily => :redhat
+  defaultfor :osfamily => :redhat
 
   require 'pathname'
 
@@ -20,14 +18,14 @@ Puppet::Type.type(:a2mod).provide(:redhat, parent: Puppet::Provider::A2mod) do
   class << self
     attr_accessor :modpath
     def preinit
-      @modpath = '/etc/httpd/mod.d'
+      @modpath = "/etc/httpd/mod.d"
     end
   end
 
-  preinit
+  self.preinit
 
   def create
-    File.open(modfile, 'w') do |f|
+    File.open(modfile,'w') do |f|
       f.puts "LoadModule #{resource[:identifier]} #{libfile}"
     end
   end
@@ -37,26 +35,26 @@ Puppet::Type.type(:a2mod).provide(:redhat, parent: Puppet::Provider::A2mod) do
   end
 
   def self.instances
-    modules = apachectl('-M').lines.map { |line|
-      m = line.match(%r{(\w+)_module \(shared\)$})
+    modules = apachectl("-M").lines.collect { |line|
+      m = line.match(/(\w+)_module \(shared\)$/)
       m[1] if m
     }.compact
 
     modules.map do |mod|
       new(
-        name: mod,
-        ensure: :present,
-        provider: :redhat,
+        :name     => mod,
+        :ensure   => :present,
+        :provider => :redhat
       )
     end
   end
 
   def modfile
-    "#{self.class.modpath}/#{resource[:name]}.load"
+    modfile ||= "#{self.class.modpath}/#{resource[:name]}.load"
   end
 
   # Set libfile path: If absolute path is passed, then maintain it. Else, make it default from 'modules' dir.
   def libfile
-    Pathname.new(resource[:lib]).absolute? ? resource[:lib] : "modules/#{resource[:lib]}"
+    libfile = Pathname.new(resource[:lib]).absolute? ? resource[:lib] : "modules/#{resource[:lib]}"
   end
 end

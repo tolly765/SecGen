@@ -1,18 +1,10 @@
-# @summary
-#   Installs and configures `mod_dav_svn`.
-# 
-# @param authz_svn_enabled
-#   Specifies whether to install Apache mod_authz_svn
-# 
-# @see https://httpd.apache.org/docs/current/mod/mod_dav_svn.html for additional documentation.
-#
 class apache::mod::dav_svn (
   $authz_svn_enabled = false,
 ) {
   Class['::apache::mod::dav'] -> Class['::apache::mod::dav_svn']
-  include apache
-  include apache::mod::dav
-  if($::operatingsystem == 'SLES' and versioncmp($::operatingsystemmajrelease, '12') < 0) {
+  include ::apache
+  include ::apache::mod::dav
+  if($::operatingsystem == 'SLES' and $::operatingsystemmajrelease < '12'){
     package { 'subversion-server':
       ensure   => 'installed',
       provider => 'zypper',
@@ -21,11 +13,15 @@ class apache::mod::dav_svn (
 
   ::apache::mod { 'dav_svn': }
 
+  if $::osfamily == 'Debian' and ($::operatingsystemmajrelease != '6' and $::operatingsystemmajrelease != '10.04' and $::operatingsystemrelease != '10.04' and $::operatingsystemmajrelease != '16.04') {
+    $loadfile_name = undef
+  } else {
+    $loadfile_name = 'dav_svn_authz_svn.load'
+  }
+
   if $authz_svn_enabled {
     ::apache::mod { 'authz_svn':
-      # authz_svn depends on symbols from the dav_svn module,
-      # therefore, make sure authz_svn is loaded after dav_svn.
-      loadfile_name => 'dav_svn_authz_svn.load',
+      loadfile_name => $loadfile_name,
       require       => Apache::Mod['dav_svn'],
     }
   }

@@ -1,7 +1,8 @@
 # Tests the path and identifier parameters for the apache::mod class
 
 # Base class for clarity:
-class { 'apache': }
+class { '::apache': }
+
 
 # Exaple parameter usage:
 apache::mod { 'testmod':

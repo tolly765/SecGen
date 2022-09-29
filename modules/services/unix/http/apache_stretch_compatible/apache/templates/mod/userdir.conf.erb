@@ -2,10 +2,9 @@
 <% if @disable_root -%>
   UserDir disabled root
 <% end -%>
-  UserDir <%= @_userdir %>
+  UserDir <%= @_path %>
 
-<%- if ! @unmanaged_path -%>
-  <Directory "<%= @_path %>">
+  <Directory "<%= @home %>/*/<%= @dir %>">
     AllowOverride <%= @overrides.join(' ') %>
     Options <%= @options.join(' ') %>
     <Limit GET POST OPTIONS>
@@ -25,8 +24,4 @@
       <%- end -%>
     </LimitExcept>
   </Directory>
-<%- end -%>
-<%- if @custom_fragment -%>
-<%= @custom_fragment %>
-<%- end -%>
 </IfModule>

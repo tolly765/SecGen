@@ -1,18 +1,3 @@
-# @summary
-#   Installs and configures `mod_pagespeed`.
-# 
-# @todo
-#   Add docs
-#
-# @note
-#   Verify that your system is compatible with the latest Google Pagespeed requirements.
-#
-# Although this apache module requires the mod-pagespeed-stable package, Puppet does not manage the software repositories required to
-# automatically install the package. If you declare this class when the package is either not installed or not available to your 
-# package manager, your Puppet run will fail.
-# 
-# @see https://developers.google.com/speed/pagespeed/module/ for additional documentation.
-#
 class apache::mod::pagespeed (
   $inherit_vhost_config          = 'on',
   $filter_xhtml                  = false,
@@ -49,8 +34,8 @@ class apache::mod::pagespeed (
   $additional_configuration      = {},
   $apache_version                = undef,
   $package_ensure                = undef,
-) {
-  include apache
+){
+  include ::apache
   $_apache_version = pick($apache_version, $apache::apache_version)
   $_lib = $_apache_version ? {
     '2.4'   => 'mod_pagespeed_ap24.so',
@@ -65,11 +50,11 @@ class apache::mod::pagespeed (
   # Template uses $_apache_version
   file { 'pagespeed.conf':
     ensure  => file,
-    path    => "${apache::mod_dir}/pagespeed.conf",
-    mode    => $apache::file_mode,
+    path    => "${::apache::mod_dir}/pagespeed.conf",
+    mode    => $::apache::file_mode,
     content => template('apache/mod/pagespeed.conf.erb'),
-    require => Exec["mkdir ${apache::mod_dir}"],
-    before  => File[$apache::mod_dir],
+    require => Exec["mkdir ${::apache::mod_dir}"],
+    before  => File[$::apache::mod_dir],
     notify  => Class['apache::service'],
   }
 }

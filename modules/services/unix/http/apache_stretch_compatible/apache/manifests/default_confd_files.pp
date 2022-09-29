@@ -1,7 +1,3 @@
-# @summary
-#   Helper for setting up default conf.d files.
-#
-# @api private
 class apache::default_confd_files (
   $all = true,
 ) {
@@ -9,7 +5,7 @@ class apache::default_confd_files (
   if $all {
     case $::osfamily {
       'freebsd': {
-        include apache::confd::no_accf
+        include ::apache::confd::no_accf
       }
       default: {
         # do nothing

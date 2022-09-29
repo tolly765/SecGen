@@ -16,14 +16,3 @@
 class { 'apache':
   mpm_module => 'prefork'
 }
-
-exec { 'apache2-systemd-reload':
-  command     => 'systemctl daemon-reload; systemctl enable apache2',
-  path        => [ '/usr/bin', '/bin', '/usr/sbin' ],
-}
-#->
-#service { 'apache2':
-#  ensure   => running,
-#  provider => systemd,
-#  enable   => true,
-#}

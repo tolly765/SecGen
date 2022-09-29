@@ -1,48 +1,50 @@
-# @summary
-#   Defines members of `mod_proxy_balancer`
-# 
-# Sets up a balancer member inside a listening service configuration block in 
-# the load balancer's `apache.cfg`.
-#   
+# == Define Resource Type: apache::balancermember
+#
 # This type will setup a balancer member inside a listening service
 # configuration block in /etc/apache/apache.cfg on the load balancer.
-# Currently it only has the ability to specify the instance name, url and an
+# currently it only has the ability to specify the instance name, url and an
 # array of options. More features can be added as needed. The best way to
 # implement this is to export this resource for all apache balancer member
 # servers, and then collect them on the main apache load balancer.
 #
-# @note
-#   Currently requires the puppetlabs/concat module on the Puppet Forge and
-#   uses storeconfigs on the Puppet Server to export/collect resources
-#   from all balancer members.
+# === Requirement/Dependencies:
 #
-# @param name
-#   The title of the resource is arbitrary and only utilized in the concat
-#   fragment name.
+# Currently requires the puppetlabs/concat module on the Puppet Forge and
+# uses storeconfigs on the Puppet Master to export/collect resources
+# from all balancer members.
 #
-# @param balancer_cluster
-#   The apache service's instance name (or, the title of the apache::balancer
-#   resource). This must match up with a declared apache::balancer resource.
+# === Parameters
 #
-# @param url
-#   The url used to contact the balancer member server.
+# [*name*]
+# The title of the resource is arbitrary and only utilized in the concat
+# fragment name.
 #
-# @param  options
-#   Specifies an array of [options](https://httpd.apache.org/docs/current/mod/mod_proxy.html#balancermember) 
-#   after the URL, and accepts any key-value pairs available to `ProxyPass`.
+# [*balancer_cluster*]
+# The apache service's instance name (or, the title of the apache::balancer
+# resource). This must match up with a declared apache::balancer resource.
 #
-# @example
-#   @@apache::balancermember { 'apache':
-#     balancer_cluster => 'puppet00',
-#     url              => "ajp://${::fqdn}:8009"
-#     options          => ['ping=5', 'disablereuse=on', 'retry=5', 'ttl=120'],
-#   }
+# [*url*]
+# The url used to contact the balancer member server.
 #
-define apache::balancermember (
+# [*options*]
+# An array of options to be specified after the url.
+#
+# === Examples
+#
+# Exporting the resource for a balancer member:
+#
+# @@apache::balancermember { 'apache':
+#   balancer_cluster => 'puppet00',
+#   url              => "ajp://${::fqdn}:8009"
+#   options          => ['ping=5', 'disablereuse=on', 'retry=5', 'ttl=120'],
+# }
+#
+define apache::balancermember(
   $balancer_cluster,
   $url = "http://${::fqdn}/",
   $options = [],
 ) {
+
   concat::fragment { "BalancerMember ${name}":
     target  => "apache_balancer_${balancer_cluster}",
     content => inline_template(" BalancerMember ${url} <%= @options.join ' ' %>\n"),

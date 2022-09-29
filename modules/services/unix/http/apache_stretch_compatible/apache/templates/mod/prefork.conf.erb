@@ -3,15 +3,6 @@
   MinSpareServers     <%= @minspareservers %>
   MaxSpareServers     <%= @maxspareservers %>
   ServerLimit         <%= @serverlimit %>
-  <%- if @maxrequestworkers -%>
-  MaxRequestWorkers      <%= @maxrequestworkers %>
-  <%- elsif @maxclients -%>
-  MaxClients             <%= @maxclients %>
-  <%- end -%>
-  <%- if @maxconnectionsperchild -%>
-  MaxConnectionsPerChild <%= @maxconnectionsperchild %>
-  <%- elsif @maxrequestsperchild -%>
-  MaxRequestsPerChild    <%= @maxrequestsperchild %>
-  <%- end -%>
-  ListenBacklog       <%= @listenbacklog %>
+  MaxClients          <%= @maxclients %>
+  MaxRequestsPerChild <%= @maxrequestsperchild %>
 </IfModule>

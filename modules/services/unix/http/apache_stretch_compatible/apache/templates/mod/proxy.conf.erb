@@ -24,11 +24,4 @@
   # ("Full" adds the server version; "Block" removes all outgoing Via: headers)
   # Set to one of: Off | On | Full | Block
   ProxyVia <%= @proxy_via %>
-
-  <%- if @proxy_timeout -%>
-  ProxyTimeout <%= @proxy_timeout %>
-  <%- end -%>
-  <%- if @proxy_iobuffersize -%>
-  ProxyIOBufferSize <%= @proxy_iobuffersize %>
-  <%- end -%>
 </IfModule>
