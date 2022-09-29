@@ -3,7 +3,7 @@
 <utility xmlns="http://www.github/cliffe/SecGen/utility"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.github/cliffe/SecGen/utility">
-  <name>User account service</name>
+  <name>User account service (legacy)</name>
   <author>Puppet Labs</author>
   <author>Jason Keighley</author>
   <module_license>Apache v2</module_license>
