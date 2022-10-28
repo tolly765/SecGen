@@ -9,8 +9,8 @@ class bludit_upload_images_exec::install {
 
   # copy and unzip archive
   # note that the file is specified as "source" -- that means the file is copied
-  $releasename = 'bludit-3-9-2.zip'
-  file { "/usr/local/src/$archive":
+  $releasename = 'bludit-3-9-2'
+  file { "/usr/local/src/$releasename.zip":
     ensure => file,
     source => "puppet:///modules/bludit_upload_images_exec/$releasename.zip",
   } ->
