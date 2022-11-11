@@ -1,5 +1,3 @@
-# Remove proxy environment settings.
-# Adjust file paths to suite SecGen.
 class pachev_ftp_server_1_path_traversal::install {
   $secgen_parameters = secgen_functions::get_parameters($::base64_inputs_file)
   $user = $secgen_parameters['leaked_username'][0]
