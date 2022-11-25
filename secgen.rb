@@ -2,6 +2,7 @@ require 'getoptlong'
 require 'fileutils'
 require 'nori'
 require 'open3'
+require 'nokogiri'
 
 require_relative 'lib/helpers/constants.rb'
 require_relative 'lib/helpers/print.rb'
