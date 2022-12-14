@@ -1,4 +1,3 @@
-# Adjust file paths to suite SecGen.
 class pachev_ftp_server_1_path_traversal::service {
   require pachev_ftp_server_1_path_traversal::config
   Exec { path => [ '/bin/', '/sbin/' , '/usr/bin/', '/usr/sbin/' ] }
