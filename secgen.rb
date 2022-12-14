@@ -61,6 +61,12 @@ def usage
    --esxi-disktype [esxi_disktype]
    --esxi-network [esxi_network_name]
 
+   PROXMOX OPTIONS:
+   --proxmoxuser [username]
+   --proxmoxpass [password]
+   --proxmox-url [api_url]
+   --proxmox-node [node]
+
    COMMANDS:
    run, r: Builds project and then builds the VMs
    build-project, p: Builds project (vagrant and puppet config), but does not build VMs
@@ -446,6 +452,11 @@ opts = GetoptLong.new(
     ['--shutdown', GetoptLong::NO_ARGUMENT],
     ['--network-ranges', GetoptLong::REQUIRED_ARGUMENT],
     ['--forensic-image-type', GetoptLong::REQUIRED_ARGUMENT],
+    ['--snapshot', GetoptLong::NO_ARGUMENT],
+    ['--no-tests', GetoptLong::NO_ARGUMENT],
+    ['--no-destroy-on-failure', GetoptLong::NO_ARGUMENT],
+    ['--no-parallel', GetoptLong::NO_ARGUMENT],
+    ['--retries', GetoptLong::REQUIRED_ARGUMENT],
     ['--ovirtuser', GetoptLong::REQUIRED_ARGUMENT],
     ['--ovirtpass', GetoptLong::REQUIRED_ARGUMENT],
     ['--ovirt-url', GetoptLong::REQUIRED_ARGUMENT],
@@ -453,11 +464,10 @@ opts = GetoptLong.new(
     ['--ovirt-cluster', GetoptLong::REQUIRED_ARGUMENT],
     ['--ovirt-network', GetoptLong::REQUIRED_ARGUMENT],
     ['--ovirt-affinity-group', GetoptLong::REQUIRED_ARGUMENT],
-    ['--snapshot', GetoptLong::NO_ARGUMENT],
-    ['--no-tests', GetoptLong::NO_ARGUMENT],
-    ['--no-destroy-on-failure', GetoptLong::NO_ARGUMENT],
-    ['--no-parallel', GetoptLong::NO_ARGUMENT],
-    ['--retries', GetoptLong::REQUIRED_ARGUMENT],
+    ['--proxmoxuser', GetoptLong::REQUIRED_ARGUMENT],
+    ['--proxmoxpass', GetoptLong::REQUIRED_ARGUMENT],
+    ['--proxmox-url', GetoptLong::REQUIRED_ARGUMENT],
+    ['--proxmox-node', GetoptLong::REQUIRED_ARGUMENT],
     ['--esxiuser', GetoptLong::REQUIRED_ARGUMENT],
     ['--esxipass', GetoptLong::REQUIRED_ARGUMENT],
     ['--esxi-url', GetoptLong::REQUIRED_ARGUMENT],
@@ -556,6 +566,19 @@ opts.each do |opt, arg|
   when '--ovirt-affinity-group'
     Print.info "Ovirt Affinity Group : #{arg}"
     options[:ovirtaffinitygroup] = arg
+    # Proxmox options
+  when '--proxmoxuser'
+    Print.info "Proxmox Username : #{arg}"
+    options[:proxmoxuser] = arg
+  when '--proxmoxpass'
+    Print.info "Proxmox Password : ********"
+    options[:proxmoxpass] = arg
+  when '--proxmox-url'
+    Print.info "Proxmox API url : #{arg}"
+    options[:proxmoxurl] = arg
+  when '--proxmox-node'
+    Print.info "Proxmox node : #{arg}"
+    options[:proxmoxurl] = arg
   # ESXi options
   when '--esxiuser'
     Print.info "ESXi Username : #{arg}"
