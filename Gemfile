@@ -23,7 +23,7 @@ gem 'process_helper'
 gem 'ovirt-engine-sdk'
 gem 'duplicate'
 gem 'smbhash'
-gem 'digest-whirlpool', :git => "https://github.com/fgosew/ruby-digest-whirlpool"
+# gem 'digest-whirlpool', :git => "https://github.com/fgosew/ruby-digest-whirlpool"
 gem 'digest-siphash'
 gem 'scrypt'
 gem 'braille', :git => "http://github.com/nicanor/braille.git"
@@ -33,16 +33,17 @@ gem 'huffman', :git => "https://github.com/fgosew/huffman"
 gem 'ruby-graphviz'
 gem 'rsa'
 gem 'gpgmeh'
-gem 'digest-sha3', :git => "http://github.com/izetex/digest-sha3-ruby"
+# gem 'digest-sha3', :git => "http://github.com/izetex/digest-sha3-ruby"
 gem 'packetfu'
 gem 'net-ntp'
 gem 'CFPropertyList'
 gem 'artii'
+gem 'sqlite3'
 
 #development only gems go here
 group :test, :development do
   gem 'minitest'
   gem 'rake'
-  gem 'rdoc'
+  # gem 'rdoc'
   gem 'yard'
 end
