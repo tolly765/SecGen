@@ -63,28 +63,31 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
     # oVirt provider end
 
-<% elsif (@options.has_key? :esxiuser) && (@options.has_key? :esxipass) %>
+<% elsif (@options.has_key? :esxiuser) %>
     # vmware_esxi provider begin
     <%= system.name %>.vm.provider :vmware_esxi do |esxi|
 <%=
-"	esxi.esxi_hostname = '#{@options[:esxi_url]}'
+"	esxi.esxi_hostname = '#{@options[:esxi_host]}'
 	esxi.esxi_username = '#{@options[:esxiuser]}'
-        esxi.esxi_password = '#{@options[:esxipass]}' "
+        esxi.esxi_password = '#{@options[:esxipass]}'"
 		%>
-
 <%= if @options.has_key? :esxidatastore
-   "     esxi.esxi_disk_store = '#{@options[:esxidatastore]}'"
+   "        esxi.esxi_disk_store = '#{@options[:esxidatastore]}'\n"
    end -%>
-<%= if @options.has_key? :esxi_disktype
-"       esxi.guest_disk_type = '#{@options[:esxi_disktype]}'"
+<%= if @options.has_key? :esxidisktype
+    "        esxi.guest_disk_type = '#{@options[:esxidisktype]}'\n"
 		end -%>
-<%= "       esxi.guest_memsize = '#{system.memory} MB'\n"
+<%= "        esxi.guest_memsize = '#{system.memory} MB'\n"
         -%>
-<%=     if @options.has_key? :cpu_cores
-"       esxi.guest_numvcpus = #{@options[:cpu_cores]}\n"
+<%= if @options.has_key? :cpu_cores
+    "        esxi.guest_numvcpus = #{@options[:cpu_cores]}\n"
         end -%>
-end
-	# End ESXi provider
+<%= if @options.has_key? :esxinetwork
+    "        esxi.esxi_virtual_network = ['#{@options[:esxinetwork]}']\n"
+        end -%>
+    <%= "    esxi.guest_name = '#{system.get_hostname}'\n" -%>
+    end
+# End ESXi provider
 <%
   else %>
     <%= system.name %>.vm.provider :virtualbox do |vb|
@@ -148,7 +151,9 @@ end
       <%= system.name %>.vm.box = 'ovirt4'
       <%= system.name %>.vm.box_url = 'https://github.com/myoung34/vagrant-ovirt4/blob/master/example_box/dummy.box?raw=true'
     <% elsif (@options.has_key? :esxiuser) && (@options.has_key? :esxipass) %>
-    <%= system.name %>.vm.hostname = '<%= system.get_hostname %>'
+      <% if !(@options.has_key? :esxinohostname) %>
+      <%= system.name %>.vm.hostname = '<%= system.get_hostname %>'
+      <% end %>
     <%= system.name %>.vm.box = "<%= selected_module.module_path_name %>"
     <%= system.name %>.vm.box_url = "<%= selected_module.attributes['esxi_url'].first %>"
     <% else %>
