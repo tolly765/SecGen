@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+
 #production gems go here
 gem 'nokogiri'
 gem 'puppet'
@@ -23,7 +24,6 @@ gem 'process_helper'
 gem 'ovirt-engine-sdk'
 gem 'duplicate'
 gem 'smbhash'
-#gem 'digest-whirlpool', :git => "https://github.com/havardMoe/ruby-digest-whirlpool.git" # Broken
 gem 'digest-siphash'
 gem 'scrypt'
 gem 'braille', :git => "http://github.com/nicanor/braille.git"
@@ -33,7 +33,6 @@ gem 'huffman', :git => "https://github.com/fgosew/huffman"
 gem 'ruby-graphviz'
 gem 'rsa'
 gem 'gpgmeh'
-# gem 'digest-sha3', :git => "http://github.com/izetex/digest-sha3-ruby" # Broken
 gem 'sha3'
 gem 'packetfu'
 gem 'net-ntp'
@@ -45,6 +44,5 @@ gem 'sqlite3'
 group :test, :development do
   gem 'minitest'
   gem 'rake'
-  # gem 'rdoc' # Probably obsolete and breaking bundle install
   gem 'yard'
 end
