@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 require_relative '../../../../../lib/objects/local_hash_encoder.rb'
-require 'digest/sha3'
+require 'sha3'
 
 class SHA3_256_Encoder < HashEncoder
   def initialize
@@ -9,7 +9,7 @@ class SHA3_256_Encoder < HashEncoder
   end
 
   def hash_function(string)
-    Digest::SHA3.hexdigest(string, 256)
+    SHA3::Digest.hexdigest(:sha256, string)
   end
 end
 
