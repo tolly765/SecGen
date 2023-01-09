@@ -38,7 +38,6 @@ gem 'packetfu'
 gem 'net-ntp'
 gem 'CFPropertyList'
 gem 'artii'
-gem 'sqlite3'
 
 #development only gems go here
 group :test, :development do
