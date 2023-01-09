@@ -57,10 +57,17 @@ def usage
    ESXI OPTIONS:
    --esxiuser [esxi_username]
    --esxipass [esxi_password]
-   --esxi-url [esxi_api_url]
+   --esxi-hostname [esxi_api_url]
+              (ESXi hostname/IP)
    --esxi-datastore [esxi_datastore]
-   --esxi-disktype [esxi_disktype]
+   --esxi-disktype [esxi_disktype]: 'thin', 'thick', or 'eagerzeroedthick'
+              (If unspecified, it will be set to 'thin')
    --esxi-network [esxi_network_name]
+              (If it's not specified, the default is to use the first found)
+   --esxi-guest-nictype [esxi_nictype]: 'e1000', 'e1000e', 'vmxnet', 'vmxnet2', 'vmxnet3', 'Vlance', or 'Flexible'
+              (RISKY - Can cause VM to not respond)
+   --esxi-no-hostname
+              (Setting the hostname on some boxes can cause 'vagrant up' to fail if the network configuration wasn't previously cleaned up.)
 
    COMMANDS:
    run, r: Builds project and then builds the VMs
@@ -461,9 +468,12 @@ opts = GetoptLong.new(
     ['--retries', GetoptLong::REQUIRED_ARGUMENT],
     ['--esxiuser', GetoptLong::REQUIRED_ARGUMENT],
     ['--esxipass', GetoptLong::REQUIRED_ARGUMENT],
-    ['--esxi-url', GetoptLong::REQUIRED_ARGUMENT],
+    ['--esxi-hostname', GetoptLong::REQUIRED_ARGUMENT],
     ['--esxi-datastore', GetoptLong::REQUIRED_ARGUMENT],
     ['--esxi-network', GetoptLong::REQUIRED_ARGUMENT],
+    ['--esxi-disktype', GetoptLong::REQUIRED_ARGUMENT],
+    ['--esxi-guest-nictype', GetoptLong::REQUIRED_ARGUMENT],
+    ['--esxi-no-hostname', GetoptLong::NO_ARGUMENT],
 )
 
 scenario = SCENARIO_XML
@@ -564,9 +574,9 @@ opts.each do |opt, arg|
   when '--esxipass'
     Print.info "ESXi Password : ********"
     options[:esxipass] = arg
-  when '--esxi-url'
-    Print.info "ESXi host url : #{arg}"
-    options[:esxi_url] = arg
+  when '--esxi-hostname'
+    Print.info "ESXi host : #{arg}"
+    options[:esxi_host] = arg
   when '--esxi-datastore'
     Print.info "ESXi datastore: #{arg}"
     options[:esxidatastore] = arg
@@ -574,8 +584,27 @@ opts.each do |opt, arg|
     Print.info "ESXi Network Name : #{arg}"
     options[:esxinetwork] = arg
   when '--esxi-disktype'
-    Print.info "ESXi disk type : #{arg}"
-    options[:esxidisktype] = arg
+    if ['thin', 'thick', 'eagerzeroedthick'].include? arg
+      Print.info "ESXi disk type : #{arg}"
+      options[:esxidisktype] = arg
+    else
+      Print.warn "ESXi disk type : #{arg} not supported"
+      Print.warn "ESXi disk type only supports: 'thin', 'thick', or 'eagerzeroedthick'"
+      Print.info "Defaulting to ESXi disk type: 'thin'"
+      options[:esxidisktype] = 'thin'
+    end
+  when '--esxi-guest-nictype'
+    if ['e1000', 'e1000e', 'vmxnet','vmxnet2', 'vmxnet3', 'Vlance','Flexible'].include? arg
+      Print.info "ESXi Guest Nic type : #{arg}"
+      options[:esxiguestnictype] = arg
+    else
+      Print.warn "ESXi guest nic type : #{arg} not supported"
+      Print.warn "ESXi guest nic type only supports: 'e1000', 'e1000e', 'vmxnet','vmxnet2', 'vmxnet3', 'Vlance','Flexible'"
+      Print.info "Defaulting to ESXi disk type: 'thin'"
+    end
+  when '--esxi-no-hostname'
+    Print.info "Not setting hostnames when VMs are created"
+    options[:esxinohostname] = true
   when '--no-tests'
     Print.info "Not running post-provision tests"
     options[:notests] = true
