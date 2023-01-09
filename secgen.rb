@@ -2,12 +2,14 @@ require 'getoptlong'
 require 'fileutils'
 require 'nori'
 require 'open3'
+require 'nokogiri/class_resolver'
 require 'nokogiri'
 
 require_relative 'lib/helpers/constants.rb'
 require_relative 'lib/helpers/print.rb'
 require_relative 'lib/helpers/gem_exec.rb'
 require_relative 'lib/helpers/ovirt.rb'
+require_relative 'lib/helpers/proxmox.rb'
 require_relative 'lib/readers/system_reader.rb'
 require_relative 'lib/readers/module_reader.rb'
 require_relative 'lib/output/project_files_creator.rb'
@@ -67,6 +69,7 @@ def usage
    --proxmoxpass [password]
    --proxmox-url [api_url]
    --proxmox-node [node]
+   --proxmox-network [proxmox network name]
 
    COMMANDS:
    run, r: Builds project and then builds the VMs
@@ -74,6 +77,8 @@ def usage
    build-vms, v: Builds VMs from a previously generated project
               (use in combination with --project [dir])
    ovirt-post-build: only performs the ovirt actions that normally follow a successful vm build
+              (snapshots and networking)
+   proxmox-post-build: only performs the proxmox actions that normally follow a successful vm build
               (snapshots and networking)
    create-forensic-image: Builds forensic images from a previously generated project
               (can be used in combination with --project [dir])
@@ -143,7 +148,7 @@ def build_vms(scenario, project_dir, options)
     if vagrant_output[:status] == 0 and post_provision_tests(project_dir, options)
       Print.info 'VMs created.'
       successful_creation = true
-      if options[:shutdown] or OVirtFunctions::provider_ovirt?(options)
+      if options[:shutdown] or OVirtFunctions::provider_ovirt?(options) or ProxmoxFunctions::provider_proxmox?(options)
         Print.info 'Shutting down VMs.'
         sleep(30)
         GemExec.exe('vagrant', project_dir, 'halt')
@@ -209,15 +214,16 @@ def build_vms(scenario, project_dir, options)
     retry_count -= 1
   end
   if successful_creation
-    ovirt_post_build(options, scenario, project_dir) if OVirtFunctions.provider_ovirt?(options)
-    if options[:snapshot]
+    if OVirtFunctions.provider_ovirt?(options)
+      ovirt_post_build(options, scenario, project_dir)
+    elsif ProxmoxFunctions.provider_proxmox?(options)
+      proxmox_post_build(options, scenario, project_dir)
+    elsif options[:snapshot]
+      # snapshots happen in the above post_build functions
+      # VirtualBox snapshots
       Print.info 'Creating a snapshot of VM(s)'
-      sleep(20) # give oVirt/Virtualbox a chance to save any VM config changes before creating the snapshot
-      if OVirtFunctions::provider_ovirt?(options)
-        OVirtFunctions::create_snapshot(options, scenario, get_vm_names(scenario))
-      else
-        GemExec.exe('vagrant', project_dir, 'snapshot push')
-      end
+      sleep(10) # give oVirt/Virtualbox a chance to save any VM config changes before creating the snapshot
+      GemExec.exe('vagrant', project_dir, 'snapshot push')
     end
   else
     Print.err "Failed to build VMs"
@@ -237,6 +243,26 @@ def ovirt_post_build(options, scenario, project_dir)
   if options[:ovirtaffinitygroup]
     Print.info 'Assigning affinity group of VM(s)'
     OVirtFunctions::assign_affinity_group(options, scenario, get_vm_names(scenario))
+  end
+  if options[:snapshot]
+    Print.info 'Creating a snapshot of VM(s)'
+    sleep(10) # give oVirt/Virtualbox a chance to save any VM config changes before creating the snapshot
+    OVirtFunctions::create_snapshot(options, scenario, get_vm_names(scenario))
+  end
+end
+
+# actions on the VMs after vagrant has built them
+# this includes networking and snapshots
+def proxmox_post_build(options, scenario, project_dir)
+  Print.std 'Taking Proxmox post-build actions...'
+  if options[:proxmoxnetwork]
+    Print.info 'Assigning network(s) of VM(s)'
+    ProxmoxFunctions::assign_networks(project_dir, get_vm_names(scenario), options)
+  end
+  if options[:snapshot]
+    Print.info 'Creating a snapshot of VM(s)'
+    sleep(1) # give oVirt/Virtualbox a chance to save any VM config changes before creating the snapshot
+    ProxmoxFunctions::create_snapshot(project_dir, get_vm_names(scenario), options)
   end
 end
 
@@ -469,6 +495,8 @@ opts = GetoptLong.new(
     ['--proxmoxpass', GetoptLong::REQUIRED_ARGUMENT],
     ['--proxmox-url', GetoptLong::REQUIRED_ARGUMENT],
     ['--proxmox-node', GetoptLong::REQUIRED_ARGUMENT],
+    ['--proxmox-network', GetoptLong::REQUIRED_ARGUMENT],
+    ['--proxmox-vlan', GetoptLong::REQUIRED_ARGUMENT],
     ['--esxiuser', GetoptLong::REQUIRED_ARGUMENT],
     ['--esxipass', GetoptLong::REQUIRED_ARGUMENT],
     ['--esxi-url', GetoptLong::REQUIRED_ARGUMENT],
@@ -580,6 +608,12 @@ opts.each do |opt, arg|
   when '--proxmox-node'
     Print.info "Proxmox node : #{arg}"
     options[:proxmoxurl] = arg
+  when '--proxmox-network'
+    Print.info "Proxmox Network Name : #{arg}"
+    options[:proxmoxnetwork] = arg
+  when '--proxmox-vlan'
+    Print.info "Proxmox Network VLAN : #{arg}"
+    options[:proxmoxvlan] = arg
   # ESXi options
   when '--esxiuser'
     Print.info "ESXi Username : #{arg}"
@@ -660,6 +694,9 @@ when 'esxi-post-build'
 
 when 'ovirt-post-build'
   ovirt_post_build(options, scenario, project_dir)
+
+when 'proxmox-post-build'
+  proxmox_post_build(options, scenario, project_dir)
 
 when 'list-scenarios'
   list_scenarios

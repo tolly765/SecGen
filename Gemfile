@@ -38,6 +38,8 @@ gem 'packetfu'
 gem 'net-ntp'
 gem 'CFPropertyList'
 gem 'artii'
+gem 'rest-client'
+gem 'retryable'
 
 #development only gems go here
 group :test, :development do
