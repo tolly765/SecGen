@@ -1,6 +1,5 @@
 #!/usr/bin/ruby
 require_relative '../../../../../lib/objects/local_hash_encoder.rb'
-require 'openssl'
 
 class SHA512Encoder < HashEncoder
   def initialize
@@ -9,7 +8,7 @@ class SHA512Encoder < HashEncoder
   end
 
   def hash_function(string)
-    OpenSSL::Digest::SHA512.new.hexdigest(string)
+    Digest::SHA512.hexdigest(string)
   end
 end
 
