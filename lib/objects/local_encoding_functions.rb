@@ -25,7 +25,7 @@ class EncodingFunctions
     utf8 = []
     value.map {|element|
       if element.is_a? String
-        utf8 << element.force_encoding('UTF-8')
+        utf8 << element.dup.force_encoding('UTF-8')
       elsif element.is_a? Hash
         utf8 << EncodingFunctions::hash_to_utf8(element)
       elsif element.is_a? Array
