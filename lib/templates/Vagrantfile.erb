@@ -125,26 +125,29 @@ end
 <%
     when "esxi"
 %>
-# vmware_esxi provider begin
-<%= system.name %>.vm.provider :vmware_esxi do |esxi|
+    # vmware_esxi provider begin
+    <%= system.name %>.vm.provider :vmware_esxi do |esxi|
 <%=
-"	esxi.esxi_hostname = '#{@options[:esxi_url]}'
-esxi.esxi_username = '#{@options[:esxiuser]}'
-esxi.esxi_password = '#{@options[:esxipass]}' "
-%>
-
+"	esxi.esxi_hostname = '#{@options[:esxi_host]}'
+	esxi.esxi_username = '#{@options[:esxiuser]}'
+        esxi.esxi_password = '#{@options[:esxipass]}'"
+		%>
 <%= if @options.has_key? :esxidatastore
-"     esxi.esxi_disk_store = '#{@options[:esxidatastore]}'"
-end -%>
-<%= if @options.has_key? :esxi_disktype
-"       esxi.guest_disk_type = '#{@options[:esxi_disktype]}'"
-end -%>
-<%= "       esxi.guest_memsize = '#{system.memory} MB'\n"
--%>
-<%=     if @options.has_key? :cpu_cores
-"       esxi.guest_numvcpus = #{@options[:cpu_cores]}\n"
-end -%>
-end
+   "        esxi.esxi_disk_store = '#{@options[:esxidatastore]}'\n"
+   end -%>
+<%= if @options.has_key? :esxidisktype
+    "        esxi.guest_disk_type = '#{@options[:esxidisktype]}'\n"
+		end -%>
+<%= "        esxi.guest_memsize = '#{system.memory} MB'\n"
+        -%>
+<%= if @options.has_key? :cpu_cores
+    "        esxi.guest_numvcpus = #{@options[:cpu_cores]}\n"
+        end -%>
+<%= if @options.has_key? :esxinetwork
+    "        esxi.esxi_virtual_network = ['#{@options[:esxinetwork]}']\n"
+        end -%>
+    <%= "    esxi.guest_name = '#{system.get_hostname}'\n" -%>
+    end
 # End ESXi provider
 <%
 when "virtualbox"

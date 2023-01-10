@@ -147,10 +147,17 @@ SecGen accepts arguments to change the way that it behaves, the currently implem
       ESXI OPTIONS:
       --esxiuser [esxi_username]
       --esxipass [esxi_password]
-      --esxi-url [esxi_api_url]
+      --esxi-hostname [esxi_api_url]
+              (ESXi hostname/IP)
       --esxi-datastore [esxi_datastore]
-      --esxi-disktype [esxi_disktype]
+      --esxi-disktype [esxi_disktype]: 'thin', 'thick', or 'eagerzeroedthick'
+              (If unspecified, it will be set to 'thin')
       --esxi-network [esxi_network_name]
+              (If its not specified, the default is to use the first found)
+      --esxi-guest-nictype [esxi_nictype]: 'e1000', 'e1000e', 'vmxnet', 'vmxnet2', 'vmxnet3', 'Vlance', or 'Flexible'
+              (RISKY - Can cause VM to not respond)
+      --esxi-no-hostname
+              (Setting the hostname on some boxes can cause vagrant up to fail if the network configuration was not previously cleaned up.)
 
       COMMANDS:
       run, r: Builds project and then builds the VMs
