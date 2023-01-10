@@ -1,15 +1,15 @@
 #!/usr/bin/ruby
 require_relative '../../../../../lib/objects/local_hash_encoder.rb'
-require 'digest/sha3'
+require 'openssl'
 
 class SHA3Encoder < HashEncoder
   def initialize
     super
-    self.module_name = 'SHA1 Encoder'
+    self.module_name = 'SHA1 Encoder' # ??
   end
 
   def hash_function(string)
-    Digest::SHA1.hexdigest(string)
+    OpenSSL::Digest::SHA1.new.hexdigest(string) # ??
   end
 end
 
