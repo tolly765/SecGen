@@ -1,6 +1,5 @@
 #!/usr/bin/ruby
 require_relative '../../../../lib/objects/local_string_encoder.rb'
-require 'faker'
 
 class GoogleSearchGenerator < StringEncoder
   attr_accessor :search_category
@@ -33,7 +32,7 @@ class GoogleSearchGenerator < StringEncoder
   def craft_search
     search_category = self.search_category
     # Read line from search_list file specified
-    line = File.readlines("#{WORDLISTS_DIR}/search_lists/#{self.search_category.chomp}").sample.chomp
+    line = File.readlines("#{INTERESTS_DIR}/#{self.search_category.chomp}/search_phrases/#{self.search_category.chomp}").sample.chomp
 
     # replace spaces with pluses
     sanitised_search = line.downcase.gsub(' ', '+')
