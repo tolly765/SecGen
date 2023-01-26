@@ -54,13 +54,6 @@ class GoogleSearchGenerator < StringEncoder
   def encoding_print_string
     'Search Term: ' + self.search_category.to_s + ' | Iterations: ' + self.iterations
   end
-  
-  # def generate
-  #   # read all the lines, and select one at random
-  #   line = File.readlines("#{LINELISTS_DIR}/#{self.linelist.sample.chomp}").sample.chomp
-  #   # strip out everything except alphanumeric and basic punctuation (no ' or ")
-  #   self.outputs << line.gsub(/[^\w !.,]/, '')
-  # end
 end
 
 GoogleSearchGenerator.new.run

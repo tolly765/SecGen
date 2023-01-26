@@ -3,21 +3,24 @@
 <generator xmlns="http://www.github/cliffe/SecGen/generator"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://www.github/cliffe/SecGen/generator">
-  <name>Domain Encoder</name>
+  <name>Google Search Generator</name>
   <author>Tom Harrison</author>
   <module_license>MIT</module_license>
-  <description>Creates a domain based on user inputting a name.</description>
+  <description>Creates google search URLS based on a common interest. Interests are found in lib/resources/interests.</description>
 
-  <type>string_generator</type>
+  <type>google_search_generator</type>
   <type>url_generator</type>
-  <type>local_calculation</type>
   <platform>linux</platform>
   <platform>windows</platform>
 
   <!-- Convert a search term into a formatted google URL. -->
-  <read_fact>search_term</read_fact>
+  <read_fact>search_category</read_fact>
 
-  <default_input into="search_term">
+  <default_input into="search_category">
+    <generator type="google_search_generator"/>
+  </default_input>
+
+  <default_input into="search_category">
     <generator type="google_search_generator"/>
   </default_input>
 
