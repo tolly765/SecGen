@@ -14,13 +14,24 @@ class GemExec
 
     version = '>= 0'
     begin
-      gem_path = Gem.bin_path(gem_name, gem_name, version)
+      gem_path = ""
+      # new versions of vagrant are executed directly
+      # this is the most reliable way of checking for vagrant, when multiple versions are isntalled
+      if gem_name == 'vagrant' && File.file?("/usr/bin/vagrant")
+        gem_path = "/usr/bin/vagrant"
+      end
+      # test if the program is already installed via package management (for example, vagrant now does this)
+      if gem_path.empty?
+        gem_path = `which #{gem_name}`.chomp
+      end
+      # otherwise try getting the location of installed gem
+      if gem_path.empty?
+        gem_path = Gem.bin_path(gem_name, gem_name, version)
+      end
       unless File.file?(gem_path)
         raise 'Gem.bin_path returned a path that does not exist.'
       end
     rescue Exception => e
-      # test if the program is already installed via package management
-      gem_path = `which #{gem_name}`.chomp
       unless File.file? gem_path
         Print.err "Executable for #{gem_name} not found: #{e.message}"
         # vagrant can be executed via the gem path, but not installed this way
