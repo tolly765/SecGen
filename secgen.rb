@@ -2,7 +2,7 @@ require 'getoptlong'
 require 'fileutils'
 require 'nori'
 require 'open3'
-require 'nokogiri/class_resolver'
+# require 'nokogiri/class_resolver'
 require 'nokogiri'
 
 require_relative 'lib/helpers/constants.rb'
@@ -77,6 +77,7 @@ def usage
    --proxmox-url [api_url]
    --proxmox-node [node]
    --proxmox-network [proxmox network name]
+   --proxmox-vlan [vlan number]
 
    COMMANDS:
    run, r: Builds project and then builds the VMs
@@ -617,7 +618,7 @@ opts.each do |opt, arg|
     options[:proxmoxurl] = arg
   when '--proxmox-node'
     Print.info "Proxmox node : #{arg}"
-    options[:proxmoxurl] = arg
+    options[:proxmoxnode] = arg
   when '--proxmox-network'
     Print.info "Proxmox Network Name : #{arg}"
     options[:proxmoxnetwork] = arg
