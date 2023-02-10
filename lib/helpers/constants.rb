@@ -42,6 +42,7 @@ DOCUMENTATION_DIR = "#{ROOT_DIR}/documentation/yard/doc"
 # Path to resources
 WORDLISTS_DIR = "#{ROOT_DIR}/lib/resources/wordlists"
 LINELISTS_DIR = "#{ROOT_DIR}/lib/resources/linelists"
+INTERESTS_DIR = "#{ROOT_DIR}/lib/resources/interests"
 STORY_DIR = "#{ROOT_DIR}/lib/resources/narrative"
 BLACKLISTED_WORDS_FILE = "#{ROOT_DIR}/lib/resources/blacklisted_words/blacklist.txt"
 IMAGES_DIR = "#{ROOT_DIR}/lib/resources/images"
