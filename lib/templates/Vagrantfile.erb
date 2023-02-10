@@ -118,7 +118,7 @@ end
 
       proxmox.vm_id_range = 1000..999999999
       proxmox.vm_memory = 3000
-      proxmox.selected_node = 'vprox1'
+      proxmox.selected_node = '<%= @options[:proxmoxnode] %>'
       proxmox.disable_adjust_forwarded_port = true
     end
     # Proxmox provider end

@@ -159,6 +159,14 @@ SecGen accepts arguments to change the way that it behaves, the currently implem
       --esxi-no-hostname
               (Setting the hostname on some boxes can cause vagrant up to fail if the network configuration was not previously cleaned up.)
 
+      PROXMOX OPTIONS:
+      --proxmoxuser [username]
+      --proxmoxpass [password]
+      --proxmox-url [api_url]
+      --proxmox-node [node]
+      --proxmox-network [proxmox network name]
+      --proxmox-vlan [vlan number]
+
       COMMANDS:
       run, r: Builds project and then builds the VMs
       build-project, p: Builds project (vagrant and puppet config), but does not build VMs
