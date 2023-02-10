@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<generator xmlns="http://www.github/cliffe/SecGen/generator"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.github/cliffe/SecGen/generator">
+  <name>Chromium History Generator</name>
+  <author>Tom Harrison</author>
+  <module_license>MIT</module_license>
+  <description>Creates google search URLS based on a common interest and converts them directly into a Chromium "History" file. Interests are found in lib/resources/interests.</description>
+
+  <type>chromium_history_generator</type>
+  <type>url_generator</type>
+  <platform>linux</platform>
+  <platform>windows</platform>
+
+  <!-- Convert a search term into a formatted google URL. -->
+  <read_fact>interest_category</read_fact>
+
+  <default_input into="interest_category">
+    <value>cars</value>
+  </default_input>
+
+  <output_type>chromium_history</output_type>
+</generator>
